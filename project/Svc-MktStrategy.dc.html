@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Strategy &amp; Analytics service page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#07080F}
+a{color:inherit}
+.ff-dark a:hover{color:#FFBC51}
+.ff-cream a:hover{color:#C93A3C}
+:focus-visible{outline:3px solid #FFBC51;outline-offset:3px}
+@keyframes ff-spin{to{transform:rotate(360deg)}}
+@keyframes ff-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes ff-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes ff-focus{from{filter:blur(12px);opacity:0;transform:scale(.97)}to{filter:blur(0);opacity:1;transform:none}}
+@keyframes ff-fill{0%,35%{color:transparent}100%{color:#FFBC51}}
+.ff-orbit{animation:ff-spin 48s linear infinite}
+.ff-core{animation:ff-breathe 7s ease-in-out infinite}
+.ff-float{animation:ff-float 8s ease-in-out infinite}
+.ff-in{animation:ff-focus 1.1s cubic-bezier(.22,1,.36,1) both}
+.ff-lit{animation:ff-fill 2.4s cubic-bezier(.22,1,.36,1) .5s both}
+.ff-stage{animation:ff-focus .7s cubic-bezier(.22,1,.36,1) both}
+.ff-root{container-type:inline-size;container-name:page}
+.ff-list{display:none}
+.ff-grp{display:flex}.ff-gtoggle{display:none}
+.lp-hide{display:none}
+.ff-cream :focus-visible{outline-color:#C93A3C}
+.ff-skip{position:absolute;left:16px;top:16px;z-index:40;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:#FFBC51;color:#0B0C14;font-family:'Manrope',Arial,sans-serif;font-size:15px;font-weight:700;text-decoration:none;opacity:0;transform:translateY(-200%);pointer-events:none}
+.ff-skip:focus{opacity:1;transform:none;pointer-events:auto}.ff-skip:hover{color:#0B0C14}.ff-skip:focus-visible{outline:3px solid #FAF5EF;outline-offset:3px}
+#main:focus{outline:none}
+.ff-soc{width:44px;height:44px;box-sizing:border-box;border-radius:50%;display:inline-flex !important;align-items:center;justify-content:center;border:1px solid rgba(250,245,239,0.22);background:rgba(250,245,239,0.04);color:#FAF5EF;text-decoration:none;transition:border-color .2s ease,background-color .2s ease}
+.ff-dark a.ff-soc:hover,.ff-soc:hover{color:#FAF5EF;border-color:#FFBC51;background:rgba(255,188,81,0.14)}
+.ff-soc:focus-visible{outline:3px solid #FFBC51;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){.ff-soc{transition:none}}
+.cw-grid{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@container page (max-width: 940px){.cw-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container page (max-width: 600px){.cw-grid{grid-template-columns:minmax(0,1fr)}}
+.cw-card{flex:1;display:flex;flex-direction:column;gap:18px;padding:12px 12px 22px;border-radius:32px;background:#FFFFFF;border:1px solid #E3DACE;color:#0B0C14;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.cw-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(11,12,20,0.08);border-color:#D8CCBD}
+.ff-cream a.cw-card,.ff-cream a.cw-card:hover{color:#0B0C14}
+.cw-go{color:#B83234}
+.cw-card:hover .cw-go,.cw-card:focus-visible .cw-go{color:#9E2A2C;text-decoration:underline;text-underline-offset:3px}
+.cw-card img{display:block;width:100%;height:auto;border-radius:22px;background:#F1EAE0;box-shadow:0 0 0 1px rgba(11,12,20,0.07)}
+.cw-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion: reduce){.cw-card{transition:none}.cw-card:hover{transform:none}}
+@container page (max-width: 1100px){.hp-offices{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.hp-offices > :last-child:nth-child(odd){grid-column:1 / -1}}
+@container page (max-width: 760px){.hp-offices{grid-template-columns:minmax(0,1fr) !important}}
+section[aria-labelledby="mk-cta-h"] a:hover{color:#FFBC51}
+section[aria-labelledby="mk-cta-h"] a[href="Contact.dc.html"]:hover{color:#0B0C14}
+section[aria-labelledby="mk-cta-h"] :focus-visible{outline-color:#FFBC51}
+.bi-steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@container page (max-width: 1100px){.bi-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container page (max-width: 760px){.bi-steps{grid-template-columns:minmax(0,1fr)}}
+[data-offscreen="1"] .ff-orbit,[data-offscreen="1"] .ff-core,[data-offscreen="1"] .ff-float{animation-play-state:paused}
+.ds-p{margin:0;font-size:18px;line-height:1.7}
+.ds-cap{scroll-margin-top:24px}
+footer a,.ff-links a,nav[aria-label="Breadcrumb"] a{min-height:24px;display:inline-flex;align-items:center}
+.ph-d,.ph-c{display:flex;flex-direction:column;gap:6px;border-radius:16px;padding:14px 16px;box-sizing:border-box}
+.ph-d{border:1px dashed rgba(255,188,81,0.6);background:rgba(255,188,81,0.06)}
+.ph-c{border:1px dashed rgba(201,58,60,0.55);background:rgba(201,58,60,0.04)}
+.ph-l{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase}
+.ph-d .ph-l{color:#FFBC51}.ph-c .ph-l{color:#C93A3C}
+.ph-t{font-size:14px;line-height:1.5}
+.ph-d .ph-t{color:#E9E3DC}.ph-c .ph-t{color:#2A2830}
+@container page (max-width: 940px){.ff-links{display:none !important}}
+@container page (max-width: 760px){.ff-hide-sm{display:none !important}.ff-labwrap{display:none !important}.ff-list{display:flex}.ff-gtitle{display:none !important}.ff-gtoggle{display:flex}.ff-grp{display:none}.ff-grp.ff-open{display:flex}}
+@media (prefers-reduced-motion: reduce){.ff-orbit,.ff-core,.ff-float,.ff-in,.ff-stage{animation:none}.ff-lit{animation:none;color:#FFBC51}}
+</style>
+</helmet>
+<div class="ff-root" style="width: 100%; position: relative; background: #07080F; color: #FAF5EF; font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif; overflow: hidden">
+  <!-- Route: /services/marketing-strategy-analytics/ · Marketing Services source copy (supplied 5 Nov 2026), kept word for word.
+       Status: APPROVED by the user as the private design and content reference (version 125, 7 Nov 2026; recorded in v126 with the related
+       cross-link changed from Website &amp; E-commerce Development to Digital &amp; Web Design (UI/UX) as decided at approval), including the hero supporting line
+       and Brand Identity Design cross-link, intro offices paragraph, hero, closing and menu buttons as "Discuss Your Project", the responsive four-step process
+       (4 / 2 / 1 columns), one dark closing panel with "Let's Turn Your Marketing Questions Into a Clear Strategy.", its lead, the shared enquiry, one button and
+       the email link, and the global footer. Hero: core and orbit only. Selected work: no project cards by decision; brand identity case studies are not
+       evidence of market research, brand strategy or analytics work; add no unverified deliverables, measurable results or performance claims. -->
+
+  <a href="#main" class="ff-skip" onClick="{{ skipToMain }}">Skip to main content</a>
+
+  <!-- ================= MEGA MENU (shared component) ================= -->
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="sv-menu" role="dialog" aria-modal="true" aria-label="Site menu" onKeyDown="{{ menuKey }}" class="ff-dark" style="position: absolute; inset: 0; z-index: 20; padding: 16px clamp(12px, 3.4cqi, 48px) 32px; background: rgba(7,8,15,0.82)">
+      <div style="position: relative; width: min(1280px, 100%); box-sizing: border-box; margin: 0 auto; border-radius: 36px; background: #0E1020; border: 1px solid rgba(250,245,239,0.14); overflow: hidden; padding: 16px">
+        <div aria-hidden="true" style="position: absolute; right: -120px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.45), rgba(255,92,94,0.12) 45%, transparent 68%)"></div>
+        <div style="position: relative; height: 60px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); display: flex; align-items: center; justify-content: space-between; padding: 0 8px 0 20px; margin-bottom: 16px">
+          <img src="/_blob/11cb7e45f87956fec08fde70311f542c" alt="Creative Propel" style="width: 140px; height: auto">
+          <button type="button" id="sv-menu-close" onClick="{{ closeMenu }}" aria-label="Close menu" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(250,245,239,0.3); background: transparent; color: #FAF5EF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"></path></svg></button>
+        </div>
+        <div style="position: relative; display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start">
+          <section aria-label="Services" style="flex: 999 1 640px; min-width: 0; padding: 22px; border-radius: 28px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+            <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8C93AD">SERVICES · 3 GROUPS · 15 PAGES</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 6px 24px">
+              <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+                <div style="min-width: 0; display: flex; flex-direction: column; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 12px">
+                  <h3 class="ff-gtitle" style="margin: 0 0 6px; display: flex; align-items: center; gap: 8px; font-family: 'Manrope', Arial, sans-serif; font-size: 16px; font-weight: 700; color: #FFBC51"><span aria-hidden="true" style="{{ g.dotStyle }}"></span>{{ g.name }}</h3>
+                  <button type="button" class="ff-gtoggle" onClick="{{ g.toggle }}" aria-expanded="{{ g.expanded }}" aria-controls="{{ g.listId }}" style="width: 100%; min-height: 48px; align-items: center; gap: 10px; padding: 0; background: transparent; border: 0; color: #FFBC51; font-family: 'Manrope', Arial, sans-serif; font-size: 16px; font-weight: 700; text-align: left; cursor: pointer"><span aria-hidden="true" style="{{ g.dotStyle }}"></span><span style="flex: 1">{{ g.name }}</span><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #A7A9B8">{{ g.count }}</span><span aria-hidden="true" style="{{ g.chevStyle }}">+</span></button>
+                  <ul id="{{ g.listId }}" class="{{ g.listClass }}" style="margin: 0 0 8px; padding: 0; list-style: none; flex-direction: column">
+                    <sc-for list="{{ g.pages }}" as="p" hint-placeholder-count="5">
+                      <li><sc-if value="{{ p.built }}" hint-placeholder-val="{{ true }}"><a href="{{ p.href }}" aria-current="{{ p.current }}" style="{{ p.linkStyle }}"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8C93AD; flex: none; width: 20px">{{ p.n }}</span><span>{{ p.name }}</span></a></sc-if><sc-if value="{{ p.unbuilt }}" hint-placeholder-val="{{ false }}"><span style="{{ p.linkStyle }}"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8C93AD; flex: none; width: 20px">{{ p.n }}</span><span>{{ p.name }}</span></span></sc-if></li>
+                    </sc-for>
+                  </ul>
+                </div>
+              </sc-for>
+            </div>
+          </section>
+          <div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+            <nav aria-label="Menu" style="display: flex; flex-direction: column; gap: 6px">
+              <a href="B-Home.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Home</a>
+              <a href="B-Projects.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Projects</a>
+              <a href="About.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">About</a>
+              <a href="B-Reviews.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Reviews</a>
+              <a href="Contact.dc.html" onClick="{{ closeMenu }}" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Contact</a>
+            </nav>
+            <a href="Contact.dc.html" onClick="{{ closeMenu }}" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 56px; padding: 8px 8px 8px 22px; box-sizing: border-box; border-radius: 999px; background: #FFBC51; color: #0B0C14; text-decoration: none; font-weight: 700; font-size: 15px">Discuss Your Project <span style="width: 40px; height: 40px; flex: none; border-radius: 50%; background: #0B0C14; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <div class="ff-dark" style="position: relative; z-index: 3; background: #07080F; padding: 16px clamp(16px, 3.4cqi, 48px) 0">
+    <header style="position: relative; z-index: 3; margin: 0 auto; width: min(1180px, 100%); height: 64px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 8px 0 20px; box-sizing: border-box">
+      <a href="B-Home.dc.html" aria-label="Creative Propel home" style="display: flex; flex: none"><img src="/_blob/11cb7e45f87956fec08fde70311f542c" alt="Creative Propel" style="width: 148px; height: auto"></a>
+      <nav class="ff-links" aria-label="Primary" style="display: flex; gap: 26px; font-size: 15px; font-weight: 600">
+        <button type="button" id="sv-menu-link" onClick="{{ openMenu }}" aria-expanded="{{ menuExpanded }}" aria-haspopup="dialog" aria-controls="sv-menu" style="display: inline-flex; align-items: center; gap: 6px; background: transparent; border: 0; padding: 0; color: #FFBC51; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#FFBC51" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"></path></svg></button>
+        <a href="B-Projects.dc.html" style="text-decoration: none">Projects</a>
+        <a href="About.dc.html" style="text-decoration: none">About</a>
+        <a href="B-Reviews.dc.html" style="text-decoration: none">Reviews</a>
+        <a href="Contact.dc.html" style="text-decoration: none">Contact</a>
+      </nav>
+      <button type="button" id="sv-menu-btn" onClick="{{ openMenu }}" aria-label="Open menu" aria-expanded="{{ menuExpanded }}" aria-haspopup="dialog" aria-controls="sv-menu" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 0; cursor: pointer; background: radial-gradient(circle at 40% 40%, #FFE6B0, #FFBC51 45%, #FF5C5E)"></button>
+    </header>
+  </div>
+
+  <main id="main" tabindex="-1">
+
+  <!-- ================= 1 · HERO ================= -->
+  <section id="sv-hero" class="ff-dark" style="position: relative; padding: 0 clamp(16px, 3.4cqi, 48px) 56px; overflow: hidden">
+
+    <div style="position: relative; width: min(1280px, 100%); margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 32px; padding: clamp(48px, 6cqi, 88px) 0 24px">
+      <div style="position: relative; z-index: 2; flex: 1 1 540px; min-width: 0; display: flex; flex-direction: column; gap: 26px">
+        <span class="ff-in" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 6px 14px; box-sizing: border-box; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; line-height: 1.4"><span style="width: 7px; height: 7px; flex: none; border-radius: 50%; background: #FFBC51"></span>MARKETING SERVICES</span>
+        <nav aria-label="Breadcrumb" class="ff-in" style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #A7A9B8; display: flex; flex-wrap: wrap; gap: 8px"><a href="B-Home.dc.html" style="text-decoration: none">HOME</a><span aria-hidden="true">/</span><span>MARKETING SERVICES</span><span aria-hidden="true">/</span><span aria-current="page" style="color: #FFBC51">STRATEGY &amp; ANALYTICS</span></nav>
+        <h1 class="ff-in" style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-weight: 600; font-size: clamp(32px, 4.4cqi, 64px); line-height: 1.06; letter-spacing: -0.05em; animation-delay: .1s">Make Smarter Marketing Decisions <span class="ff-lit" style="font-weight: 300; -webkit-text-stroke: 1.3px #FFBC51">With Strategy and Insight.</span></h1>
+        <div class="ff-in" style="max-width: 600px; display: flex; flex-direction: column; gap: 14px; animation-delay: .2s">
+          <p class="ds-p" style="color: #E9E3DC">Build a stronger marketing direction through research, audience understanding, brand positioning, and performance analysis. We help businesses make informed decisions, identify opportunities, and connect marketing activities with meaningful business objectives.</p>
+        </div>
+        <div class="ff-in" style="display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; animation-delay: .3s">
+          <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 60px; padding: 0 10px 0 26px; border-radius: 999px; background: #FFBC51; color: #0B0C14; text-decoration: none; font-weight: 700; font-size: 16px">Discuss Your Project <span style="width: 42px; height: 42px; flex: none; border-radius: 50%; background: #0B0C14; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #C9C3BC">Ready to shape how your brand looks? <a href="B-Svc-Brand.dc.html" style="display: inline; min-height: 24px; color: #FAF5EF; font-weight: 600; text-underline-offset: 3px">See Brand Identity Design</a></p>
+        </div>
+      </div>
+
+      <figure style="position: relative; flex: 1 1 400px; min-width: 0; max-width: 560px; aspect-ratio: 1; margin: 0 auto">
+        <div aria-hidden="true" style="position: absolute; inset: 0">
+          <div class="ff-core" style="position: absolute; inset: 22%; border-radius: 50%; background: radial-gradient(circle at 42% 40%, #FFF1D2 0%, #FFE6B0 6%, #FFBC51 22%, rgba(255,92,94,0.75) 44%, rgba(255,92,94,0.12) 62%, rgba(7,8,15,0) 72%)"></div>
+          <div class="ff-orbit" style="position: absolute; inset: 8%; border-radius: 50%; border: 1px solid rgba(250,245,239,0.18)"><div style="position: absolute; left: 50%; top: -6px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: #FFBC51; box-shadow: 0 0 18px #FFBC51"></div></div>
+          <div style="position: absolute; inset: 0; border-radius: 50%; border: 1px dashed rgba(250,245,239,0.1)"></div>
+
+        </div>
+        <figcaption style="position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%); display: inline-flex; align-items: center; height: 26px; padding: 0 12px; border-radius: 999px; background: rgba(7,8,15,0.8); border: 1px solid rgba(250,245,239,0.22); font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #C9C3BC; white-space: nowrap">ILLUSTRATIVE CONCEPT</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 2 · INTRODUCTION (cream) ================= -->
+  <section class="ff-cream" aria-labelledby="ds-intro-h" style="background: #FAF5EF; color: #0B0C14; padding: clamp(80px, 9cqi, 128px) clamp(16px, 3.4cqi, 48px); border-radius: 48px 48px 0 0">
+    <div style="width: min(1200px, 100%); margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(32px, 6cqi, 96px); align-items: flex-start">
+      <div style="flex: 999 1 520px; min-width: 0; max-width: 700px; display: flex; flex-direction: column; gap: 20px">
+        <h2 id="ds-intro-h" style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-size: clamp(30px, 3.6cqi, 52px); font-weight: 600; line-height: 1.08; letter-spacing: -0.05em">Better Decisions Begin With Better Understanding</h2>
+        <p class="ds-p" style="color: #2A2830">Effective marketing starts with knowing your market, understanding your audience, and recognizing what makes your business different.</p>
+        <p class="ds-p" style="color: #2A2830">Without a clear strategy and reliable performance insights, marketing decisions can become difficult to evaluate.</p>
+        <p class="ds-p" style="color: #2A2830">Creative Propel brings research, strategic thinking, and analytics together to help businesses understand their opportunities and make more informed marketing decisions.</p>
+        <p class="ds-p" style="color: #2A2830">Working from offices in Austin, London and Nancy, we help businesses research their market, define their positioning and measure their marketing performance.</p>
+      </div>
+      <aside aria-labelledby="sv-included" class="ff-hide-sm" style="flex: 1 1 300px; min-width: 0; padding: 26px; border-radius: 32px; background: #0B0C14; color: #FAF5EF; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden">
+        <span aria-hidden="true" style="position: absolute; right: -60px; top: -60px; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.6), rgba(255,92,94,0.15) 50%, transparent 70%)"></span>
+        <p id="sv-included" style="position: relative; margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #FFBC51">OUR STRATEGY &amp; ANALYTICS SERVICES · 03</p>
+        <ol style="position: relative; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+          <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+            <li style="border-top: 1px solid rgba(250,245,239,0.14)"><button type="button" onClick="{{ s.jump }}" style="width: 100%; min-height: 48px; display: flex; gap: 12px; align-items: center; padding: 12px 0; background: transparent; border: 0; color: #FAF5EF; font-family: 'Manrope', Arial, sans-serif; font-size: 16px; font-weight: 600; text-align: left; cursor: pointer"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8C93AD; width: 20px; flex: none">{{ s.n }}</span><span style="flex: 1">{{ s.name }}</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex: none"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button></li>
+          </sc-for>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= 3 · SERVICES EXPLORER (dark) ================= -->
+  <section id="sv-services" class="ff-dark ds-cap" aria-labelledby="ds-svc-h" style="background: #07080F; padding: clamp(80px, 9cqi, 128px) clamp(16px, 3.4cqi, 48px); border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; overflow: hidden">
+    <div style="width: min(1280px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
+      <h2 id="ds-svc-h" style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-size: clamp(30px, 3.6cqi, 52px); font-weight: 600; line-height: 1.08; letter-spacing: -0.05em">Our Strategy &amp; Analytics Services</h2>
+      <div class="ff-labwrap" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch">
+        <div role="tablist" aria-label="Our Strategy &amp; Analytics Services" aria-orientation="vertical" style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+          <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+            <button type="button" role="tab" id="{{ s.id }}" aria-selected="{{ s.selected }}" aria-controls="sv-lab-panel" tabindex="{{ s.tab }}" onClick="{{ s.pick }}" onKeyDown="{{ s.key }}" style="{{ s.btn }}">
+              <span style="{{ s.numStyle }}">{{ s.n }}</span>
+              <span style="{{ s.nameStyle }}">{{ s.name }}</span>
+              <span aria-hidden="true" style="{{ s.dotStyle }}"></span>
+            </button>
+          </sc-for>
+          <p style="margin: 6px 4px 0; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #8C93AD">ARROW KEYS TO EXPLORE</p>
+        </div>
+        <div id="sv-lab-panel" role="tabpanel" aria-labelledby="{{ cur.id }}" style="flex: 999 1 560px; min-width: 0; border-radius: 36px; background: #0E1020; border: 1px solid rgba(250,245,239,0.14); overflow: hidden; display: flex; flex-direction: column">
+          <figure style="position: relative; margin: 0; height: clamp(240px, 26cqi, 330px); overflow: hidden; background: radial-gradient(circle at 80% 20%, rgba(255,188,81,0.35), rgba(255,92,94,0.1) 40%, transparent 65%), #0B0D17">
+            <div aria-hidden="true" style="position: absolute; inset: 0">
+              <sc-if value="{{ a0 }}" hint-placeholder-val="{{ true }}"><div class="ff-stage" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><svg viewBox="0 0 200 200" style="height: 82%; width: auto; overflow: visible"><circle cx="86" cy="86" r="46" fill="none" stroke="#FAF5EF" stroke-width="7"></circle><path d="M120 120l42 42" stroke="#FAF5EF" stroke-width="12" stroke-linecap="round"></path><path d="M62 100l16-20 14 12 18-26" fill="none" stroke="#FFBC51" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></sc-if>
+              <sc-if value="{{ a1 }}" hint-placeholder-val="{{ false }}"><div class="ff-stage" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><svg viewBox="0 0 200 200" style="height: 82%; width: auto; overflow: visible"><path d="M100 24v152M24 100h152" stroke="rgba(250,245,239,0.4)" stroke-width="2"></path><circle cx="58" cy="140" r="10" fill="rgba(250,245,239,0.4)"></circle><circle cx="70" cy="60" r="10" fill="rgba(250,245,239,0.4)"></circle><circle cx="140" cy="146" r="10" fill="rgba(250,245,239,0.4)"></circle><circle cx="142" cy="58" r="20" fill="#FFBC51"></circle><path d="M142 46l3.5 8 8.5 1-6.3 5.8 1.7 8.4-7.4-4.3-7.4 4.3 1.7-8.4L130 55l8.5-1z" fill="#0B0C14"></path></svg></div></sc-if>
+              <sc-if value="{{ a2 }}" hint-placeholder-val="{{ false }}"><div class="ff-stage" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center"><svg viewBox="0 0 200 200" style="height: 82%; width: auto; overflow: visible"><path d="M40 160h120" fill="none" stroke="rgba(250,245,239,0.55)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path><rect x="52" y="120" width="20" height="40" rx="4" fill="rgba(250,245,239,0.3)"></rect><rect x="84" y="96" width="20" height="64" rx="4" fill="rgba(250,245,239,0.3)"></rect><rect x="116" y="70" width="20" height="90" rx="4" fill="#FFBC51"></rect><path d="M50 98l34-22 32 10 34-38" fill="none" stroke="#FF5C5E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="150" cy="48" r="7" fill="#FF5C5E"></circle></svg></div></sc-if>
+            </div>
+            <figcaption style="position: absolute; left: 16px; bottom: 14px; display: inline-flex; align-items: center; gap: 10px; height: 26px; padding: 0 12px; border-radius: 999px; background: rgba(7,8,15,0.8); border: 1px solid rgba(250,245,239,0.22); font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #C9C3BC">{{ cur.n }} / 03 · ILLUSTRATIVE CONCEPT</figcaption>
+          </figure>
+          <div style="padding: clamp(22px, 3cqi, 32px); display: flex; flex-direction: column; gap: 14px">
+            <h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(22px, 2.3cqi, 32px); font-weight: 600; letter-spacing: -0.045em; line-height: 1.12">{{ cur.name }}</h3>
+            <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #E9E3DC; max-width: 640px">{{ cur.desc }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ff-list" style="flex-direction: column; gap: 10px">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+          <div style="border-radius: 24px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14); overflow: hidden">
+            <h3 style="margin: 0"><button type="button" onClick="{{ s.pick }}" aria-expanded="{{ s.selected }}" aria-controls="{{ s.pid }}" style="width: 100%; min-height: 60px; display: flex; align-items: center; gap: 14px; padding: 16px 18px; background: transparent; border: 0; color: #FAF5EF; text-align: left; cursor: pointer; font-family: 'Manrope', Arial, sans-serif">
+              <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #FFBC51">{{ s.n }}</span>
+              <span style="flex: 1; font-family: 'Unbounded', sans-serif; font-size: 17px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.25">{{ s.name }}</span>
+              <span aria-hidden="true" style="{{ s.dotStyle }}"></span>
+            </button></h3>
+            <sc-if value="{{ s.active }}" hint-placeholder-val="{{ false }}">
+              <p id="{{ s.pid }}" style="margin: 0; padding: 0 18px 20px 52px; font-size: 16px; line-height: 1.65; color: #E9E3DC">{{ s.desc }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4 · BUSINESS BENEFITS / OBJECTIVES (ink) ================= -->
+  <section class="ff-dark" aria-labelledby="mk-ben-h" style="background: #0E1020; padding: clamp(80px, 9cqi, 128px) clamp(16px, 3.4cqi, 48px); border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; right: -160px; top: -160px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.28), rgba(255,92,94,0.08) 50%, transparent 70%)"></div>
+    <div style="position: relative; width: min(1280px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
+      <h2 id="mk-ben-h" style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-size: clamp(30px, 3.6cqi, 52px); font-weight: 600; line-height: 1.08; letter-spacing: -0.05em; max-width: 900px">Turn Insights Into Marketing Direction</h2>
+      <ul aria-label="Turn Insights Into Marketing Direction" style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(max(420px, 40%), 100%), 1fr)); gap: 2px; background: rgba(250,245,239,0.18); border-radius: 32px; overflow: hidden; border: 1px solid rgba(250,245,239,0.18)">
+          <li style="display: flex; flex-direction: column; gap: 12px; padding: clamp(22px, 3cqi, 36px); background: #0E1020"><span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Geist Mono', monospace; font-size: 12px; color: #FFBC51"><span style="width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #FFBC51; box-sizing: border-box"></span>01</span><h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.25">Understand Your Market</h3><p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E9E3DC">Explore industry trends, competitor positioning, and audience expectations to identify relevant opportunities.</p></li>
+          <li style="display: flex; flex-direction: column; gap: 12px; padding: clamp(22px, 3cqi, 36px); background: #0E1020"><span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Geist Mono', monospace; font-size: 12px; color: #FFBC51"><span style="width: 10px; height: 10px; border-radius: 50%; background: #FFBC51"></span>02</span><h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.25">Know Your Audience</h3><p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E9E3DC">Develop a clearer understanding of your customers, their needs, interests, and decision-making behavior.</p></li>
+          <li style="display: flex; flex-direction: column; gap: 12px; padding: clamp(22px, 3cqi, 36px); background: #0E1020"><span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Geist Mono', monospace; font-size: 12px; color: #FFBC51"><span style="width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #FFBC51; box-sizing: border-box"></span>03</span><h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.25">Strengthen Your Brand Positioning</h3><p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E9E3DC">Define what makes your business different and communicate that value consistently across marketing channels.</p></li>
+          <li style="display: flex; flex-direction: column; gap: 12px; padding: clamp(22px, 3cqi, 36px); background: #0E1020"><span aria-hidden="true" style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Geist Mono', monospace; font-size: 12px; color: #FFBC51"><span style="width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #FFBC51; box-sizing: border-box"></span>04</span><h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.25">Measure What Matters</h3><p style="margin: 0; font-size: 16px; line-height: 1.65; color: #E9E3DC">Use relevant performance indicators to understand how marketing activities are performing and where improvements may be needed.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 5 · PROCESS (cream) ================= -->
+  <section class="ff-cream" aria-labelledby="ds-proc-h" style="background: #FAF5EF; color: #0B0C14; padding: clamp(80px, 9cqi, 128px) clamp(16px, 3.4cqi, 48px); border-radius: 48px 48px 0 0; margin-top: -48px; position: relative">
+    <div style="width: min(1200px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 6px 14px; box-sizing: border-box; border-radius: 999px; background: #FFFFFF; border: 1px solid #E3DACE; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; line-height: 1.4"><span style="width: 7px; height: 7px; flex: none; border-radius: 50%; background: #FF5C5E"></span>OUR STRATEGY &amp; ANALYTICS PROCESS</span>
+        <h2 id="ds-proc-h" style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-size: clamp(30px, 3.6cqi, 52px); font-weight: 600; line-height: 1.08; letter-spacing: -0.05em; max-width: 820px">From Research to Actionable Insights</h2>
+      </div>
+      <div aria-hidden="true" class="ff-hide-sm" style="position: relative; height: 64px; margin: 0 6%">
+        <div style="position: absolute; left: 0; right: 0; top: 31px; height: 2px; background: #E3DACE; border-radius: 2px"></div>
+        <div style="{{ trackFill }}"></div>
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+          <span style="{{ st.node }}"></span>
+        </sc-for>
+      </div>
+      <ol aria-label="Our Strategy &amp; Analytics Process" class="bi-steps">
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+          <li style="display: flex">
+            <button type="button" id="{{ st.id }}" aria-pressed="{{ st.selected }}" onClick="{{ st.pick }}" onKeyDown="{{ st.key }}" style="{{ st.card }}">
+              <span style="{{ st.badge }}">{{ st.n }}</span>
+              <span style="font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.2">{{ st.name }}</span>
+              <span style="{{ st.descStyle }}">{{ st.desc }}</span>
+            </button>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= 7 · WHY CREATIVE PROPEL + SELECTED WORK (dark) — approved v125: no verified market research, brand strategy or analytics project yet; supplied heading, intro and Explore Our Work only ================= -->
+  <section class="ff-dark" aria-labelledby="ds-work-h" style="background: #07080F; padding: clamp(80px, 9cqi, 128px) clamp(16px, 3.4cqi, 48px); border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; overflow: hidden">
+    <div style="width: min(1280px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 32px">
+
+            <div style="display: flex; flex-direction: column; gap: 32px">
+        <h2 id="mk-why-h" style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-size: clamp(30px, 3.6cqi, 52px); font-weight: 600; line-height: 1.08; letter-spacing: -0.05em">Why Work With Creative Propel?</h2>
+        <ul aria-label="Why Work With Creative Propel?" style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 14px">
+          <li style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 28px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14)"><span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 40% 40%, #FFE6B0, #FFBC51 45%, #FF5C5E); color: #0B0C14; font-family: 'Geist Mono', monospace; font-size: 12px">01</span><h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.25">Strategy Before Activity</h3><p style="margin: 0; font-size: 15px; line-height: 1.65; color: #E9E3DC">We believe marketing decisions should be connected to clear business objectives.</p></li>
+          <li style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 28px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14)"><span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 40% 40%, #FFE6B0, #FFBC51 45%, #FF5C5E); color: #0B0C14; font-family: 'Geist Mono', monospace; font-size: 12px">02</span><h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.25">An Audience-First Approach</h3><p style="margin: 0; font-size: 15px; line-height: 1.65; color: #E9E3DC">We consider customer needs, behavior, and expectations when developing marketing direction.</p></li>
+          <li style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 28px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14)"><span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 40% 40%, #FFE6B0, #FFBC51 45%, #FF5C5E); color: #0B0C14; font-family: 'Geist Mono', monospace; font-size: 12px">03</span><h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.25">Clear Brand Positioning</h3><p style="margin: 0; font-size: 15px; line-height: 1.65; color: #E9E3DC">We help businesses communicate their value and establish a more consistent market presence.</p></li>
+          <li style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 28px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14)"><span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 40% 40%, #FFE6B0, #FFBC51 45%, #FF5C5E); color: #0B0C14; font-family: 'Geist Mono', monospace; font-size: 12px">04</span><h3 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.25">Decisions Supported by Data</h3><p style="margin: 0; font-size: 15px; line-height: 1.65; color: #E9E3DC">We use available research and performance information to help evaluate marketing activities and identify improvement opportunities.</p></li>
+        </ul>
+      </div>
+      <div aria-hidden="true" style="height: 1px; background: rgba(250,245,239,0.14); margin: 8px 0"></div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+        <div style="flex: 1 1 520px; min-width: 0; max-width: 780px; display: flex; flex-direction: column; gap: 20px">
+          <span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 6px 14px; box-sizing: border-box; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; line-height: 1.4"><span style="width: 7px; height: 7px; flex: none; border-radius: 50%; background: #FFBC51"></span>SELECTED WORK</span>
+          <h2 id="ds-work-h" style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-size: clamp(30px, 3.6cqi, 52px); font-weight: 600; line-height: 1.08; letter-spacing: -0.05em">Strategy That Gives Marketing a Clearer Direction</h2>
+          <p class="ds-p" style="color: #E9E3DC">Explore selected Creative Propel projects and see how we approach business challenges through research, brand thinking, and digital strategy.</p>
+        </div>
+        <a href="B-Projects.dc.html" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.24); text-decoration: none; font-weight: 700">Explore Our Work <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8 · FAQ (cream) ================= -->
+  <section class="ff-cream" aria-labelledby="ds-faq-h" style="background: #FAF5EF; color: #0B0C14; padding: clamp(80px, 9cqi, 128px) clamp(16px, 3.4cqi, 48px); border-radius: 48px 48px 0 0; margin-top: -48px; position: relative">
+    <div style="width: min(1200px, 100%); margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(32px, 5cqi, 80px); align-items: flex-start">
+      <div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+        <h2 id="ds-faq-h" style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-size: clamp(30px, 3.6cqi, 52px); font-weight: 600; line-height: 1.08; letter-spacing: -0.05em">Frequently Asked Questions</h2>
+      </div>
+      <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; border-top: 1px solid #0B0C14">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+          <div style="border-bottom: 1px solid #E3DACE">
+            <h3 style="margin: 0">
+              <button type="button" id="{{ f.id }}" onClick="{{ f.toggle }}" aria-expanded="{{ f.expanded }}" aria-controls="{{ f.pid }}" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: 'Manrope', Arial, sans-serif; color: #0B0C14">
+                <span style="flex: 1; font-size: 18px; font-weight: 700; line-height: 1.45">{{ f.q }}</span>
+                <span aria-hidden="true" style="{{ f.icon }}"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h10"></path><path class="{{ f.vClass }}" d="M8 3v10"></path></svg></span>
+              </button>
+            </h3>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}"><p id="{{ f.pid }}" style="margin: 0 56px 22px 0; font-size: 16px; line-height: 1.7; color: #2A2830">{{ f.a }}</p></sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 9 · MORE MARKETING SERVICES (cream-2) ================= -->
+  <section class="ff-cream" style="background: #F1EAE0; color: #0B0C14; padding: clamp(64px, 7cqi, 96px) clamp(16px, 3.4cqi, 48px) clamp(96px, 9cqi, 128px); border-radius: 48px 48px 0 0; margin-top: -48px; position: relative">
+    <div style="width: min(1200px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+        <h2 style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; color: #5A5560">MORE MARKETING SERVICES</h2>
+        <button type="button" id="sv-all-btn" onClick="{{ openMenu }}" aria-haspopup="dialog" aria-controls="sv-menu" aria-expanded="{{ menuExpanded }}" style="display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 0; padding: 0; min-height: 44px; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 700; color: #B83234; cursor: pointer">All 15 Services <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 12px">
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="5">
+          <a href="{{ r.href }}" style="text-decoration: none; display: flex; flex-direction: column; gap: 18px; padding: 22px; border-radius: 28px; background: #FFFFFF; border: 1px solid #E3DACE; min-height: 150px; box-sizing: border-box">
+            <span style="display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #5A5560">{{ r.n }}</span><span aria-hidden="true" style="width: 36px; height: 36px; border-radius: 50%; background: #0B0C14; display: inline-flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></span>
+            <span style="margin-top: auto; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.25">{{ r.name }}</span>
+          </a>
+        </sc-for>
+      </div>
+      <section aria-labelledby="mk-cta-h" style="margin-top: 24px; display: flex; flex-direction: column; gap: 28px; padding: clamp(24px, 3.4cqi, 40px); border-radius: 36px; background: #0B0C14; color: #FAF5EF">
+        <div style="display: flex; flex-direction: column; gap: 12px">
+          <h2 id="mk-cta-h" style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(24px, 2.6cqi, 36px); font-weight: 600; letter-spacing: -0.045em; line-height: 1.12">Let's Turn Your Marketing Questions <span style="font-weight: 300; color: #FFBC51">Into a Clear Strategy.</span></h2>
+          <p style="margin: 0; max-width: 680px; font-size: 17px; line-height: 1.7; color: #E9E3DC">Whether you're entering a new market, repositioning your brand, or looking to understand your marketing performance, let's start with the right questions.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding-top: 24px; border-top: 1px solid rgba(250,245,239,0.14)">
+          <div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+            <h3 id="ds-enq-h" style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(19px, 1.8cqi, 24px); font-weight: 600; letter-spacing: -0.04em; line-height: 1.2">Bridging the Gap Between Strategy and Growth.</h3>
+            <p style="margin: 0; max-width: 640px; font-size: 16px; line-height: 1.7; color: #E9E3DC">Every business has different marketing goals. Tell us what you're looking to achieve, and let's explore how the right combination of strategy, creativity, and technology can help.</p>
+          </div>
+          <div class="ff-dark" style="flex: 0 1 auto; min-width: 0; max-width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; background: transparent">
+          <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 8px 0 24px; border-radius: 999px; background: #FFBC51; color: #0B0C14; text-decoration: none; font-weight: 700; font-size: 16px">Discuss Your Project <span style="width: 40px; height: 40px; border-radius: 50%; background: #0B0C14; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+            <a href="mailto:info@creativepropel.com" style="font-size: 16px; font-weight: 600; color: #FAF5EF">info@creativepropel.com</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ================= 10 · FOOTER (approved global footer) ================= -->
+  <footer id="sv-contact" class="ff-dark" style="background: #07080F; padding: clamp(96px, 10cqi, 144px) clamp(16px, 3.4cqi, 48px) 32px; border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; left: 50%; top: -420px; width: 900px; height: 900px; margin-left: -450px; border-radius: 50%; background: radial-gradient(circle at 50% 70%, rgba(255,188,81,0.5), rgba(255,92,94,0.14) 36%, transparent 60%)"></div>
+    <div style="position: relative; width: min(1280px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 64px">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+        <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(40px, 7cqi, 104px); font-weight: 600; line-height: 0.98; letter-spacing: -0.06em">Let's Build <span style="font-weight: 300; color: #FFBC51; -webkit-text-stroke: 1.4px #FFBC51">What's Next.</span></h2>
+        <p style="margin: 0; max-width: 600px; font-size: 19px; line-height: 1.65; color: #E9E3DC">Your business has potential. Let's give it the digital direction, creativity and technology to go further.</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; margin-top: 6px">
+          <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 64px; padding: 0 10px 0 30px; border-radius: 999px; background: #FFBC51; color: #0B0C14; text-decoration: none; font-weight: 700; font-size: 17px">Discuss Your Project <span style="width: 46px; height: 46px; border-radius: 50%; background: #0B0C14; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+          <a href="mailto:info@creativepropel.com" style="font-size: 17px; font-weight: 600">info@creativepropel.com</a>
+        </div>
+      </div>
+
+      <div class="hp-offices" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 14px">
+        <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(250,245,239,0.08); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em">UNITED STATES</span><span style="font-family: 'Geist Mono', monospace; font-size: 14px; color: #FFBC51">{{ tAus }}</span></div>
+          <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">Austin</p>
+          <address style="font-style: normal; font-size: 15px; line-height: 1.6; color: #D9D3CC">5900 Balcones Dr STE 14405<br>Austin, TX 78731<br>United States</address>
+          
+        </div>
+        <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(250,245,239,0.08); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em">UNITED KINGDOM</span><span style="font-family: 'Geist Mono', monospace; font-size: 14px; color: #FFBC51">{{ tLon }}</span></div>
+          <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">London</p>
+          <address style="font-style: normal; font-size: 15px; line-height: 1.6; color: #D9D3CC">30 Churchill Pl<br>Canary Wharf Estate<br>London E14 5RE<br>United Kingdom</address>
+          
+        </div>
+        <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(250,245,239,0.08); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em">FRANCE</span><span style="font-family: 'Geist Mono', monospace; font-size: 14px; color: #FFBC51">{{ tFra }}</span></div>
+          <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">Nancy</p>
+          <address style="font-style: normal; font-size: 15px; line-height: 1.6; color: #D9D3CC">2 Allée de l'Arno<br>54500 Vandœuvre-lès-Nancy<br>France</address>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 32px">
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <img src="/_blob/f8348b2d676579851b5f399effbbfeb9" alt="Creative Propel" style="width: 110px; height: auto">
+          <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.14em; color: #FAF5EF">STRATEGY. CREATIVITY. TECHNOLOGY. <span style="color: #FFBC51">GROWTH.</span></p>
+        </div>
+        <div style="flex: 0 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+        <nav aria-label="Footer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 40px; font-size: 15px">
+          <a href="B-Home.dc.html#hp-services" style="text-decoration: none">Services</a>
+          <a href="B-Projects.dc.html" style="text-decoration: none">Projects</a>
+          <a href="About.dc.html" style="text-decoration: none">About</a>
+          <a href="B-Reviews.dc.html" style="text-decoration: none">Reviews</a>
+          <a href="Contact.dc.html" style="text-decoration: none">Contact</a>
+        </nav>
+        <!-- Social: official platform icons from Font Awesome Free 7.3.1 brand set (CC BY 4.0, fontawesome.com/license/free), shown in a single colour -->
+        <ul aria-label="Creative Propel on social media" style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 12px">
+          <li><a class="ff-soc" href="https://www.linkedin.com/company/creativepropel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on LinkedIn (opens in a new tab)" title="LinkedIn"><svg width="17.5" height="20" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.instagram.com/creativepropel/" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on Instagram (opens in a new tab)" title="Instagram"><svg width="17.5" height="20" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.facebook.com/creativepropelllc/" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on Facebook (opens in a new tab)" title="Facebook"><svg width="20.0" height="20" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.tiktok.com/@creativepropel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on TikTok (opens in a new tab)" title="TikTok"><svg width="17.5" height="20" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M448.5 209.9c-44 .1-87-13.6-122.8-39.2l0 178.7c0 33.1-10.1 65.4-29 92.6s-45.6 48-76.6 59.6-64.8 13.5-96.9 5.3-60.9-25.9-82.7-50.8-35.3-56-39-88.9 2.9-66.1 18.6-95.2 40-52.7 69.6-67.7 62.9-20.5 95.7-16l0 89.9c-15-4.7-31.1-4.6-46 .4s-27.9 14.6-37 27.3-14 28.1-13.9 43.9 5.2 31 14.5 43.7 22.4 22.1 37.4 26.9 31.1 4.8 46-.1 28-14.4 37.2-27.1 14.2-28.1 14.2-43.8l0-349.4 88 0c-.1 7.4 .6 14.9 1.9 22.2 3.1 16.3 9.4 31.9 18.7 45.7s21.3 25.6 35.2 34.6c19.9 13.1 43.2 20.1 67 20.1l0 87.4z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.behance.net/Creative_propel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on Behance (opens in a new tab)" title="Behance"><svg width="22.5" height="20" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8l-167.1 0 0 354.4 171.8 0c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9l73.1 0c28.1 0 53.4 7.9 53.4 40.5 0 30.1-19.7 42.2-47.5 42.2l-79 0 0-82.7zm83.3 233.7l-83.3 0 0-97.6 84.9 0c34.3 0 56 14.3 56 50.6 0 35.8-25.9 47-57.6 47zM519.7 128.9l-143.7 0 0-34.9 143.7 0 0 34.9zM576 305.2c0-75.9-44.4-139.2-124.9-139.2-78.2 0-131.3 58.8-131.3 135.8 0 79.9 50.3 134.7 131.3 134.7 61.3 0 101-27.6 120.1-86.3l-62.2 0c-6.7 21.9-34.3 33.5-55.7 33.5-41.3 0-63-24.2-63-65.3l185.1 0c.3-4.2 .6-8.7 .6-13.2zM390.4 274c2.3-33.7 24.7-54.8 58.5-54.8 35.4 0 53.2 20.8 56.2 54.8l-114.7 0z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.youtube.com/@CreativePropel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on YouTube (opens in a new tab)" title="YouTube"><svg width="22.5" height="20" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z"></path></svg></a></li>
+        </ul>
+        </div>
+      </div>
+      <div style="height: 1px; background: linear-gradient(90deg, transparent, rgba(250,245,239,0.3), transparent)"></div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #A7A9B8">
+        <span>© 2026 Creative Propel · creativepropel.com</span>
+        <span style="display: flex; gap: 20px"><a href="Privacy.dc.html" style="text-decoration: none; text-transform: uppercase">Privacy Policy</a><a href="Cookies.dc.html" style="text-decoration: none; text-transform: uppercase">Cookies Policy</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { svc: 0, step: 0, faq: 0, menu: false, grp: 'mkt', tAus: '--:--', tLon: '--:--', tFra: '--:--' };
+  }
+  componentDidMount() { this.tick(); this.timer = setInterval(() => this.tick(), 30000); const hero = document.getElementById('sv-hero'); if (hero && typeof IntersectionObserver !== 'undefined') { this.heroIO = new IntersectionObserver((entries) => { entries.forEach((en) => { hero.dataset.offscreen = en.isIntersecting ? '0' : '1'; }); }); this.heroIO.observe(hero); } }
+  componentWillUnmount() { clearInterval(this.timer); if (this.heroIO) this.heroIO.disconnect(); }
+  tick() {
+    const f = (tz) => { try { return new Date().toLocaleTimeString('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit' }); } catch (e) { return '--:--'; } };
+    this.setState({ tAus: f('America/Chicago'), tLon: f('Europe/London'), tFra: f('Europe/Paris') });
+  }
+  renderVals() {
+    const S = this.state;
+    const focusSoon = (id) => setTimeout(() => { const el = document.getElementById(id); if (el) { el.focus(); if (el.scrollIntoView) el.scrollIntoView({ block: 'nearest' }); } }, 40);
+
+    /* ---- PAGE DATA (supplied Marketing Services source copy, exact) ---- */
+    const PAGE = "Strategy & Analytics";
+    const GROUP = 'mkt';
+    const CAPS = [{"name": "Market Research & Analysis", "desc": "We research your market, competitors, industry positioning, and target audience to identify opportunities and understand the environment in which your business operates."}, {"name": "Brand Strategy", "desc": "We help define your brand positioning, messaging, differentiation, and communication direction. The goal is to create a clearer identity that connects your business with the audience you want to reach."}, {"name": "Marketing Analytics & Reporting", "desc": "We help identify relevant marketing metrics, review campaign performance, and organize reporting around your business objectives. Where appropriate, this can include analytics and tracking tools such as Google Analytics."}];
+    const STEPS = [{"name": "Discovery & Alignment", "desc": "We discuss your business objectives, current marketing activities, target audience, and challenges.", "deliv": ""}, {"name": "Research & Analysis", "desc": "We review market conditions, competitors, audience information, and available performance data.", "deliv": ""}, {"name": "Strategy & Positioning", "desc": "We develop recommendations around brand messaging, marketing priorities, and opportunities for growth.", "deliv": ""}, {"name": "Measurement & Optimization", "desc": "We identify relevant KPIs, review performance, and use available insights to inform future marketing decisions.", "deliv": ""}];
+    const FAQS = [{"q": "Why does my business need a marketing strategy?", "a": "A marketing strategy gives your business a clearer direction. It helps define your audience, priorities, messaging, channels, and objectives."}, {"q": "What is included in market research?", "a": "Depending on the project, research can include competitor analysis, audience insights, industry research, market positioning, and opportunity assessment."}, {"q": "Can you help reposition an existing brand?", "a": "Yes. We can review your current positioning, messaging, audience, and market presence to identify opportunities for improvement."}, {"q": "Which analytics tools do you work with?", "a": "The tools depend on your requirements and existing setup. Google Analytics and other relevant tracking platforms can be considered where appropriate."}, {"q": "How do you measure marketing success?", "a": "We establish relevant KPIs based on your objectives. These may include traffic, engagement, leads, conversions, campaign performance, and other business indicators."}];
+    /* ---------------------------------------------------------------------------- */
+
+    const FILES = {"Brand Identity Design": "B-Svc-Brand.dc.html", "Digital & Web Design (UI/UX)": "Svc-DigitalWeb.dc.html", "Marketing & Advertising Design": "Svc-Marketing.dc.html", "Print & Publication Design": "Svc-Print.dc.html", "Motion Graphics & Video": "Svc-Motion.dc.html", "Website & E-commerce Development": "Svc-WebDev.dc.html", "Development by Product Type": "Svc-DevProduct.dc.html", "Development by Technology Focus": "Svc-DevTech.dc.html", "Quality, Testing & Maintenance": "Svc-QA.dc.html", "Strategy & Consulting": "Svc-Strategy.dc.html", "Digital Marketing & Traffic Generation": "Svc-MktDigital.dc.html", "Content & Brand Engagement": "Svc-MktContent.dc.html", "Social Media & Community": "Svc-MktSocial.dc.html", "Conversion & Customer Nurturing": "Svc-MktConversion.dc.html", "Strategy & Analytics": "Svc-MktStrategy.dc.html"};
+    const hrefOf = (nm) => FILES[nm] || '';
+
+    const N = CAPS.length;
+    const go = (i, focus) => { const n = (i + N) % N; this.setState({ svc: n }); if (focus) focusSoon('sv-tab-' + n); };
+    const services = CAPS.map((c, i) => {
+      const on = i === S.svc;
+      return {
+        name: c.name, desc: c.desc, n: String(i + 1).padStart(2, '0'), id: 'sv-tab-' + i, pid: `sv-acc-${i}`,
+        active: on, selected: on ? 'true' : 'false', tab: on ? '0' : '-1',
+        btn: 'width: 100%; min-height: 64px; display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 22px; cursor: pointer; text-align: left; font-family: Manrope, Arial, sans-serif; color: #FAF5EF; box-sizing: border-box; transition: background .3s, border-color .3s; ' + (on ? 'border: 2px solid #FFBC51; background: rgba(255,188,81,0.12);' : 'border: 2px solid rgba(250,245,239,0.12); background: transparent;'),
+        numStyle: 'font-family: Geist Mono, monospace; font-size: 12px; width: 22px; flex: none; color: ' + (on ? '#FFBC51' : '#8C93AD') + ';',
+        nameStyle: 'flex: 1; font-family: Unbounded, sans-serif; font-size: 17px; letter-spacing: -0.03em; line-height: 1.25; font-weight: ' + (on ? '600; color: #FFBC51;' : '400; color: #FAF5EF;'),
+        dotStyle: on ? 'width: 10px; height: 10px; flex: none; border-radius: 50%; background: #FFBC51; box-shadow: 0 0 12px #FFBC51;' : 'width: 10px; height: 10px; flex: none; border-radius: 50%; border: 1px solid rgba(250,245,239,0.3); box-sizing: border-box;',
+        pick: () => go(i, false),
+        jump: () => { go(i, false); const el = document.getElementById('sv-services'); if (el && el.scrollIntoView) el.scrollIntoView({ behavior: (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) ? 'auto' : 'smooth' }); },
+        key: (e) => {
+          if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); go(S.svc + 1, true); }
+          else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); go(S.svc - 1, true); }
+          else if (e.key === 'Home') { e.preventDefault(); go(0, true); }
+          else if (e.key === 'End') { e.preventDefault(); go(N - 1, true); }
+        }
+      };
+    });
+    const art = (k) => S.svc === k;
+
+    const M = STEPS.length;
+    const sgo = (i, focus) => { const n = (i + M) % M; this.setState({ step: n }); if (focus) focusSoon('sv-step-' + n); };
+    const steps = STEPS.map((st, i) => {
+      const on = i === S.step, done = i < S.step;
+      const left = M === 1 ? 50 : (i / (M - 1)) * 100;
+      return {
+        name: st.name, desc: st.desc, deliv: st.deliv, lblStyle: 'font-weight: 700; color: ' + (i === S.step ? '#FFBC51' : '#0B0C14') + ';', n: String(i + 1).padStart(2, '0'), id: 'sv-step-' + i,
+        selected: on ? 'true' : 'false',
+        descStyle: 'font-size: 15px; line-height: 1.6; color: ' + (on ? '#E9E3DC' : '#2A2830') + ';',
+        node: 'position: absolute; top: 32px; left: ' + left + '%; transform: translate(-50%, -50%); border-radius: 50%; transition: all .5s cubic-bezier(.22,1,.36,1); ' + (on ? 'width: 34px; height: 34px; background: #FFBC51; box-shadow: 0 0 0 10px rgba(255,188,81,0.22);' : (done ? 'width: 16px; height: 16px; background: #0B0C14;' : 'width: 16px; height: 16px; background: #FAF5EF; border: 2px solid #D9CFC3; box-sizing: border-box;')),
+        card: 'width: 100%; text-align: left; cursor: pointer; padding: 22px; border-radius: 28px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; font-family: Manrope, Arial, sans-serif; box-sizing: border-box; ' + (on ? 'border: 1px solid #0B0C14; background: #0B0C14; color: #FAF5EF;' : 'border: 1px solid #E3DACE; background: #FFFFFF; color: #0B0C14;'),
+        badge: 'width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Geist Mono, monospace; font-size: 12px; ' + (on ? 'background: radial-gradient(circle at 40% 40%, #FFE6B0, #FFBC51 45%, #FF5C5E); color: #0B0C14;' : 'background: #0B0C14; color: #FFBC51;'),
+        pick: () => sgo(i, false),
+        key: (e) => {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); sgo(S.step + 1, true); }
+          else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); sgo(S.step - 1, true); }
+        }
+      };
+    });
+    const fillPct = M === 1 ? 0 : (S.step / (M - 1)) * 100;
+
+    const faqs = FAQS.map((f, i) => {
+      const open = S.faq === i;
+      return { q: f.q, a: f.a, id: 'ds-faq-' + i, pid: 'ds-faq-a-' + i, open: open, expanded: open ? 'true' : 'false', vClass: open ? 'lp-hide' : '', icon: 'width: 40px; height: 40px; flex: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-sizing: border-box; color: #0B0C14; ' + (open ? 'background: #FFBC51;' : 'border: 1px solid #0B0C14;'), toggle: () => this.setState({ faq: open ? -1 : i }) };
+    });
+
+    const groupData = [
+      { id: 'design', name: 'Design Services', dot: '#FFBC51', pages: ['Brand Identity Design', 'Digital & Web Design (UI/UX)', 'Marketing & Advertising Design', 'Print & Publication Design', 'Motion Graphics & Video'] },
+      { id: 'dev', name: 'Web, App & Software Development', dot: '#FF5C5E', pages: ['Website & E-commerce Development', 'Development by Product Type', 'Development by Technology Focus', 'Quality, Testing & Maintenance', 'Strategy & Consulting'] },
+      { id: 'mkt', name: 'Marketing Services', dot: '#FAF5EF', pages: ['Digital Marketing & Traffic Generation', 'Content & Brand Engagement', 'Social Media & Community', 'Conversion & Customer Nurturing', 'Strategy & Analytics'] }
+    ];
+    let pn = 0;
+    const groups = groupData.map((g) => {
+      const open = S.grp === g.id;
+      return {
+        name: g.name, listId: 'sv-grp-' + g.id, count: String(g.pages.length).padStart(2, '0'),
+        expanded: open ? 'true' : 'false', listClass: open ? 'ff-grp ff-open' : 'ff-grp',
+        dotStyle: 'width: 8px; height: 8px; flex: none; border-radius: 50%; background: ' + g.dot + ';',
+        chevStyle: 'width: 28px; height: 28px; flex: none; border-radius: 50%; border: 1px solid rgba(250,245,239,0.3); display: inline-flex; align-items: center; justify-content: center; color: #FAF5EF; font-size: 16px; transform: rotate(' + (open ? '45' : '0') + 'deg); transition: transform .3s;',
+        toggle: () => this.setState({ grp: open ? '' : g.id }),
+        pages: g.pages.map((nm) => { pn += 1; const cur = nm === PAGE; const built = !!FILES[nm]; return { name: nm, n: String(pn).padStart(2, '0'), href: hrefOf(nm), built: built, unbuilt: !built, current: cur ? 'page' : 'false', linkStyle: 'display: flex; gap: 10px; align-items: baseline; padding: 8px 0; text-decoration: none; font-size: 15px; line-height: 1.4; ' + (cur ? 'color: #FFBC51; font-weight: 700;' : (built ? '' : 'color: #A7A9B8;')) }; })
+      };
+    });
+    const grp = groupData.find((g) => g.id === GROUP);
+    let base = 0; for (const g of groupData) { if (g.id === GROUP) break; base += g.pages.length; }
+    const related = grp.pages.map((nm, i) => ({ name: nm, n: String(base + i + 1).padStart(2, '0'), href: hrefOf(nm) })).filter((r) => r.name !== PAGE)
+      .concat([{ name: 'Digital & Web Design (UI/UX)', n: '02', href: hrefOf('Digital & Web Design (UI/UX)') }]); /* cross-link to the design group (UI/UX), decided by the user at approval */
+
+    return {
+      groups: groups, related: related,
+      menuOpen: S.menu, menuExpanded: S.menu ? 'true' : 'false',
+      openMenu: () => { const t = document.activeElement; this.menuReturn = t && t.id ? t.id : 'sv-menu-btn'; this.setState({ menu: true }); focusSoon('sv-menu-close'); },
+      closeMenu: () => { this.setState({ menu: false }); focusSoon(this.menuReturn || 'sv-menu-btn'); },
+      menuKey: (e) => {
+        if (e.key === 'Escape') { e.preventDefault(); this.setState({ menu: false }); focusSoon(this.menuReturn || 'sv-menu-btn'); return; }
+        if (e.key !== 'Tab') return;
+        const dlg = document.getElementById('sv-menu'); if (!dlg) return;
+        const items = [...dlg.querySelectorAll('a[href], button:not([disabled])')].filter((el) => el.offsetParent !== null);
+        if (!items.length) return;
+        const first = items[0], last = items[items.length - 1], cur = document.activeElement;
+        if (e.shiftKey && (cur === first || !dlg.contains(cur))) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && (cur === last || !dlg.contains(cur))) { e.preventDefault(); first.focus(); }
+      },
+      skipToMain: (e) => { if (e && e.preventDefault) e.preventDefault(); const m = document.getElementById('main'); if (m) { m.focus(); if (m.scrollIntoView) m.scrollIntoView({ block: 'start' }); } },
+      services: services, cur: services[S.svc],
+      a0: art(0), a1: art(1), a2: art(2),
+      steps: steps,
+      trackFill: 'position: absolute; left: 0; top: 31px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #FF5C5E, #FFBC51); width: ' + fillPct + '%; transition: width .6s cubic-bezier(.22,1,.36,1);',
+      faqs: faqs,
+      tAus: S.tAus, tLon: S.tLon, tFra: S.tFra
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Case study template</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#07080F}
+a{color:inherit}
+.ff-dark a:hover{color:#FFBC51}
+.ff-cream a:hover{color:#C93A3C}
+:focus-visible{outline:3px solid #FFBC51;outline-offset:3px}
+.ff-cream :focus-visible{outline-color:#C93A3C}
+@keyframes ff-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes ff-spin{to{transform:rotate(360deg)}}
+@keyframes ff-focus{from{filter:blur(12px);opacity:0;transform:scale(.97)}to{filter:blur(0);opacity:1;transform:none}}
+.ff-core{animation:ff-breathe 7s ease-in-out infinite}
+.ff-orbit{animation:ff-spin 60s linear infinite}
+.ff-in{animation:ff-focus 1.1s cubic-bezier(.22,1,.36,1) both}
+.ff-root{container-type:inline-size;container-name:page}
+.ff-grp{display:flex}.ff-gtoggle{display:none}
+footer a,.ff-links a,nav[aria-label="Breadcrumb"] a{min-height:24px;display:inline-flex;align-items:center}
+.ph-d,.ph-c{display:flex;flex-direction:column;gap:6px;border-radius:16px;padding:14px 16px;box-sizing:border-box}
+.ph-d{border:1px dashed rgba(255,188,81,0.6);background:rgba(255,188,81,0.06)}
+.ph-c{border:1px dashed rgba(201,58,60,0.55);background:rgba(201,58,60,0.04)}
+.ph-l{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase}
+.ph-d .ph-l{color:#FFBC51}.ph-c .ph-l{color:#B83234}
+.ph-t{font-size:14px;line-height:1.5}
+.ph-d .ph-t{color:#E9E3DC}.ph-c .ph-t{color:#2A2830}
+@container page (max-width: 940px){.ff-links{display:none !important}}
+@container page (max-width: 760px){.ff-gtitle{display:none !important}.ff-gtoggle{display:flex}.ff-grp{display:none}.ff-grp.ff-open{display:flex}.ff-hide-sm{display:none !important}}
+@media (prefers-reduced-motion: reduce){.ff-core,.ff-orbit,.ff-in{animation:none}}
+.ff-skip{position:absolute;left:16px;top:16px;z-index:40;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:#FFBC51;color:#0B0C14;font-family:'Manrope',Arial,sans-serif;font-size:15px;font-weight:700;text-decoration:none;opacity:0;transform:translateY(-200%);pointer-events:none}
+.ff-skip:focus{opacity:1;transform:none;pointer-events:auto}.ff-skip:hover{color:#0B0C14}.ff-skip:focus-visible{outline:3px solid #FAF5EF;outline-offset:3px}
+#main:focus{outline:none}
+[data-offscreen="1"] .ff-orbit,[data-offscreen="1"] .ff-core{animation-play-state:paused}
+.ff-soc{width:44px;height:44px;box-sizing:border-box;border-radius:50%;display:inline-flex !important;align-items:center;justify-content:center;border:1px solid rgba(250,245,239,0.22);background:rgba(250,245,239,0.04);color:#FAF5EF;text-decoration:none;transition:border-color .2s ease,background-color .2s ease}
+.ff-dark a.ff-soc:hover,.ff-soc:hover{color:#FAF5EF;border-color:#FFBC51;background:rgba(255,188,81,0.14)}
+.ff-soc:focus-visible{outline:3px solid #FFBC51;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){.ff-soc{transition:none}}
+@container page (max-width: 1100px){.hp-offices{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.hp-offices > :last-child:nth-child(odd){grid-column:1 / -1}}
+@container page (max-width: 760px){.hp-offices{grid-template-columns:minmax(0,1fr) !important}}
+.cs-light :focus-visible{outline-color:#C93A3C}.ff-dark .cs-light a:hover{color:#C93A3C}
+</style>
+</helmet>
+<div class="ff-root" style="width: 100%; position: relative; background: #07080F; color: #FAF5EF; font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif; overflow: hidden">
+
+  <!-- Consistency pass (7 Nov 2026, for review): menu button "Discuss Your Project"; hero button "Let's Talk About Your Project" and closing "Let's Talk" button (now the approved global footer) read "Discuss Your Project". No other copy changed.
+       Final fixes (7 Nov 2026): core/orbit animations pause while their section is off-screen, as on the service pages; "Asset needed" placeholder labels #B83234 for 4.5:1 contrast. -->
+  <!-- ================= MEGA MENU (shared) ================= -->
+  <a href="#main" class="ff-skip" onClick="{{ skipToMain }}">Skip to main content</a>
+
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="cs-menu" role="dialog" aria-modal="true" aria-label="Site menu" onKeyDown="{{ menuKey }}" class="ff-dark" style="position: absolute; inset: 0; z-index: 20; padding: 16px clamp(12px, 3.4cqi, 48px) 32px; background: rgba(7,8,15,0.82)">
+      <div style="position: relative; width: min(1280px, 100%); box-sizing: border-box; margin: 0 auto; border-radius: 36px; background: #0E1020; border: 1px solid rgba(250,245,239,0.14); overflow: hidden; padding: 16px">
+        <div aria-hidden="true" style="position: absolute; right: -120px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.45), rgba(255,92,94,0.12) 45%, transparent 68%)"></div>
+        <div style="position: relative; height: 60px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); display: flex; align-items: center; justify-content: space-between; padding: 0 8px 0 20px; margin-bottom: 16px">
+          <img src="/_blob/11cb7e45f87956fec08fde70311f542c" alt="Creative Propel" style="width: 140px; height: auto">
+          <button type="button" id="cs-menu-close" onClick="{{ closeMenu }}" aria-label="Close menu" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(250,245,239,0.3); background: transparent; color: #FAF5EF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"></path></svg></button>
+        </div>
+        <div style="position: relative; display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start">
+          <section aria-label="Services" style="flex: 999 1 640px; min-width: 0; padding: 22px; border-radius: 28px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+            <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8C93AD">SERVICES · 3 GROUPS · 15 PAGES</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 6px 24px">
+              <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+                <div style="min-width: 0; display: flex; flex-direction: column; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 12px">
+                  <h3 class="ff-gtitle" style="margin: 0 0 6px; display: flex; align-items: center; gap: 8px; font-family: 'Manrope', Arial, sans-serif; font-size: 16px; font-weight: 700; color: #FFBC51"><span aria-hidden="true" style="{{ g.dotStyle }}"></span>{{ g.name }}</h3>
+                  <button type="button" class="ff-gtoggle" onClick="{{ g.toggle }}" aria-expanded="{{ g.expanded }}" aria-controls="{{ g.listId }}" style="width: 100%; min-height: 48px; align-items: center; gap: 10px; padding: 0; background: transparent; border: 0; color: #FFBC51; font-family: 'Manrope', Arial, sans-serif; font-size: 16px; font-weight: 700; text-align: left; cursor: pointer"><span aria-hidden="true" style="{{ g.dotStyle }}"></span><span style="flex: 1">{{ g.name }}</span><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #A7A9B8">{{ g.count }}</span><span aria-hidden="true" style="{{ g.chevStyle }}">+</span></button>
+                  <ul id="{{ g.listId }}" class="{{ g.listClass }}" style="margin: 0 0 8px; padding: 0; list-style: none; flex-direction: column">
+                    <sc-for list="{{ g.pages }}" as="p" hint-placeholder-count="5">
+                      <li><sc-if value="{{ p.built }}" hint-placeholder-val="{{ true }}"><a href="{{ p.href }}" style="display: flex; gap: 10px; align-items: baseline; padding: 8px 0; text-decoration: none; font-size: 15px; line-height: 1.4"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8C93AD; flex: none; width: 20px">{{ p.n }}</span><span>{{ p.name }}</span></a></sc-if><sc-if value="{{ p.unbuilt }}" hint-placeholder-val="{{ false }}"><span style="display: flex; gap: 10px; align-items: baseline; padding: 8px 0; text-decoration: none; font-size: 15px; line-height: 1.4; color: #A7A9B8"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8C93AD; flex: none; width: 20px">{{ p.n }}</span><span>{{ p.name }}</span></span></sc-if></li>
+                    </sc-for>
+                  </ul>
+                </div>
+              </sc-for>
+            </div>
+          </section>
+          <div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+            <nav aria-label="Menu" style="display: flex; flex-direction: column; gap: 6px">
+              <a href="B-Home.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Home</a>
+              <a href="B-Projects.dc.html" aria-current="page" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(255,188,81,0.12); border: 1px solid rgba(255,188,81,0.5); color: #FFBC51; font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Projects</a>
+              <a href="About.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">About</a>
+              <a href="B-Reviews.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Reviews</a>
+              <a href="Contact.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Contact</a>
+            </nav>
+            <a href="Contact.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 56px; padding: 8px 8px 8px 22px; box-sizing: border-box; border-radius: 999px; background: #FFBC51; color: #0B0C14; text-decoration: none; font-weight: 700; font-size: 15px">Discuss Your Project <span style="width: 40px; height: 40px; flex: none; border-radius: 50%; background: #0B0C14; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ================= 1 · HERO ================= -->
+  <div class="ff-dark" style="position: relative; z-index: 3; padding: 16px clamp(16px, 3.4cqi, 48px) 0">
+    <header style="position: relative; z-index: 3; margin: 0 auto; width: min(1180px, 100%); height: 64px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 8px 0 20px; box-sizing: border-box">
+      <a href="B-Home.dc.html" aria-label="Creative Propel home" style="display: flex; flex: none"><img src="/_blob/11cb7e45f87956fec08fde70311f542c" alt="Creative Propel" style="width: 148px; height: auto"></a>
+      <nav class="ff-links" aria-label="Primary" style="display: flex; gap: 26px; font-size: 15px; font-weight: 600">
+        <button type="button" id="cs-menu-link" onClick="{{ openMenu }}" aria-expanded="{{ menuExpanded }}" aria-haspopup="dialog" aria-controls="cs-menu" style="display: inline-flex; align-items: center; gap: 6px; background: transparent; border: 0; padding: 0; color: #FAF5EF; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#FFBC51" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"></path></svg></button>
+        <a href="B-Projects.dc.html" aria-current="page" style="text-decoration: none; color: #FFBC51">Projects</a>
+        <a href="About.dc.html" style="text-decoration: none">About</a>
+        <a href="B-Reviews.dc.html" style="text-decoration: none">Reviews</a>
+        <a href="Contact.dc.html" style="text-decoration: none">Contact</a>
+      </nav>
+      <button type="button" id="cs-menu-btn" onClick="{{ openMenu }}" aria-label="Open menu" aria-expanded="{{ menuExpanded }}" aria-haspopup="dialog" aria-controls="cs-menu" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 0; cursor: pointer; background: radial-gradient(circle at 40% 40%, #FFE6B0, #FFBC51 45%, #FF5C5E)"></button>
+    </header>
+  </div>
+
+  <main id="main" tabindex="-1">
+  <section class="ff-dark" style="position: relative; padding: 80px clamp(16px, 3.4cqi, 48px) 56px; margin-top: -80px; overflow: hidden">
+
+    <div style="position: relative; width: min(1280px, 100%); margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; padding: clamp(48px, 6cqi, 88px) 0 8px">
+      <div style="position: relative; z-index: 2; flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+        <nav aria-label="Breadcrumb" class="ff-in" style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #C9C3BC; display: flex; flex-wrap: wrap; gap: 8px"><a href="B-Home.dc.html" style="text-decoration: none">HOME</a><span aria-hidden="true">/</span><a href="B-Projects.dc.html" style="text-decoration: none">PROJECTS</a><span aria-hidden="true">/</span><span aria-current="page" style="color: #FFBC51">{{ p.nameUpper }}</span></nav>
+        <div class="ff-in" style="display: flex; flex-wrap: wrap; gap: 8px">
+          <span style="display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 14px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em"><span style="width: 7px; height: 7px; border-radius: 50%; background: #FFBC51"></span>{{ p.categoryUpper }}</span>
+          <span style="display: inline-flex; align-items: center; min-height: 32px; padding: 0 14px; border-radius: 999px; background: #FFBC51; color: #0B0C14; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em">{{ p.platformUpper }}</span>
+        </div>
+        <p class="ff-in" style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(20px, 2cqi, 26px); font-weight: 500; letter-spacing: -0.03em; color: #FFBC51; animation-delay: .05s">{{ p.name }}</p>
+        <h1 class="ff-in" style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-weight: 600; font-size: clamp(32px, 4.4cqi, 64px); line-height: 1.06; letter-spacing: -0.05em; animation-delay: .1s">{{ p.title }}</h1>
+        <p class="ff-in" style="margin: 0; max-width: 640px; font-size: clamp(17px, 1.4cqi, 20px); line-height: 1.65; color: #E9E3DC; animation-delay: .2s">{{ p.card }}</p>
+        <div class="ff-in" style="display: flex; flex-wrap: wrap; gap: 12px; animation-delay: .3s">
+          <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 10px 0 24px; border-radius: 999px; background: #FFBC51; color: #0B0C14; text-decoration: none; font-weight: 700">Discuss Your Project <span style="width: 38px; height: 38px; flex: none; border-radius: 50%; background: #0B0C14; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+          <a href="B-Projects.dc.html" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 22px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.26); text-decoration: none; font-weight: 600"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"></path></svg> All projects</a>
+        </div>
+      </div>
+
+      <!-- hero visual: what was delivered, orbiting the Core (illustrative concept) -->
+      <figure style="position: relative; flex: 1 1 380px; min-width: 0; max-width: 520px; aspect-ratio: 1; margin: 0 auto 40px">
+        <div aria-hidden="true" style="position: absolute; inset: 0">
+          <div class="ff-core" style="position: absolute; inset: 24%; border-radius: 50%; background: radial-gradient(circle at 42% 40%, #FFF1D2 0%, #FFE6B0 6%, #FFBC51 22%, rgba(255,92,94,0.75) 44%, rgba(255,92,94,0.12) 62%, rgba(7,8,15,0) 72%)"></div>
+          <div style="{{ p.orbitStyle }}"><div class="ff-orbit" style="position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(250,245,239,0.2)"><div style="position: absolute; left: 50%; top: -6px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: #FFBC51; box-shadow: 0 0 18px #FFBC51"></div></div></div>
+          <div style="position: absolute; inset: 0; border-radius: 50%; border: 1px dashed rgba(250,245,239,0.1)"></div>
+          <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; color: #0B0C14">
+            <span style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.16em">BUILT ON</span>
+            <span style="font-family: 'Unbounded', sans-serif; font-size: clamp(18px, 2.2cqi, 28px); font-weight: 600; letter-spacing: -0.04em">{{ p.platform }}</span>
+          </div>
+          <sc-for list="{{ p.chips }}" as="c" hint-placeholder-count="6">
+            <span style="{{ c.style }}">{{ c.label }}</span>
+          </sc-for>
+        </div>
+        <figcaption style="position: absolute; left: 50%; bottom: -44px; transform: translateX(-50%); display: inline-flex; align-items: center; height: 26px; padding: 0 12px; border-radius: 999px; background: rgba(7,8,15,0.8); border: 1px solid rgba(250,245,239,0.22); font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #C9C3BC; white-space: nowrap">ILLUSTRATIVE CONCEPT · NOT CLIENT WORK</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 2 · OVERVIEW + PROJECT DETAILS (cream) ================= -->
+  <section class="ff-cream" style="background: #FAF5EF; color: #0B0C14; padding: clamp(72px, 8cqi, 112px) clamp(16px, 3.4cqi, 48px); border-radius: 48px 48px 0 0">
+    <div style="width: min(1200px, 100%); margin: 0 auto; display: flex; flex-wrap: wrap; gap: clamp(32px, 6cqi, 88px); align-items: flex-start">
+      <div style="flex: 999 1 520px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 56px">
+        <article style="display: flex; flex-direction: column; gap: 18px">
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center"><span style="display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 14px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E3DACE; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em"><span style="width: 7px; height: 7px; border-radius: 50%; background: #FF5C5E"></span>PROJECT OVERVIEW</span></div>
+          <p style="margin: 0; font-size: clamp(19px, 1.6cqi, 22px); line-height: 1.6">{{ p.summary }}</p>
+        </article>
+        <article style="display: flex; flex-direction: column; gap: 16px">
+          <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(24px, 2.6cqi, 34px); font-weight: 600; letter-spacing: -0.045em">The brief</h2>
+          <sc-for list="{{ p.challenge }}" as="t" hint-placeholder-count="2">
+            <p style="margin: 0; font-size: 18px; line-height: 1.75; color: #2A2830">{{ t }}</p>
+          </sc-for>
+        </article>
+        <article style="display: flex; flex-direction: column; gap: 16px">
+          <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(24px, 2.6cqi, 34px); font-weight: 600; letter-spacing: -0.045em">Our approach</h2>
+          <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+            <sc-for list="{{ p.approach }}" as="a" hint-placeholder-count="3">
+              <li style="display: grid; grid-template-columns: minmax(110px, 150px) 1fr; gap: 16px; padding: 18px 0; border-top: 1px solid #E3DACE"><span style="display: flex; gap: 10px; align-items: baseline"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #C93A3C">{{ a.n }}</span><strong style="font-size: 16px">{{ a.phase }}</strong></span><span style="font-size: 17px; line-height: 1.65; color: #2A2830">{{ a.text }}</span></li>
+            </sc-for>
+          </ol>
+        </article>
+      </div>
+      <aside aria-labelledby="cs-details" style="flex: 1 1 300px; min-width: 0; position: sticky; top: 24px; padding: 26px; border-radius: 32px; background: #0B0C14; color: #FAF5EF; display: flex; flex-direction: column; gap: 4px">
+        <h2 id="cs-details" style="margin: 0 0 10px; font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; color: #FFBC51">PROJECT DETAILS</h2>
+        <dl style="margin: 0; display: flex; flex-direction: column">
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14)"><dt style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A7A9B8">CLIENT</dt><dd style="margin: 0; font-weight: 700">{{ p.name }}</dd></div>
+          <sc-if value="{{ p.hasIndustry }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14)"><dt style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A7A9B8">INDUSTRY</dt><dd style="margin: 0; font-weight: 700">{{ p.industry }}</dd></div>
+          </sc-if>
+          <sc-if value="{{ p.hasLocation }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14)"><dt style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A7A9B8">LOCATION</dt><dd style="margin: 0; font-weight: 700">{{ p.location }}</dd></div>
+          </sc-if>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14)"><dt style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A7A9B8">PLATFORM</dt><dd style="margin: 0; font-weight: 700">{{ p.platform }}</dd></div>
+          <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14)"><dt style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A7A9B8">PROJECT TYPE</dt><dd style="margin: 0; font-weight: 700">{{ p.type }}</dd></div>
+          <div style="display: flex; flex-direction: column; gap: 8px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14)"><dt style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A7A9B8">SERVICES</dt><dd style="margin: 0; display: flex; flex-wrap: wrap; gap: 6px"><sc-for list="{{ p.services }}" as="s" hint-placeholder-count="4"><span style="display: inline-flex; align-items: center; min-height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(250,245,239,0.08); border: 1px solid rgba(250,245,239,0.18); font-size: 13px">{{ s }}</span></sc-for></dd></div>
+          <sc-if value="{{ p.hasStack }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 8px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14)"><dt style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A7A9B8">TECHNOLOGY DETECTED ON THE SITE</dt><dd style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 1.8; color: #E9E3DC">{{ p.stackText }}</dd></div>
+          </sc-if>
+          <sc-if value="{{ p.hasLive }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14)"><dt style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A7A9B8">LIVE SITE</dt><dd style="margin: 0; font-weight: 700"><a href="{{ p.liveUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ p.liveAria }}" style="display: inline-flex; align-items: center; min-height: 24px">{{ p.liveLabel }}</a></dd></div>
+          </sc-if>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= 3 · WHAT WE DELIVERED (dark) ================= -->
+  <section class="ff-dark" style="background: #07080F; padding: clamp(80px, 9cqi, 120px) clamp(16px, 3.4cqi, 48px); border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; right: -160px; top: -200px; width: 560px; height: 560px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.4), rgba(255,92,94,0.1) 45%, transparent 68%)"></div>
+    <div style="position: relative; width: min(1200px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+        <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(28px, 3.6cqi, 50px); font-weight: 600; letter-spacing: -0.05em; line-height: 1.06">What we delivered</h2>
+        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #C9C3BC">{{ p.deliveredCount }} CONFIRMED DELIVERABLES</span>
+      </div>
+      <ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 12px">
+        <sc-for list="{{ p.delivered }}" as="d" hint-placeholder-count="6">
+          <li style="display: flex; gap: 14px; align-items: flex-start; padding: 20px 22px; border-radius: 24px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14)"><span style="flex: none; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,188,81,0.14); border: 1px solid rgba(255,188,81,0.5); display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">{{ d.n }}</span><span style="font-size: 16px; line-height: 1.5; padding-top: 6px">{{ d.text }}</span></li>
+        </sc-for>
+      </ol>
+      <sc-if value="{{ p.hasNote }}" hint-placeholder-val="{{ false }}">
+        <p style="margin: 0; padding: 16px 20px; border-radius: 20px; border: 1px solid rgba(250,245,239,0.18); font-size: 15px; line-height: 1.6; color: #E9E3DC; max-width: 760px">{{ p.note }}</p>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- ================= 4 · PROJECT VISUALS (cream-2, asset slots) ================= -->
+  <section class="ff-cream" style="background: #F1EAE0; color: #0B0C14; padding: clamp(80px, 9cqi, 120px) clamp(16px, 3.4cqi, 48px); border-radius: 48px 48px 0 0; margin-top: -48px; position: relative">
+    <div style="width: min(1200px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+        <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(28px, 3.6cqi, 50px); font-weight: 600; letter-spacing: -0.05em; line-height: 1.06">Project visuals</h2>
+        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #5A5560">GENUINE ASSETS ONLY · SLOTS SHOWN UNTIL SUPPLIED</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 14px">
+        <sc-if value="{{ p.hasLogo }}" hint-placeholder-val="{{ false }}">
+          <figure style="{{ p.logoFig }}"><img src="{{ p.logoSrc }}" alt="{{ p.logoAlt }}" loading="lazy" decoding="async" style="{{ p.logoImg }}"><figcaption style="position: absolute; left: 18px; bottom: 14px; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #5A5560">{{ p.logoCaption }}</figcaption></figure>
+        </sc-if>
+        <sc-for list="{{ p.assets }}" as="v" hint-placeholder-count="4">
+          <div class="ph-c" style="{{ v.style }}"><span class="ph-l">Asset needed · {{ v.n }}</span><span class="ph-t" style="font-weight: 600">{{ v.label }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5 · OUTCOME + CLIENT REVIEW (dark) ================= -->
+  <section class="ff-dark" style="background: #07080F; padding: clamp(80px, 9cqi, 120px) clamp(16px, 3.4cqi, 48px); border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; overflow: hidden">
+    <div style="position: relative; width: min(1200px, 100%); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+      <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+        <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(28px, 3.6cqi, 50px); font-weight: 600; letter-spacing: -0.05em; line-height: 1.06">The outcome</h2>
+        <p style="margin: 0; max-width: 680px; font-size: clamp(18px, 1.5cqi, 21px); line-height: 1.65; color: #E9E3DC">{{ p.outcome }}</p>
+        <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.1em; line-height: 1.7; color: #A7A9B8">NO PERFORMANCE FIGURES ARE SHOWN. VERIFIED RESULTS CAN BE ADDED HERE IF SUPPLIED.</p>
+      </div>
+      <sc-if value="{{ p.hasReview }}" hint-placeholder-val="{{ false }}">
+        <figure class="cs-light" style="flex: 1 1 340px; min-width: 0; margin: 0; padding: 26px; border-radius: 32px; background: #FAF5EF; color: #0B0C14; display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px"><span style="white-space: nowrap; display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 999px; background: #0B0C14; color: #FAF5EF; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em">CLIENT REVIEW · TRUSTPILOT</span><span style="display: inline-flex; align-items: center; gap: 6px; white-space: nowrap"><svg width="86" height="16" viewBox="0 0 106 20" role="img" aria-label="Rated 5 out of 5 on Trustpilot"><g fill="#B5720A"><path d="M10 1.5l2.6 5.6 6.1.7-4.5 4.1 1.2 6-5.4-3-5.4 3 1.2-6L.8 7.8l6.1-.7z"></path><path transform="translate(22 0)" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.1 1.2 6-5.4-3-5.4 3 1.2-6L.8 7.8l6.1-.7z"></path><path transform="translate(44 0)" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.1 1.2 6-5.4-3-5.4 3 1.2-6L.8 7.8l6.1-.7z"></path><path transform="translate(66 0)" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.1 1.2 6-5.4-3-5.4 3 1.2-6L.8 7.8l6.1-.7z"></path><path transform="translate(88 0)" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.1 1.2 6-5.4-3-5.4 3 1.2-6L.8 7.8l6.1-.7z"></path></g></svg><span style="font-family: 'Geist Mono', monospace; font-size: 12px">Rated 5/5</span></span></div>
+          <blockquote style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 500; line-height: 1.35; letter-spacing: -0.03em">“{{ p.reviewTitle }}”</blockquote>
+          <figcaption style="margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; padding-top: 14px; border-top: 1px solid #E3DACE"><span style="display: flex; flex-direction: column; font-size: 14px"><strong>{{ p.reviewName }}</strong><span style="color: #5A5560">{{ p.reviewDate }}</span></span><a href="{{ p.reviewUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ p.reviewAria }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 14px; font-weight: 700; color: #C93A3C">Read on Trustpilot <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"></path></svg></a></figcaption>
+        </figure>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- ================= 6 · RELATED PROJECTS (cream) ================= -->
+  <section class="ff-cream" style="background: #FAF5EF; color: #0B0C14; padding: clamp(72px, 8cqi, 104px) clamp(16px, 3.4cqi, 48px) clamp(96px, 10cqi, 136px); border-radius: 48px 48px 0 0; margin-top: -48px; position: relative">
+    <div style="width: min(1200px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+        <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(24px, 2.8cqi, 38px); font-weight: 600; letter-spacing: -0.045em">Related projects</h2>
+        <a href="B-Projects.dc.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 700; color: #C93A3C"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"></path></svg> Back to all projects</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px">
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="2">
+          <a href="{{ r.file }}" style="text-decoration: none; display: flex; flex-direction: column; border-radius: 32px; overflow: hidden; background: #FFFFFF; border: 1px solid #E3DACE">
+            <span style="position: relative; display: block; height: 180px; background: radial-gradient(circle at 75% 30%, #FFE6B0, #FFBC51 14%, rgba(255,92,94,0.5) 32%, transparent 56%), #0E1020"><span style="position: absolute; left: 18px; bottom: 16px; display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 999px; background: #FFBC51; color: #0B0C14; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em">{{ r.platformUpper }}</span></span>
+            <span style="padding: 22px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #5A5560">{{ r.categoryUpper }}</span><span style="font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.04em">{{ r.name }}</span><span style="font-size: 15px; line-height: 1.6; color: #2A2830">{{ r.card }}</span><span style="display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; font-weight: 700; color: #C93A3C">View case study <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7 · FOOTER (approved global footer, including its "Let's Build What's Next." CTA) ================= -->
+  </main>
+
+  <footer class="ff-dark" style="background: #07080F; padding: clamp(96px, 10cqi, 144px) clamp(16px, 3.4cqi, 48px) 32px; border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; left: 50%; top: -420px; width: 900px; height: 900px; margin-left: -450px; border-radius: 50%; background: radial-gradient(circle at 50% 70%, rgba(255,188,81,0.5), rgba(255,92,94,0.14) 36%, transparent 60%)"></div>
+    <div style="position: relative; width: min(1280px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 64px">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+        <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(40px, 7cqi, 104px); font-weight: 600; line-height: 0.98; letter-spacing: -0.06em">Let's Build <span style="font-weight: 300; color: #FFBC51; -webkit-text-stroke: 1.4px #FFBC51">What's Next.</span></h2>
+        <p style="margin: 0; max-width: 600px; font-size: 19px; line-height: 1.65; color: #E9E3DC">Your business has potential. Let's give it the digital direction, creativity and technology to go further.</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; margin-top: 6px">
+          <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 64px; padding: 0 10px 0 30px; border-radius: 999px; background: #FFBC51; color: #0B0C14; text-decoration: none; font-weight: 700; font-size: 17px">Discuss Your Project <span style="width: 46px; height: 46px; border-radius: 50%; background: #0B0C14; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+          <a href="mailto:info@creativepropel.com" style="font-size: 17px; font-weight: 600">info@creativepropel.com</a>
+        </div>
+      </div>
+
+      <div class="hp-offices" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 14px">
+        <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(250,245,239,0.08); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em">UNITED STATES</span><span style="font-family: 'Geist Mono', monospace; font-size: 14px; color: #FFBC51">{{ tAus }}</span></div>
+          <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">Austin</p>
+          <address style="font-style: normal; font-size: 15px; line-height: 1.6; color: #D9D3CC">5900 Balcones Dr STE 14405<br>Austin, TX 78731<br>United States</address>
+          
+        </div>
+        <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(250,245,239,0.08); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em">UNITED KINGDOM</span><span style="font-family: 'Geist Mono', monospace; font-size: 14px; color: #FFBC51">{{ tLon }}</span></div>
+          <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">London</p>
+          <address style="font-style: normal; font-size: 15px; line-height: 1.6; color: #D9D3CC">30 Churchill Pl<br>Canary Wharf Estate<br>London E14 5RE<br>United Kingdom</address>
+          
+        </div>
+        <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(250,245,239,0.08); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em">FRANCE</span><span style="font-family: 'Geist Mono', monospace; font-size: 14px; color: #FFBC51">{{ tFra }}</span></div>
+          <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">Nancy</p>
+          <address style="font-style: normal; font-size: 15px; line-height: 1.6; color: #D9D3CC">2 Allée de l'Arno<br>54500 Vandœuvre-lès-Nancy<br>France</address>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 32px">
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <img src="/_blob/f8348b2d676579851b5f399effbbfeb9" alt="Creative Propel" style="width: 110px; height: auto">
+          <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.14em; color: #FAF5EF">STRATEGY. CREATIVITY. TECHNOLOGY. <span style="color: #FFBC51">GROWTH.</span></p>
+        </div>
+        <div style="flex: 0 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+        <nav aria-label="Footer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 40px; font-size: 15px">
+          <a href="B-Home.dc.html#hp-services" style="text-decoration: none">Services</a>
+          <a href="B-Projects.dc.html" style="text-decoration: none">Projects</a>
+          <a href="About.dc.html" style="text-decoration: none">About</a>
+          <a href="B-Reviews.dc.html" style="text-decoration: none">Reviews</a>
+          <a href="Contact.dc.html" style="text-decoration: none">Contact</a>
+        </nav>
+        <!-- Social: official platform icons from Font Awesome Free 7.3.1 brand set (CC BY 4.0, fontawesome.com/license/free), shown in a single colour -->
+        <ul aria-label="Creative Propel on social media" style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 12px">
+          <li><a class="ff-soc" href="https://www.linkedin.com/company/creativepropel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on LinkedIn (opens in a new tab)" title="LinkedIn"><svg width="17.5" height="20" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.instagram.com/creativepropel/" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on Instagram (opens in a new tab)" title="Instagram"><svg width="17.5" height="20" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.facebook.com/creativepropelllc/" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on Facebook (opens in a new tab)" title="Facebook"><svg width="20.0" height="20" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.tiktok.com/@creativepropel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on TikTok (opens in a new tab)" title="TikTok"><svg width="17.5" height="20" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M448.5 209.9c-44 .1-87-13.6-122.8-39.2l0 178.7c0 33.1-10.1 65.4-29 92.6s-45.6 48-76.6 59.6-64.8 13.5-96.9 5.3-60.9-25.9-82.7-50.8-35.3-56-39-88.9 2.9-66.1 18.6-95.2 40-52.7 69.6-67.7 62.9-20.5 95.7-16l0 89.9c-15-4.7-31.1-4.6-46 .4s-27.9 14.6-37 27.3-14 28.1-13.9 43.9 5.2 31 14.5 43.7 22.4 22.1 37.4 26.9 31.1 4.8 46-.1 28-14.4 37.2-27.1 14.2-28.1 14.2-43.8l0-349.4 88 0c-.1 7.4 .6 14.9 1.9 22.2 3.1 16.3 9.4 31.9 18.7 45.7s21.3 25.6 35.2 34.6c19.9 13.1 43.2 20.1 67 20.1l0 87.4z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.behance.net/Creative_propel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on Behance (opens in a new tab)" title="Behance"><svg width="22.5" height="20" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8l-167.1 0 0 354.4 171.8 0c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9l73.1 0c28.1 0 53.4 7.9 53.4 40.5 0 30.1-19.7 42.2-47.5 42.2l-79 0 0-82.7zm83.3 233.7l-83.3 0 0-97.6 84.9 0c34.3 0 56 14.3 56 50.6 0 35.8-25.9 47-57.6 47zM519.7 128.9l-143.7 0 0-34.9 143.7 0 0 34.9zM576 305.2c0-75.9-44.4-139.2-124.9-139.2-78.2 0-131.3 58.8-131.3 135.8 0 79.9 50.3 134.7 131.3 134.7 61.3 0 101-27.6 120.1-86.3l-62.2 0c-6.7 21.9-34.3 33.5-55.7 33.5-41.3 0-63-24.2-63-65.3l185.1 0c.3-4.2 .6-8.7 .6-13.2zM390.4 274c2.3-33.7 24.7-54.8 58.5-54.8 35.4 0 53.2 20.8 56.2 54.8l-114.7 0z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.youtube.com/@CreativePropel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on YouTube (opens in a new tab)" title="YouTube"><svg width="22.5" height="20" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z"></path></svg></a></li>
+        </ul>
+        </div>
+      </div>
+      <div style="height: 1px; background: linear-gradient(90deg, transparent, rgba(250,245,239,0.3), transparent)"></div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #A7A9B8">
+        <span>© 2026 Creative Propel · creativepropel.com</span>
+        <span style="display: flex; gap: 20px"><a href="Privacy.dc.html" style="text-decoration: none; text-transform: uppercase">Privacy Policy</a><a href="Cookies.dc.html" style="text-decoration: none; text-transform: uppercase">Cookies Policy</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"slug":{"editor":"enum","options":["the-fit-faction","giuliana-brandon","e-motion-sports","passport-to-life","fortico-security-services","new-heights-collective"],"default":"giuliana-brandon"},"$preview":{"width":1440,"height":6000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menu: false, grp: '', tAus: '--:--', tLon: '--:--', tFra: '--:--' };
+  }
+  componentDidMount() { this.tick(); this.timer = setInterval(() => this.tick(), 30000); if (typeof IntersectionObserver !== 'undefined') { this.animIO = new IntersectionObserver((entries) => { entries.forEach((en) => { en.target.dataset.offscreen = en.isIntersecting ? '0' : '1'; }); }); new Set([...document.querySelectorAll('.ff-core, .ff-orbit')].map((el) => el.closest('section, footer, header') || el.parentElement)).forEach((sec) => this.animIO.observe(sec)); } }
+  componentWillUnmount() { clearInterval(this.timer); if (this.animIO) this.animIO.disconnect(); }
+  tick() {
+    const f = (tz) => { try { return new Date().toLocaleTimeString('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit' }); } catch (e) { return '--:--'; } };
+    this.setState({ tAus: f('America/Chicago'), tLon: f('Europe/London'), tFra: f('Europe/Paris') });
+  }
+  renderVals() {
+    const S = this.state;
+    const focusSoon = (id) => setTimeout(() => { const el = document.getElementById(id); if (el) el.focus(); }, 40);
+
+    /* ===== PROJECT DATA — approved content (Prompt 13); industry and location approved 4 Nov 2026. Keep B-Projects and B-Home card text in sync. The Fit Faction is ON HOLD: archived here, excluded from related projects. ===== */
+    const PROJECTS = [
+      {"slug": "the-fit-faction", "onHold": true, "file": "Case-FitFaction.dc.html", "name": "The Fit Faction", "platform": "WordPress", "category": "Website design & development", "type": "New website", "industry": "", "industryHint": "Industry", "title": "A complete website, from first layout to final copy.", "summary": "Every part of The Fit Faction’s website was created in one project: the visual design, the page structure and navigation, the WordPress build and the copy. Design, development and writing were all handled by Creative Propel.", "card": "New WordPress website: design, structure and copywriting, from scratch.", "challenge": ["The Fit Faction needed a new website built from scratch, with the content written as part of the same project.", "The confirmed scope also called for clearer navigation and user experience, a layout that works on mobile, and additional pages."], "approach": [["Structure", "Page structure and navigation planned for a clearer user experience, including the additional pages in scope."], ["Design", "A complete visual design for the site, adapted for mobile screens."], ["Build", "Developed in WordPress from scratch."], ["Copy", "Website content and copy written for the site."]], "delivered": ["New website built from scratch", "WordPress development", "Complete visual website design", "Clearer navigation and user experience", "Mobile-responsive design", "Additional website pages", "Website content creation and copywriting"], "outcome": "The Fit Faction has a website whose design, structure and copy were created by one team, and that works across desktop and mobile.", "services": ["Website design", "UX & navigation", "WordPress development", "Copywriting"], "assets": ["Client logo · on file, please upload", "Homepage screenshot · desktop", "Key page screenshots", "Mobile screenshots", "Live website URL"], "related": ["giuliana-brandon", "passport-to-life"], "chips": ["Visual design", "WordPress", "Navigation & UX", "Responsive", "Extra pages", "Copywriting"], "tilt": -16},
+      {"slug": "giuliana-brandon", "file": "Case-GiulianaBrandon.dc.html", "name": "Giuliana Brandon", "platform": "WordPress", "category": "Website, booking & print", "type": "Website, booking, local listing & print", "industry": "Beauty: makeup artistry and hair styling", "industryHint": "Industry (the client’s Trustpilot name suggests makeup)", "title": "A website that takes bookings and payments, supported by print and local search.", "summary": "For Giuliana Brandon, the website was one part of a wider setup. Alongside a new WordPress site, the project covered appointment booking and payments through Square, a Google Business Profile, and printed materials including standees and business cards.", "card": "WordPress website with Square booking and payments, Google Business Profile and printed collateral.", "challenge": ["The project brought together several connected requirements: a new WordPress website with appointment booking and payments through Square, a Google Business Profile, and printed materials including standees and business cards."], "approach": [["Website", "WordPress site designed and built from scratch, with the content written by Creative Propel."], ["Booking", "Calendar and appointment booking configured, with Square handling bookings and payments."], ["Local search", "Google Business Profile set up."], ["Print", "Standees, business cards and other printed collateral."]], "delivered": ["Website built from scratch using WordPress", "Website design", "Website content creation", "Calendar and appointment booking setup", "Square booking and payment integration", "Google Business Profile setup", "Standees, business cards and other printed collateral"], "outcome": "Clients can book and pay for appointments on Giuliana Brandon’s website through Square, and the business is supported offline by printed materials and online by its Google Business Profile.", "services": ["Website design", "WordPress development", "Booking & payments", "Google Business Profile", "Print collateral"], "assets": ["Homepage screenshot · desktop", "Booking flow screenshots", "Mobile screenshots", "Photos of standees and business cards", "Live website URL"], "review": {"title": "Just amazing!", "name": "Giuliana Brandon Makeup", "date": "US · Posted 12 Feb 2025", "url": "https://www.trustpilot.com/reviews/67ace2314c077a608a03e303"}, "related": ["passport-to-life", "new-heights-collective"], "chips": ["WordPress", "Booking", "Square", "Google Business", "Standees", "Business cards"], "tilt": 12, "location": "Goshen, New York", "logo": {"src": "/_blob/e8bffe5cb51e42b88e510bafeaf33f4c", "alt": "Giuliana Brandon Studio logo", "bg": "#FFFFFF", "maxw": 460, "caption": "CLIENT LOGO · GIULIANA BRANDON STUDIO"}},
+      {"slug": "e-motion-sports", "file": "Case-EMotionSports.dc.html", "name": "E-Motion Sports", "platform": "Shopify", "category": "Shopify store completion", "type": "Completion of an existing Shopify store", "industry": "Electric bikes, e-motos and e-surf: sales, rentals and repairs", "industryHint": "Industry", "title": "Finishing a Shopify store that was already underway.", "summary": "E-Motion Sports already had a Shopify store in progress, but it was unfinished. Creative Propel took the project over and completed it: products uploaded and organised with their images, descriptions and pricing, and payments, shipping and taxes configured.", "card": "Completing an existing Shopify store: products, payments, shipping and taxes.", "challenge": ["The store had been started but not completed. The task was to take over the existing Shopify build and finish it, working with what was already in place rather than starting again."], "approach": [["Takeover", "Took over the existing, unfinished Shopify project."], ["Catalogue", "Products uploaded and organised, with their images, descriptions and pricing added."], ["Checkout", "Payment settings configured."], ["Fulfilment", "Shipping and taxes configured."]], "delivered": ["Took over an unfinished website project", "Completed the existing Shopify website", "Uploaded and organised products", "Added product images, descriptions and pricing", "Configured payment settings", "Configured shipping and taxes"], "note": "This project completed an existing Shopify website. It was not a new build, and Creative Propel did not create original website content for it.", "outcome": "The existing store was brought to completion. Its products are in place, and the settings it needs to take payments and handle shipping and tax are configured.", "services": ["Shopify", "Product setup", "Payments, shipping & tax"], "assets": ["Storefront screenshot · desktop", "Product page screenshot", "Mobile screenshots", "Live store URL"], "review": {"title": "Creative and Supportive", "name": "E-MOTION SPORTS", "date": "US · Posted 11 Feb 2025", "url": "https://www.trustpilot.com/reviews/67aba40f9d158dd230b81b32"}, "related": ["new-heights-collective", "passport-to-life"], "chips": ["Shopify", "Products", "Pricing", "Payments", "Shipping", "Taxes"], "tilt": -6, "location": "Newport Beach, California"},
+      {"slug": "passport-to-life", "file": "Case-PassportToLife.dc.html", "name": "Passport to Life", "platform": "WordPress", "category": "Website, e-commerce & merchandise", "type": "Website, online store & merchandise design", "industry": "Apparel: luxury casual clothing", "industryHint": "Industry", "title": "A website, an online store and the T-shirt designs, from one team.", "summary": "Passport to Life’s project combined merchandise design with e-commerce. Creative Propel designed custom T-shirts and created merchandise mockups, and built a WordPress website with an online store, with products uploaded and payments and shipping configured.", "card": "WordPress website and online store, plus custom T-shirt designs and mockups.", "challenge": ["The project brought together custom T-shirt design and merchandise mockups with a WordPress website and online store. The scope also included product uploads and the configuration of payments and shipping."], "approach": [["Merchandise", "Custom T-shirt designs created, with merchandise mockups."], ["Website & store", "WordPress website and e-commerce set up from scratch."], ["Products", "Products uploaded and organised."], ["Checkout", "Payment and shipping configured."]], "delivered": ["Website built from scratch using WordPress", "Website and e-commerce setup", "Custom T-shirt merchandise design", "Merchandise mockup creation", "Product uploads and organisation", "Payment and shipping configuration"], "outcome": "The project resulted in custom T-shirt designs and merchandise mockups, alongside a WordPress website and online store with product uploads, payment configuration and shipping setup.", "services": ["WordPress development", "E-commerce setup", "T-shirt design", "Mockups"], "assets": ["Homepage screenshot · desktop", "Shop and product page screenshots", "T-shirt design artwork", "Merchandise mockups", "Live website URL"], "related": ["new-heights-collective", "e-motion-sports"], "chips": ["WordPress", "E-commerce", "T-shirt design", "Mockups", "Products", "Payments"], "tilt": 18},
+      {"slug": "fortico-security-services", "file": "Case-Fortico.dc.html", "name": "Fortico Security Services", "platform": "React", "category": "Brand identity & React website", "type": "Brand identity & custom website", "industry": "Security services", "industryHint": "", "title": "A new brand and a custom React website, from one team.", "summary": "Creative Propel created Fortico Security Services’ brand identity and logo, wrote the website content, and designed and developed the site from scratch in React. The website was developed in React, with a responsive interface and forms for contact and quote requests.", "card": "Brand identity, logo and a custom React website with contact and quote request forms.", "challenge": ["Fortico needed a brand identity and a website, both from scratch. The site also had to give visitors a direct way to get in touch or request a quote."], "approach": [["Identity", "Brand identity and logo designed."], ["Content", "Website content and copy written."], ["Build", "Designed and developed from scratch in React, with a responsive interface."], ["Enquiries", "Contact and quote request forms built into the site."]], "delivered": ["Brand identity and logo design", "Website design and development from scratch", "React development", "Website content creation and copywriting", "Responsive user interface", "Contact and quote request form functionality"], "outcome": "Fortico Security Services has a brand identity and logo, and a responsive website where visitors can contact the company or request a quote directly.", "services": ["Brand identity", "Logo design", "React development", "Copywriting"], "assets": ["Logo files", "Brand identity sheet · colours and type", "Homepage screenshot · desktop", "Quote request form screenshot", "Mobile screenshots", "Live website URL"], "related": ["new-heights-collective", "giuliana-brandon"], "chips": ["Brand identity", "Logo", "React", "Copywriting", "Responsive UI", "Quote forms"], "tilt": -22, "location": "Seattle, Washington", "logo": {"src": "/_blob/54a838d1948fa3c3ca96e539e1856753", "alt": "Fortico Security Services logo", "bg": "#F7F7F7", "maxw": 340, "caption": "LOGO · BRAND IDENTITY BY CREATIVE PROPEL"}},
+      {"slug": "new-heights-collective", "file": "Case-NewHeights.dc.html", "name": "New Heights Collective", "platform": "WordPress", "category": "Brand identity & WordPress e-commerce", "type": "Brand identity & online store", "industry": "Furniture", "industryHint": "Industry", "title": "From brand identity to a complete online store.", "summary": "Creative Propel created New Heights Collective’s brand identity and visual design, and built its WordPress e-commerce site from scratch. The project also included product variations and product copywriting, alongside payment, shipping and tax configuration.", "card": "Brand identity and a WordPress store with a full product catalogue and product copy.", "challenge": ["New Heights Collective needed a brand identity and a complete online store, both from scratch. The catalogue included products with variations, and the product copy was written as part of the project."], "approach": [["Brand", "Brand identity and visual design created."], ["Store", "WordPress e-commerce site built from scratch, with the payment gateway configured."], ["Catalogue", "Products uploaded and organised with images, descriptions, pricing and variations."], ["Copy", "Website and product copy written."], ["Fulfilment", "Shipping and tax configured."]], "delivered": ["Brand identity and visual design", "WordPress website built from scratch", "Complete e-commerce store setup", "Product images, descriptions, pricing and variations", "Product uploads and catalogue organisation", "Website content and product copywriting", "Payment gateway configuration", "Shipping and tax configuration"], "outcome": "New Heights Collective has a brand identity and an online store set up end to end, from the catalogue and product copy to checkout, shipping and tax.", "services": ["Brand identity", "WordPress e-commerce", "Product catalogue", "Copywriting"], "assets": ["Logo and brand identity files", "Storefront screenshot · desktop", "Product page screenshots", "Mobile screenshots", "Live website URL"], "related": ["passport-to-life", "fortico-security-services"], "chips": ["Brand identity", "WordPress", "E-commerce", "Catalogue", "Copywriting", "Payments"], "tilt": 8}
+    ];
+    /* =================================================================================================== */
+
+    const slug = this.props.slug ?? 'giuliana-brandon';
+    const raw = PROJECTS.find((x) => x.slug === slug) || PROJECTS[0];
+    const pad = (n) => String(n).padStart(2, '0');
+    const N = raw.chips.length;
+    const chips = raw.chips.map((label, i) => {
+      const a = (i / N) * Math.PI * 2 - Math.PI / 2;
+      const x = 50 + Math.cos(a) * 44, y = 50 + Math.sin(a) * 44;
+      return { label: label, style: 'position: absolute; left: ' + x.toFixed(1) + '%; top: ' + y.toFixed(1) + '%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; white-space: nowrap; min-height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(14,16,32,0.92); border: 1px solid rgba(250,245,239,0.24); color: #FAF5EF; font-family: Manrope, Arial, sans-serif; font-size: 12px; font-weight: 600;' };
+    });
+    const p = {
+      ...raw,
+      nameUpper: raw.name.toUpperCase(), categoryUpper: raw.category.toUpperCase(), platformUpper: raw.platform.toUpperCase(),
+      /* Project details: a row is shown only when its value is confirmed. Empty fields and "To confirm" placeholders never appear on public pages. */
+      hasIndustry: !!raw.industry, hasLocation: !!raw.location, location: raw.location || '',
+      hasLive: !!raw.liveUrl, liveUrl: raw.liveUrl || '#', liveLabel: (raw.liveUrl || '').replace(/^https?:\/\//, '').replace(/\/$/, ''), liveAria: raw.liveUrl ? 'Visit the ' + raw.name + ' website (opens in a new tab)' : '',
+      approach: raw.approach.map((a, i) => ({ n: pad(i + 1), phase: a[0], text: a[1] })),
+      delivered: raw.delivered.map((t, i) => ({ n: pad(i + 1), text: t })), deliveredCount: pad(raw.delivered.length),
+      assets: raw.assets.filter((label) => !(raw.logo && /^Logo files$/.test(label))).map((label, i) => ({ n: pad(i + 1), label: label, style: 'min-height: ' + (i === 0 ? '220px' : '150px') + '; justify-content: flex-end;' })),
+      hasLogo: !!raw.logo, logoSrc: raw.logo ? raw.logo.src : '', logoAlt: raw.logo ? raw.logo.alt : '', logoCaption: raw.logo ? raw.logo.caption : '',
+      logoFig: raw.logo ? 'grid-column: 1 / -1; position: relative; margin: 0; min-height: clamp(260px, 30cqi, 380px); padding: 40px 24px 48px; box-sizing: border-box; border-radius: 28px; border: 1px solid #E3DACE; background: ' + raw.logo.bg + '; display: flex; align-items: center; justify-content: center;' : '',
+      logoImg: raw.logo ? 'display: block; width: min(100%, ' + raw.logo.maxw + 'px); height: auto;' : '',
+      hasNote: !!raw.note, hasStack: !!raw.stack, stackText: (raw.stack || []).join(' · '),
+      hasReview: !!raw.review, reviewTitle: raw.review ? raw.review.title : '', reviewName: raw.review ? raw.review.name : '', reviewDate: raw.review ? raw.review.date : '', reviewUrl: raw.review ? raw.review.url : '#', reviewAria: raw.review ? 'Read ' + raw.review.name + '’s review on Trustpilot (opens in a new tab)' : '',
+      orbitStyle: 'position: absolute; inset: 10%; transform: rotate(' + raw.tilt + 'deg) scaleY(0.62);',
+      chips: chips
+    };
+    const related = raw.related.map((s) => PROJECTS.find((x) => x.slug === s)).filter((r) => !r.onHold).map((r) => ({ name: r.name, file: r.file, card: r.card, categoryUpper: r.category.toUpperCase(), platformUpper: r.platform.toUpperCase() }));
+
+    const SLUG = {
+      'Brand Identity Design': 'brand-identity-design', 'Digital & Web Design (UI/UX)': 'digital-web-design', 'Marketing & Advertising Design': 'marketing-advertising-design', 'Print & Publication Design': 'print-publication-design', 'Motion Graphics & Video': 'motion-graphics-video',
+      'Website & E-commerce Development': 'website-ecommerce-development', 'Development by Product Type': 'development-by-product-type', 'Development by Technology Focus': 'development-by-technology-focus', 'Quality, Testing & Maintenance': 'quality-testing-maintenance', 'Strategy & Consulting': 'software-strategy-consulting',
+      'Digital Marketing & Traffic Generation': 'digital-marketing-traffic-generation', 'Content & Brand Engagement': 'content-brand-engagement', 'Social Media & Community': 'social-media-community', 'Conversion & Customer Nurturing': 'conversion-customer-nurturing', 'Strategy & Analytics': 'marketing-strategy-analytics'
+    };
+    const groupData = [
+      { id: 'design', name: 'Design Services', dot: '#FFBC51', pages: ['Brand Identity Design', 'Digital & Web Design (UI/UX)', 'Marketing & Advertising Design', 'Print & Publication Design', 'Motion Graphics & Video'] },
+      { id: 'dev', name: 'Web, App & Software Development', dot: '#FF5C5E', pages: ['Website & E-commerce Development', 'Development by Product Type', 'Development by Technology Focus', 'Quality, Testing & Maintenance', 'Strategy & Consulting'] },
+      { id: 'mkt', name: 'Marketing Services', dot: '#FAF5EF', pages: ['Digital Marketing & Traffic Generation', 'Content & Brand Engagement', 'Social Media & Community', 'Conversion & Customer Nurturing', 'Strategy & Analytics'] }
+    ];
+    let pn = 0;
+    const groups = groupData.map((g) => {
+      const open = S.grp === g.id;
+      return {
+        name: g.name, listId: 'cs-grp-' + g.id, count: pad(g.pages.length),
+        expanded: open ? 'true' : 'false', listClass: open ? 'ff-grp ff-open' : 'ff-grp',
+        dotStyle: 'width: 8px; height: 8px; flex: none; border-radius: 50%; background: ' + g.dot + ';',
+        chevStyle: 'width: 28px; height: 28px; flex: none; border-radius: 50%; border: 1px solid rgba(250,245,239,0.3); display: inline-flex; align-items: center; justify-content: center; color: #FAF5EF; font-size: 16px; transform: rotate(' + (open ? '45' : '0') + 'deg); transition: transform .3s;',
+        toggle: () => this.setState({ grp: open ? '' : g.id }),
+        pages: g.pages.map((nm) => { pn += 1; return { name: nm, n: pad(pn), href: ({ 'brand-identity-design': 'B-Svc-Brand.dc.html', 'digital-web-design': 'Svc-DigitalWeb.dc.html', 'marketing-advertising-design': 'Svc-Marketing.dc.html', 'print-publication-design': 'Svc-Print.dc.html', 'motion-graphics-video': 'Svc-Motion.dc.html', 'website-ecommerce-development': 'Svc-WebDev.dc.html', 'development-by-product-type': 'Svc-DevProduct.dc.html', 'development-by-technology-focus': 'Svc-DevTech.dc.html', 'quality-testing-maintenance': 'Svc-QA.dc.html', 'software-strategy-consulting': 'Svc-Strategy.dc.html', 'digital-marketing-traffic-generation': 'Svc-MktDigital.dc.html', 'content-brand-engagement': 'Svc-MktContent.dc.html', 'social-media-community': 'Svc-MktSocial.dc.html', 'conversion-customer-nurturing': 'Svc-MktConversion.dc.html', 'marketing-strategy-analytics': 'Svc-MktStrategy.dc.html' })[SLUG[nm]] || '', built: !!({ 'brand-identity-design': 'B-Svc-Brand.dc.html', 'digital-web-design': 'Svc-DigitalWeb.dc.html', 'marketing-advertising-design': 'Svc-Marketing.dc.html', 'print-publication-design': 'Svc-Print.dc.html', 'motion-graphics-video': 'Svc-Motion.dc.html', 'website-ecommerce-development': 'Svc-WebDev.dc.html', 'development-by-product-type': 'Svc-DevProduct.dc.html', 'development-by-technology-focus': 'Svc-DevTech.dc.html', 'quality-testing-maintenance': 'Svc-QA.dc.html', 'software-strategy-consulting': 'Svc-Strategy.dc.html', 'digital-marketing-traffic-generation': 'Svc-MktDigital.dc.html', 'content-brand-engagement': 'Svc-MktContent.dc.html', 'social-media-community': 'Svc-MktSocial.dc.html', 'conversion-customer-nurturing': 'Svc-MktConversion.dc.html', 'marketing-strategy-analytics': 'Svc-MktStrategy.dc.html' })[SLUG[nm]], unbuilt: !({ 'brand-identity-design': 'B-Svc-Brand.dc.html', 'digital-web-design': 'Svc-DigitalWeb.dc.html', 'marketing-advertising-design': 'Svc-Marketing.dc.html', 'print-publication-design': 'Svc-Print.dc.html', 'motion-graphics-video': 'Svc-Motion.dc.html', 'website-ecommerce-development': 'Svc-WebDev.dc.html', 'development-by-product-type': 'Svc-DevProduct.dc.html', 'development-by-technology-focus': 'Svc-DevTech.dc.html', 'quality-testing-maintenance': 'Svc-QA.dc.html', 'software-strategy-consulting': 'Svc-Strategy.dc.html', 'digital-marketing-traffic-generation': 'Svc-MktDigital.dc.html', 'content-brand-engagement': 'Svc-MktContent.dc.html', 'social-media-community': 'Svc-MktSocial.dc.html', 'conversion-customer-nurturing': 'Svc-MktConversion.dc.html', 'marketing-strategy-analytics': 'Svc-MktStrategy.dc.html' })[SLUG[nm]] }; })
+      };
+    });
+
+    return {
+      p: p, related: related, groups: groups,
+      menuOpen: S.menu, menuExpanded: S.menu ? 'true' : 'false',
+      openMenu: () => { const t = document.activeElement; this.menuReturn = t && t.id ? t.id : 'cs-menu-btn'; this.setState({ menu: true }); focusSoon('cs-menu-close'); },
+      closeMenu: () => { this.setState({ menu: false }); focusSoon(this.menuReturn || 'cs-menu-btn'); },
+      menuKey: (e) => {
+        if (e.key === 'Escape') { e.preventDefault(); this.setState({ menu: false }); focusSoon(this.menuReturn || 'cs-menu-btn'); return; }
+        if (e.key !== 'Tab') return;
+        const dlg = document.getElementById('cs-menu'); if (!dlg) return;
+        const items = [...dlg.querySelectorAll('a[href], button:not([disabled])')].filter((el) => el.offsetParent !== null);
+        if (!items.length) return;
+        const first = items[0], last = items[items.length - 1], cur = document.activeElement;
+        if (e.shiftKey && (cur === first || !dlg.contains(cur))) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && (cur === last || !dlg.contains(cur))) { e.preventDefault(); first.focus(); }
+      },
+      skipToMain: (e) => { if (e && e.preventDefault) e.preventDefault(); const m = document.getElementById('main'); if (m) { m.focus(); if (m.scrollIntoView) m.scrollIntoView({ block: 'start' }); } },
+      tAus: S.tAus, tLon: S.tLon, tFra: S.tFra
+    };
+  }
+}
+</script>
+</body>
+</html>

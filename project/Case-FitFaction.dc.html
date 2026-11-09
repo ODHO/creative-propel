@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Case study — The Fit Faction</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#07080F}
+a{color:inherit}
+.ff-dark a:hover{color:#FFBC51}
+.ff-cream a:hover{color:#C93A3C}
+:focus-visible{outline:3px solid #FFBC51;outline-offset:3px}
+.ff-cream :focus-visible{outline-color:#C93A3C}
+@keyframes ff-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes ff-spin{to{transform:rotate(360deg)}}
+@keyframes ff-focus{from{filter:blur(12px);opacity:0;transform:scale(.97)}to{filter:blur(0);opacity:1;transform:none}}
+.ff-core{animation:ff-breathe 7s ease-in-out infinite}
+.ff-orbit{animation:ff-spin 60s linear infinite}
+.ff-in{animation:ff-focus 1.1s cubic-bezier(.22,1,.36,1) both}
+.ff-root{container-type:inline-size;container-name:page}
+.ff-grp{display:flex}.ff-gtoggle{display:none}
+footer a,.ff-links a,nav[aria-label="Breadcrumb"] a{min-height:24px;display:inline-flex;align-items:center}
+.ph-d,.ph-c{display:flex;flex-direction:column;gap:6px;border-radius:16px;padding:14px 16px;box-sizing:border-box}
+.ph-d{border:1px dashed rgba(255,188,81,0.6);background:rgba(255,188,81,0.06)}
+.ph-c{border:1px dashed rgba(201,58,60,0.55);background:rgba(201,58,60,0.04)}
+.ph-l{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase}
+.ph-d .ph-l{color:#FFBC51}.ph-c .ph-l{color:#B83234}
+.ph-t{font-size:14px;line-height:1.5}
+.ph-d .ph-t{color:#E9E3DC}.ph-c .ph-t{color:#2A2830}
+@container page (max-width: 940px){.ff-links{display:none !important}}
+@container page (max-width: 760px){.ff-gtitle{display:none !important}.ff-gtoggle{display:flex}.ff-grp{display:none}.ff-grp.ff-open{display:flex}.ff-hide-sm{display:none !important}}
+@media (prefers-reduced-motion: reduce){.ff-core,.ff-orbit,.ff-in{animation:none}}
+.ff-skip{position:absolute;left:16px;top:16px;z-index:40;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:#FFBC51;color:#0B0C14;font-family:'Manrope',Arial,sans-serif;font-size:15px;font-weight:700;text-decoration:none;opacity:0;transform:translateY(-200%);pointer-events:none}
+.ff-skip:focus{opacity:1;transform:none;pointer-events:auto}.ff-skip:hover{color:#0B0C14}.ff-skip:focus-visible{outline:3px solid #FAF5EF;outline-offset:3px}
+#main:focus{outline:none}
+[data-offscreen="1"] .ff-orbit,[data-offscreen="1"] .ff-core{animation-play-state:paused}
+.ff-soc{width:44px;height:44px;box-sizing:border-box;border-radius:50%;display:inline-flex !important;align-items:center;justify-content:center;border:1px solid rgba(250,245,239,0.22);background:rgba(250,245,239,0.04);color:#FAF5EF;text-decoration:none;transition:border-color .2s ease,background-color .2s ease}
+.ff-dark a.ff-soc:hover,.ff-soc:hover{color:#FAF5EF;border-color:#FFBC51;background:rgba(255,188,81,0.14)}
+.ff-soc:focus-visible{outline:3px solid #FFBC51;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){.ff-soc{transition:none}}
+@container page (max-width: 1100px){.hp-offices{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.hp-offices > :last-child:nth-child(odd){grid-column:1 / -1}}
+@container page (max-width: 760px){.hp-offices{grid-template-columns:minmax(0,1fr) !important}}
+.cs-light :focus-visible{outline-color:#C93A3C}.ff-dark .cs-light a:hover{color:#C93A3C}
+</style>
+</helmet>
+<div style="width: 100%; background: #07080F; font-family: 'Manrope', Arial, sans-serif; color: #FAF5EF">
+  <dc-import name="B-Case" slug="the-fit-faction" hint-size="100%,6000px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6000}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

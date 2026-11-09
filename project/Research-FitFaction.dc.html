@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Asset research — The Fit Faction</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FAF5EF}
+a{color:inherit}
+:focus-visible{outline:3px solid #C93A3C;outline-offset:3px}
+.rv{container-type:inline-size;width:100%;background:#FAF5EF;color:#0B0C14;font-family:'Manrope',Arial,sans-serif}
+.mono{font-family:'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+.uh{font-family:'Unbounded',sans-serif;letter-spacing:-.045em;font-weight:600}
+.top{background:#07080F;color:#FAF5EF;padding:48px clamp(16px,3.4cqi,48px) 72px;position:relative;overflow:hidden}
+.glow{position:absolute;right:-200px;top:-320px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(255,188,81,.42),rgba(255,92,94,.12) 45%,transparent 68%)}
+.wrap{position:relative;width:min(1280px,100%);margin:0 auto}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:30px;padding:0 12px;border-radius:999px;font-size:11px}
+.cd{background:rgba(250,245,239,.07);border:1px solid rgba(250,245,239,.2)}
+.ca{background:#FFBC51;color:#0B0C14}
+.cw{border:1px dashed rgba(255,188,81,.7);color:#FFBC51}
+.body{border-radius:48px 48px 0 0;margin-top:-40px;position:relative;background:#FAF5EF;padding:56px clamp(16px,3.4cqi,48px) 96px}
+.cols{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}
+.main{flex:999 1 620px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.side{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:16px;position:sticky;top:20px}
+.f{background:#FFFFFF;border:1px solid #E3DACE;border-radius:28px;padding:24px 26px;display:flex;flex-direction:column;gap:14px}
+.fh{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center}
+.id{font-size:12px;color:#C93A3C}
+.st{font-size:10px;padding:0 10px;min-height:24px;border-radius:999px;display:inline-flex;align-items:center}
+.st-n{background:#0B0C14;color:#FAF5EF}.st-u{border:1px solid #D8CCBD;color:#5A5560}
+.pt{font-size:18px;line-height:1.65;margin:0}
+.pt-h{font-family:'Unbounded',sans-serif;font-size:clamp(22px,2.4cqi,30px);font-weight:600;letter-spacing:-.045em;line-height:1.15;margin:0}
+.cur{border-top:1px dashed #D8CCBD;padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.cur .mono{font-size:10px;color:#8A8390}
+.cur p,.cur li{margin:0;font-size:14px;line-height:1.6;color:#6A6470}
+ol.ap{margin:0;padding:0;list-style:none}
+ol.ap li{display:grid;grid-template-columns:minmax(120px,150px) 1fr;gap:14px;padding:12px 0;border-top:1px solid #EEE6DA;font-size:16px;line-height:1.6}
+ol.ap li:first-child{border-top:0}
+ol.ap b{font-weight:700}ol.ap .n{font-family:'Geist Mono',monospace;font-size:11px;color:#C93A3C;margin-right:8px}
+ul.dl{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:8px}
+ul.dl li{padding:10px 14px;border-radius:16px;background:#F7F1E8;font-size:15px;line-height:1.45}
+.card{background:#0B0C14;color:#FAF5EF;border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font-size:12px;font-weight:500;color:#FFBC51}
+.card dl{margin:0}.card dl div{padding:9px 0;border-top:1px solid rgba(250,245,239,.14);display:flex;flex-direction:column;gap:3px}
+.card dt{font-size:10px;color:#A7A9B8}.card dd{margin:0;font-weight:700;font-size:15px;line-height:1.45}
+.tc{color:#FFBC51 !important;font-weight:600 !important}
+.lst{background:#FFFFFF;border:1px solid #E3DACE;border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.lst h3{margin:0;font-size:12px;font-weight:500}
+.lst ul{margin:0;padding:0 0 0 18px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.55}
+.miss{border:1px dashed rgba(201,58,60,.55);background:rgba(201,58,60,.04)}
+.miss h3{color:#C93A3C}
+.note{border-left:3px solid #FFBC51;padding:10px 14px;background:#F7F1E8;border-radius:0 14px 14px 0;font-size:15px;line-height:1.6;margin:0}
+.lnk{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:700;color:#FFBC51;text-decoration:none}
+@container (max-width:760px){ol.ap li{grid-template-columns:1fr;gap:4px}.side{position:static}}
+</style>
+<style>
+.sec{display:flex;flex-direction:column;gap:12px}
+.sec h2{margin:0;font-family:'Unbounded',sans-serif;font-size:clamp(20px,2cqi,26px);font-weight:600;letter-spacing:-.04em}
+.fact{display:flex;flex-direction:column;gap:4px;padding:12px 0;border-top:1px solid #EEE6DA;font-size:16px;line-height:1.55}
+.fact:first-of-type{border-top:0}
+.src{font-family:'Geist Mono',monospace;font-size:11px;color:#C93A3C;word-break:break-all;text-decoration:none;display:inline-flex;align-items:center;min-height:24px}
+.asset{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:10px 18px;padding:16px 0;border-top:1px solid #EEE6DA}
+.asset:first-of-type{border-top:0}
+.k{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8A8390;display:block;margin-bottom:3px}
+.v{font-size:14px;line-height:1.5}
+.badge{display:inline-flex;align-items:center;min-height:24px;padding:0 10px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.b-cap{background:#0B0C14;color:#FAF5EF}.b-sup{border:1px dashed #C93A3C;color:#C93A3C}.b-img{background:#F1EAE0;color:#2A2830}
+.warn{background:#FFF4E0;border:1px solid #F1D29A;border-radius:14px;padding:10px 12px;font-size:13px;line-height:1.5;color:#5A4320}
+table.cmp{width:100%;border-collapse:collapse;font-size:13px;line-height:1.45}
+table.cmp th,table.cmp td{text-align:left;vertical-align:top;padding:10px 8px;border-top:1px solid #EEE6DA}
+table.cmp th{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8A8390;font-weight:500}
+.scroll{overflow-x:auto}
+.shot{border:1px dashed #C93A3C;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:6px;background:rgba(201,58,60,.04)}
+</style>
+</helmet>
+<div class="rv">
+<header class="top"><div class="glow" aria-hidden="true"></div><div class="wrap" style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-wrap:wrap;gap:8px"><span class="mono chip cd"><span style="width:7px;height:7px;border-radius:50%;background:#FFBC51"></span>Asset research · on hold</span><span class="mono chip cw">Internal research only · not for publication</span><span class="mono chip ca">Site not readable</span><span class="mono chip" style="background:#C93A3C;color:#FAF5EF">On hold · not in the active portfolio</span></div>
+<h1 class="uh" style="margin:0;font-size:clamp(34px,4.6cqi,64px);line-height:1.04">The Fit Faction</h1>
+<p style="margin:0;max-width:880px;font-size:17px;line-height:1.65;color:#E9E3DC">Source: <a class="src" href="https://www.thefitfaction.com/" target="_blank" rel="noopener">https://www.thefitfaction.com/</a> · Access: Not readable. The site’s robots.txt blocks automated reading, so nothing on the live site could be checked.</p>
+</div></header><main class="body"><div class="wrap cols"><div class="main"><section class="shot" style="border-style:solid"><span class="mono" style="font-size:11px;color:#C93A3C">On hold · archived research</span><span style="font-size:15px;line-height:1.6">The Fit Faction is removed from the active portfolio until you supply the original project assets and confirm it can be presented accurately. This research is kept for reference only.</span></section><section class="shot" aria-label="Screenshot status"><span class="mono" style="font-size:11px;color:#C93A3C">Screenshots · none captured</span><span style="font-size:15px;line-height:1.55">Direct browser access to this domain is blocked in this session, so no genuine screenshots could be taken. No mockups or recreated interfaces have been made. Each “Screenshot to capture” item below is a capture plan.</span></section>
+<section class="f sec"><div class="fh"><span class="mono id">TFF · Publicly verified facts</span><span class="mono st st-u">Stated on the client site</span></div><p class="pt" style="font-size:15px;color:#5A5560;margin:0">Nothing could be verified from the live site.</p></section>
+<section class="f sec"><div class="fh"><span class="mono id">TFF · Not verified, or assumptions</span><span class="mono st st-u">Needs your confirmation</span></div><div class="fact"><span>A web search found a “The Fit Faction” listing in Manhattan on a fitness-partner directory, but nothing links it to thefitfaction.com. It has not been used.</span><a class="src" href="https://wellhub.com/en-us/search/partners/the-fit-faction-manhattan/" target="_blank" rel="noopener">https://wellhub.com/en-us/search/partners/the-fit-faction-manhattan/</a></div><div class="fact"><span>Whether the current live site is the version Creative Propel delivered. This can only be settled from your project files.</span></div></section>
+<section class="f sec"><div class="fh"><span class="mono id">TFF · Asset inventory</span><span class="mono st st-u">5 items</span></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">TFF-A01 · Homepage, desktop (delivered version)</strong><span class="badge b-sup">To be supplied</span></div>
+<div><span class="k">Description</span><span class="v">The homepage as delivered, from your project archive or design files.</span></div><div><span class="k">Type</span><span class="v">Screenshot or design export</span></div><div><span class="k">Recommended placement</span><span class="v">Project visuals 01 (lead image)</span></div><div style="grid-column:1/-1"><span class="k">Source</span><span class="src" style="color:#5A5560">Your project files</span></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> Preferred over the live site, which may have changed since delivery.</div></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">TFF-A02 · Homepage, desktop (live)</strong><span class="badge b-cap">Screenshot to capture</span></div>
+<div><span class="k">Description</span><span class="v">Current live homepage, for comparison only.</span></div><div><span class="k">Type</span><span class="v">Website screenshot</span></div><div><span class="k">Recommended placement</span><span class="v">Comparison only</span></div><div style="grid-column:1/-1"><span class="k">Source</span><a class="src" href="https://www.thefitfaction.com/" target="_blank" rel="noopener">https://www.thefitfaction.com/</a></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> Could not be captured here. The live site may differ from the delivered work. Needs client permission.</div></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">TFF-A03 · Homepage, mobile</strong><span class="badge b-cap">Screenshot to capture</span></div>
+<div><span class="k">Description</span><span class="v">Mobile view showing the responsive layout.</span></div><div><span class="k">Type</span><span class="v">Website screenshot</span></div><div><span class="k">Recommended placement</span><span class="v">Project visuals 02</span></div><div style="grid-column:1/-1"><span class="k">Source</span><a class="src" href="https://www.thefitfaction.com/" target="_blank" rel="noopener">https://www.thefitfaction.com/</a> <span class="v" style="color:#5A5560">(or project files)</span></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> Same as above.</div></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">TFF-A04 · Navigation and additional pages</strong><span class="badge b-cap">Screenshot to capture</span></div>
+<div><span class="k">Description</span><span class="v">One or two interior pages showing the navigation and the additional pages in scope.</span></div><div><span class="k">Type</span><span class="v">Website screenshot</span></div><div><span class="k">Recommended placement</span><span class="v">Project visuals 03</span></div><div style="grid-column:1/-1"><span class="k">Source</span><span class="src" style="color:#5A5560">URLs unknown (site not readable)</span></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> Page list needed from you.</div></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">TFF-A05 · Client logo</strong><span class="badge b-sup">To be supplied</span></div>
+<div><span class="k">Description</span><span class="v">The Fit Faction logo, which you say is on file.</span></div><div><span class="k">Type</span><span class="v">Brand logo</span></div><div><span class="k">Recommended placement</span><span class="v">Hero / project details</span></div><div style="grid-column:1/-1"><span class="k">Source</span><span class="src" style="color:#5A5560">Your files</span></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> Client-owned logo. Not part of Creative Propel’s confirmed scope.</div></div></section><a class="lnk" style="color:#C93A3C" href="Case-FitFaction.dc.html">Open the approved case study (unchanged)</a></div><aside class="side"><section class="card"><h3 class="mono">Recommended visual selection · on hold</h3><ol style="margin:0;padding:0 0 0 20px;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.5"><li><strong>Delivered homepage, desktop</strong><br><span style="color:#C9C3BC">Shows the full visual design that Creative Propel created, without later changes.</span></li><li><strong>Delivered homepage, mobile</strong><br><span style="color:#C9C3BC">Demonstrates the confirmed mobile-responsive design.</span></li><li><strong>One interior page</strong><br><span style="color:#C9C3BC">Shows the clearer navigation and the additional pages.</span></li><li><strong>Client logo</strong><br><span style="color:#C9C3BC">Identifies the client in the hero and the project details.</span></li></ol></section>
+<section class="lst"><h3 class="mono">Potential factual updates</h3><p style="margin:0;font-size:15px;color:#5A5560">None. The site could not be read.</p></section>
+<section class="lst miss"><h3 class="mono">Missing · to be supplied by you or the client</h3><ul><li>Delivered-version screenshots or design files (desktop and mobile)</li><li>List of the additional pages added</li><li>Client logo upload</li><li>Confirmation that the live site still reflects the delivered work, or what has changed</li><li>What the business does (the site could not be read)</li></ul></section>
+</aside></div></main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4000}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

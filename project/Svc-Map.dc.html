@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Service architecture and template map</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#FAF5EF}a:hover{color:#FFBC51}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1640px; box-sizing: border-box; background: #07080F; color: #FAF5EF; font-family: 'Manrope', Arial, sans-serif; padding: 64px; display: flex; flex-direction: column; gap: 40px; position: relative; overflow: hidden">
+  <div aria-hidden="true" style="position: absolute; right: -180px; top: -220px; width: 640px; height: 640px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.5), rgba(255,92,94,0.12) 45%, transparent 68%)"></div>
+  <header style="position: relative; display: flex; flex-direction: column; gap: 14px">
+    <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #FFBC51">09 · SERVICE ARCHITECTURE</p>
+    <h1 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 56px; font-weight: 600; letter-spacing: -0.05em; line-height: 1">3 groups · 14 service pages · 1 template</h1>
+  </header>
+
+  <section style="position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+    <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 14px">
+      <p style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 500; letter-spacing: -0.03em"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FFBC51"></span>Design Services</p>
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #8C93AD">HOMEPAGE ENTRY: WEB DESIGN &amp; DEVELOPMENT · BRANDING &amp; CREATIVE DESIGN</p>
+      <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #FFBC51; width: 22px">01</span><a href="B-Svc-Brand.dc.html" style="font-weight: 700; color: #FFBC51">Brand Identity Design · TEMPLATE ✓</a></li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">02</span>Digital &amp; Web Design (UI/UX)</li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">03</span>Marketing &amp; Advertising Design</li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">04</span>Print &amp; Publication Design</li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">05</span>Motion Graphics &amp; Video</li>
+      </ol>
+    </div>
+    <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 14px">
+      <p style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 500; letter-spacing: -0.03em"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FF5C5E"></span>App &amp; Software Development</p>
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #8C93AD">HOMEPAGE ENTRY: SOFTWARE &amp; DIGITAL PRODUCTS</p>
+      <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">06</span>Development by Product Type</li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">07</span>Development by Technology Focus</li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">08</span>Quality, Testing &amp; Maintenance</li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">09</span>Strategy &amp; Consulting</li>
+      </ol>
+    </div>
+    <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 14px">
+      <p style="margin: 0; display: flex; align-items: center; gap: 10px; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 500; letter-spacing: -0.03em"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FAF5EF"></span>Marketing Services</p>
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #8C93AD">HOMEPAGE ENTRY: DIGITAL MARKETING &amp; GROWTH</p>
+      <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">10</span>Digital Marketing &amp; Traffic Generation</li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">11</span>Content &amp; Brand Engagement</li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">12</span>Social Media &amp; Community</li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">13</span>Conversion &amp; Customer Nurturing</li>
+        <li style="display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(250,245,239,0.14); font-size: 16px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD; width: 22px">14</span>Strategy &amp; Analytics</li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="position: relative; display: flex; flex-direction: column; gap: 16px">
+    <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8C93AD">SERVICE TEMPLATE · BLOCKS IN ORDER</p>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+      <div style="padding: 20px; border-radius: 24px; background: #0E1020; border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">01 · REQUIRED · DARK</span><strong style="font-size: 17px">Hero</strong><span style="font-size: 14px; line-height: 1.55; color: #C9C3BC">Breadcrumb, page name, approved headline, description, two CTAs. Visual set per group (identity system, interface, product, growth).</span></div>
+      <div style="padding: 20px; border-radius: 24px; background: #FAF5EF; color: #0B0C14; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #C93A3C">02 · REQUIRED · CREAM</span><strong style="font-size: 17px">Overview + What's included</strong><span style="font-size: 14px; line-height: 1.55; color: #2A2830">Long-form intro. The "included" card lists the page's services and jumps to them.</span></div>
+      <div style="padding: 20px; border-radius: 24px; background: #0E1020; border: 1px solid rgba(255,188,81,0.5); display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">03 · REQUIRED · DARK · SIGNATURE</span><strong style="font-size: 17px">Services explorer</strong><span style="font-size: 14px; line-height: 1.55; color: #C9C3BC">Takes 3–7 items. Each item has a name, description, deliverables and an illustrative visual. Accordion on mobile.</span></div>
+      <div style="padding: 20px; border-radius: 24px; background: #FAF5EF; color: #0B0C14; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #C93A3C">04 · OPTIONAL · CREAM</span><strong style="font-size: 17px">Process track</strong><span style="font-size: 14px; line-height: 1.55; color: #2A2830">Takes 3–6 steps, and the track spaces itself to fit. Hidden if a page has no approved process.</span></div>
+      <div style="padding: 20px; border-radius: 24px; background: #0E1020; border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">05 · OPTIONAL · DARK</span><strong style="font-size: 17px">Related work</strong><span style="font-size: 14px; line-height: 1.55; color: #C9C3BC">1–3 verified projects tagged with this service. The section is removed if there are none.</span></div>
+      <div style="padding: 20px; border-radius: 24px; background: #0E1020; border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">06 · OPTIONAL · DARK</span><strong style="font-size: 17px">Relevant review</strong><span style="font-size: 14px; line-height: 1.55; color: #C9C3BC">One genuine review matched to the service, plus the two platform ratings. If no review fits, only the ratings show.</span></div>
+      <div style="padding: 20px; border-radius: 24px; background: #FAF5EF; color: #0B0C14; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #C93A3C">07 · OPTIONAL · CREAM</span><strong style="font-size: 17px">FAQ</strong><span style="font-size: 14px; line-height: 1.55; color: #2A2830">Takes 3–8 approved questions. Hidden if a page has none.</span></div>
+      <div style="padding: 20px; border-radius: 24px; background: #F1EAE0; color: #0B0C14; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #C93A3C">08 · AUTO · CREAM 2 → 09 · GLOBAL · DARK</span><strong style="font-size: 17px">Related services → closing CTA + footer</strong><span style="font-size: 14px; line-height: 1.55; color: #2A2830">Sibling pages are generated from the group. Footer CTA uses the approved "Let's Build What's Next."</span></div>
+    </div>
+  </section>
+
+  <section style="position: relative; display: flex; flex-direction: column; gap: 14px">
+    <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #FFBC51">URL STRUCTURE · FROZEN 4 NOV 2026 · NO SERVICES OVERVIEW PAGE</p>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; font-family: 'Geist Mono', monospace; font-size: 12.5px; line-height: 2; color: #E9E3DC">
+      <div style="padding: 18px 22px; border-radius: 24px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14)">/services/brand-identity-design/<br>/services/digital-web-design/<br>/services/marketing-advertising-design/<br>/services/print-publication-design/<br>/services/motion-graphics-video/</div>
+      <div style="padding: 18px 22px; border-radius: 24px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14)">/services/software-development-by-product-type/<br>/services/software-development-by-technology-focus/<br>/services/quality-testing-maintenance/<br>/services/software-strategy-consulting/<br><span style="color: #A7A9B8">/reviews/ · /projects/ · /about/ · /contact/ · /blog/</span></div>
+      <div style="padding: 18px 22px; border-radius: 24px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14)">/services/digital-marketing-traffic-generation/<br>/services/content-brand-engagement/<br>/services/social-media-community/<br>/services/conversion-customer-nurturing/<br>/services/marketing-strategy-analytics/</div>
+    </div>
+    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #C9C3BC">Breadcrumbs: Home / [Group name] / [Page]. Group names are labels, not links, because there are no group pages, and /services/ on its own is not a page. The homepage category buttons link to /services/digital-web-design/, /services/software-development-by-product-type/, /services/brand-identity-design/ and /services/digital-marketing-traffic-generation/. On the canvas, pages not yet designed use the same paths as #-links.</p>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1640}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About Creative Propel</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#07080F}
+a{color:inherit}
+.ff-dark a:hover{color:#FFBC51}
+.ff-cream a:hover{color:#C93A3C}
+:focus-visible{outline:3px solid #FFBC51;outline-offset:3px}
+.ff-cream :focus-visible{outline-color:#C93A3C}
+@keyframes ff-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes ff-spin{to{transform:rotate(360deg)}}
+@keyframes ff-focus{from{filter:blur(12px);opacity:0;transform:scale(.97)}to{filter:blur(0);opacity:1;transform:none}}
+.ff-core{animation:ff-breathe 7s ease-in-out infinite}
+.ff-orbit{animation:ff-spin 60s linear infinite}
+.ff-in{animation:ff-focus 1.1s cubic-bezier(.22,1,.36,1) both}
+.ff-root{container-type:inline-size;container-name:page}
+.ff-grp{display:flex}.ff-gtoggle{display:none}
+footer a,.ff-links a,nav[aria-label="Breadcrumb"] a{min-height:24px;display:inline-flex;align-items:center}
+.ph-d,.ph-c{display:flex;flex-direction:column;gap:6px;border-radius:16px;padding:14px 16px;box-sizing:border-box}
+.ph-d{border:1px dashed rgba(255,188,81,0.6);background:rgba(255,188,81,0.06)}
+.ph-c{border:1px dashed rgba(201,58,60,0.55);background:rgba(201,58,60,0.04)}
+.ph-l{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase}
+.ph-d .ph-l{color:#FFBC51}.ph-c .ph-l{color:#C93A3C}
+.ph-t{font-size:14px;line-height:1.5}
+.ph-d .ph-t{color:#E9E3DC}.ph-c .ph-t{color:#2A2830}
+@container page (max-width: 940px){.ff-links{display:none !important}}
+@container page (max-width: 760px){.ff-gtitle{display:none !important}.ff-gtoggle{display:flex}.ff-grp{display:none}.ff-grp.ff-open{display:flex}.ff-hide-sm{display:none !important}}
+@media (prefers-reduced-motion: reduce){.ff-core,.ff-orbit,.ff-in{animation:none}}
+</style>
+<style>
+.ab-sec{padding:clamp(80px,9cqi,128px) clamp(16px,3.4cqi,48px)}
+.ab-wrap{width:min(1200px,100%);margin:0 auto;box-sizing:border-box}
+.ab-eyebrow{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:0 14px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em}
+.ab-eyebrow-d{background:rgba(250,245,239,.07);border:1px solid rgba(250,245,239,.18);color:#FAF5EF}
+.ab-eyebrow-c{background:#FFFFFF;border:1px solid #E3DACE;color:#0B0C14}
+.ab-dot{width:7px;height:7px;border-radius:50%;flex:none}
+.ab-h2{margin:0;font-family:'Unbounded',sans-serif;font-size:clamp(30px,4.2cqi,58px);font-weight:600;line-height:1.06;letter-spacing:-.05em}
+.ab-h3{margin:0;font-family:'Unbounded',sans-serif;font-size:clamp(19px,1.6cqi,22px);font-weight:600;letter-spacing:-.04em;line-height:1.2}
+.ab-btn{display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 10px 0 24px;border-radius:999px;text-decoration:none;font-weight:700;box-sizing:border-box}
+.ab-btn-amber{background:#FFBC51;color:#0B0C14}
+.ff-dark a.ab-btn-amber:hover{color:#0B0C14;background:#FFCD78}
+.ab-btn-ghost{padding:0 26px;background:rgba(250,245,239,.07);border:1px solid rgba(250,245,239,.3);color:#FAF5EF}
+.ab-btn-ic{width:38px;height:38px;flex:none;border-radius:50%;background:#0B0C14;display:inline-flex;align-items:center;justify-content:center}
+.ab-chip{position:absolute;transform:translate(-50%,-50%);display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border-radius:999px;background:rgba(14,16,32,.92);border:1px solid rgba(250,245,239,.24);color:#FAF5EF;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;white-space:nowrap}
+.ab-orb-l{position:absolute;transform:translate(-50%,-50%);font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.16em;white-space:nowrap}
+.ab-sticky{position:sticky;top:24px}
+.ab-pillar{display:flex;gap:18px;align-items:flex-start;padding:24px 26px;border-radius:28px;background:rgba(250,245,239,.05);border:1px solid rgba(250,245,239,.14)}
+.ab-pillar p{margin:8px 0 0;font-size:16px;line-height:1.65;color:#D9D3CC}
+.ab-num{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid;display:flex;align-items:center;justify-content:center;font-family:'Geist Mono',monospace;font-size:12px}
+.ab-mv{position:relative;overflow:hidden;border-radius:36px;padding:clamp(28px,3.4cqi,48px);display:flex;flex-direction:column;gap:18px;min-height:280px;box-sizing:border-box}
+.ab-mv-h{margin:0;font-family:'Geist Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+.ab-mv-p{position:relative;margin:0;font-family:'Unbounded',sans-serif;font-size:clamp(21px,2.2cqi,30px);font-weight:500;line-height:1.3;letter-spacing:-.035em}
+.ab-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ab-val{display:flex;flex-direction:column;gap:10px;padding:26px;border-radius:28px;background:#FAF5EF;border:1px solid #E3DACE}
+.ab-val p{margin:0;font-size:16px;line-height:1.65;color:#2A2830}
+.ab-val-n{font-family:'Geist Mono',monospace;font-size:12px;color:#C93A3C}
+.ab-x{display:flex;flex-direction:column;gap:12px;padding:26px;border-radius:28px;background:rgba(250,245,239,.05);border:1px solid rgba(250,245,239,.14)}
+.ab-x-n{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#FFBC51}
+.ab-x-primary{align-self:flex-start;display:inline-block;min-height:44px;box-sizing:border-box;padding:11px 0;line-height:22px;font-weight:700;font-size:15px;color:#FFBC51;text-decoration:none}.ab-x-primary svg{display:inline-block;vertical-align:-2px;margin-left:6px}
+.ab-x-link{display:inline-flex;align-items:center;min-height:32px;font-size:14px;color:#E9E3DC;text-decoration:none}
+.ff-dark a.ab-x-link:hover{color:#FFBC51}
+.ab-who{display:flex;flex-direction:column;gap:14px}
+.ab-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;position:relative}
+.ab-track::before{content:"";position:absolute;left:26px;right:26px;top:33px;height:1px;background:linear-gradient(90deg,#FF5C5E,#FFBC51)}
+.ab-stage{position:relative;display:flex;flex-direction:column;gap:10px;padding:24px 26px 26px;border-radius:28px;background:#FFFFFF;border:1px solid #E3DACE}
+.ab-stage p,.ab-going p{margin:0;font-size:16px;line-height:1.65;color:#2A2830}
+.ab-stage-dot{width:16px;height:16px;border-radius:50%;background:#FFBC51;box-shadow:0 0 0 5px #FFFFFF,0 0 0 6px #E3DACE;margin-bottom:4px}
+.ab-going{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px;padding:26px 28px;border-radius:28px;background:#0B0C14}
+.ab-going p{color:#D9D3CC;max-width:640px}
+@container page (max-width: 940px){.ab-values{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container page (max-width: 760px){.ab-values{grid-template-columns:1fr}.ab-track{grid-template-columns:1fr}.ab-track::before{left:33px;right:auto;top:26px;bottom:26px;width:1px;height:auto;background:linear-gradient(180deg,#FF5C5E,#FFBC51)}.ab-sticky{position:static}}
+.ff-skip{position:absolute;left:16px;top:16px;z-index:40;display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:#FFBC51;color:#0B0C14;font-family:'Manrope',Arial,sans-serif;font-size:15px;font-weight:700;text-decoration:none;opacity:0;transform:translateY(-200%);pointer-events:none}
+.ff-skip:focus{opacity:1;transform:none;pointer-events:auto}.ff-skip:hover{color:#0B0C14}.ff-skip:focus-visible{outline:3px solid #FAF5EF;outline-offset:3px}
+#main:focus{outline:none}
+[data-offscreen="1"] .ff-orbit,[data-offscreen="1"] .ff-core{animation-play-state:paused}
+.ff-soc{width:44px;height:44px;box-sizing:border-box;border-radius:50%;display:inline-flex !important;align-items:center;justify-content:center;border:1px solid rgba(250,245,239,0.22);background:rgba(250,245,239,0.04);color:#FAF5EF;text-decoration:none;transition:border-color .2s ease,background-color .2s ease}
+.ff-dark a.ff-soc:hover,.ff-soc:hover{color:#FAF5EF;border-color:#FFBC51;background:rgba(255,188,81,0.14)}
+.ff-soc:focus-visible{outline:3px solid #FFBC51;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){.ff-soc{transition:none}}
+@container page (max-width: 1100px){.hp-offices{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.hp-offices > :last-child:nth-child(odd){grid-column:1 / -1}}
+@container page (max-width: 760px){.hp-offices{grid-template-columns:minmax(0,1fr) !important}}
+</style>
+</helmet>
+<div class="ff-root" style="width: 100%; position: relative; background: #07080F; color: #FAF5EF; font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif; overflow: hidden">
+
+  <!-- Consistency pass (7 Nov 2026, for review): menu button, hero button "Let's Work Together" and closing button "Start a Conversation" now read "Discuss Your Project"; the About closing CTA (eyebrow, heading, text and both buttons) is a dark panel at the end of "Our Team"; approved global footer. No other copy changed.
+       Final fixes (7 Nov 2026): core/orbit animations pause while their section is off-screen, as on the service pages. -->
+  <!-- ================= MEGA MENU (shared) ================= -->
+  <a href="#main" class="ff-skip" onClick="{{ skipToMain }}">Skip to main content</a>
+
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="ab-menu" role="dialog" aria-modal="true" aria-label="Site menu" onKeyDown="{{ menuKey }}" class="ff-dark" style="position: absolute; inset: 0; z-index: 20; padding: 16px clamp(12px, 3.4cqi, 48px) 32px; background: rgba(7,8,15,0.82)">
+      <div style="position: relative; width: min(1280px, 100%); box-sizing: border-box; margin: 0 auto; border-radius: 36px; background: #0E1020; border: 1px solid rgba(250,245,239,0.14); overflow: hidden; padding: 16px">
+        <div aria-hidden="true" style="position: absolute; right: -120px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.45), rgba(255,92,94,0.12) 45%, transparent 68%)"></div>
+        <div style="position: relative; height: 60px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); display: flex; align-items: center; justify-content: space-between; padding: 0 8px 0 20px; margin-bottom: 16px">
+          <img src="/_blob/11cb7e45f87956fec08fde70311f542c" alt="Creative Propel" style="width: 140px; height: auto">
+          <button type="button" id="ab-menu-close" onClick="{{ closeMenu }}" aria-label="Close menu" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(250,245,239,0.3); background: transparent; color: #FAF5EF; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"></path></svg></button>
+        </div>
+        <div style="position: relative; display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start">
+          <section aria-label="Services" style="flex: 999 1 640px; min-width: 0; padding: 22px; border-radius: 28px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+            <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8C93AD">SERVICES · 3 GROUPS · 15 PAGES</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 6px 24px">
+              <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+                <div style="min-width: 0; display: flex; flex-direction: column; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 12px">
+                  <h3 class="ff-gtitle" style="margin: 0 0 6px; display: flex; align-items: center; gap: 8px; font-family: 'Manrope', Arial, sans-serif; font-size: 16px; font-weight: 700; color: #FFBC51"><span aria-hidden="true" style="{{ g.dotStyle }}"></span>{{ g.name }}</h3>
+                  <button type="button" class="ff-gtoggle" onClick="{{ g.toggle }}" aria-expanded="{{ g.expanded }}" aria-controls="{{ g.listId }}" style="width: 100%; min-height: 48px; align-items: center; gap: 10px; padding: 0; background: transparent; border: 0; color: #FFBC51; font-family: 'Manrope', Arial, sans-serif; font-size: 16px; font-weight: 700; text-align: left; cursor: pointer"><span aria-hidden="true" style="{{ g.dotStyle }}"></span><span style="flex: 1">{{ g.name }}</span><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #A7A9B8">{{ g.count }}</span><span aria-hidden="true" style="{{ g.chevStyle }}">+</span></button>
+                  <ul id="{{ g.listId }}" class="{{ g.listClass }}" style="margin: 0 0 8px; padding: 0; list-style: none; flex-direction: column">
+                    <sc-for list="{{ g.pages }}" as="p" hint-placeholder-count="5">
+                      <li><sc-if value="{{ p.built }}" hint-placeholder-val="{{ true }}"><a href="{{ p.href }}" style="display: flex; gap: 10px; align-items: baseline; padding: 8px 0; text-decoration: none; font-size: 15px; line-height: 1.4"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8C93AD; flex: none; width: 20px">{{ p.n }}</span><span>{{ p.name }}</span></a></sc-if><sc-if value="{{ p.unbuilt }}" hint-placeholder-val="{{ false }}"><span style="display: flex; gap: 10px; align-items: baseline; padding: 8px 0; text-decoration: none; font-size: 15px; line-height: 1.4; color: #A7A9B8"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8C93AD; flex: none; width: 20px">{{ p.n }}</span><span>{{ p.name }}</span></span></sc-if></li>
+                    </sc-for>
+                  </ul>
+                </div>
+              </sc-for>
+            </div>
+          </section>
+          <div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+            <nav aria-label="Menu" style="display: flex; flex-direction: column; gap: 6px">
+              <a href="B-Home.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Home</a>
+              <a href="B-Projects.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Projects</a>
+              <a href="About.dc.html" aria-current="page" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(255,188,81,0.12); border: 1px solid rgba(255,188,81,0.5); color: #FFBC51; font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">About</a>
+              <a href="B-Reviews.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Reviews</a>
+              <a href="Contact.dc.html" style="text-decoration: none; padding: 14px 20px; border-radius: 20px; background: rgba(250,245,239,0.04); border: 1px solid rgba(250,245,239,0.1); font-family: 'Unbounded', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.03em">Contact</a>
+            </nav>
+            <a href="Contact.dc.html" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 56px; padding: 8px 8px 8px 22px; box-sizing: border-box; border-radius: 999px; background: #FFBC51; color: #0B0C14; text-decoration: none; font-weight: 700; font-size: 15px">Discuss Your Project <span style="width: 40px; height: 40px; flex: none; border-radius: 50%; background: #0B0C14; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ================= 1 · ABOUT HERO (Stage) ================= -->
+  <div class="ff-dark" style="position: relative; z-index: 3; padding: 16px clamp(16px, 3.4cqi, 48px) 0">
+    <header style="position: relative; z-index: 3; margin: 0 auto; width: min(1180px, 100%); height: 64px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 8px 0 20px; box-sizing: border-box">
+      <a href="B-Home.dc.html" aria-label="Creative Propel home" style="display: flex; flex: none"><img src="/_blob/11cb7e45f87956fec08fde70311f542c" alt="Creative Propel" style="width: 148px; height: auto"></a>
+      <nav class="ff-links" aria-label="Primary" style="display: flex; gap: 26px; font-size: 15px; font-weight: 600">
+        <button type="button" id="ab-menu-link" onClick="{{ openMenu }}" aria-expanded="{{ menuExpanded }}" aria-haspopup="dialog" aria-controls="ab-menu" style="display: inline-flex; align-items: center; gap: 6px; background: transparent; border: 0; padding: 0; color: #FAF5EF; font-family: 'Manrope', Arial, sans-serif; font-size: 15px; font-weight: 600; cursor: pointer">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#FFBC51" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"></path></svg></button>
+        <a href="B-Projects.dc.html" style="text-decoration: none">Projects</a>
+        <a href="About.dc.html" aria-current="page" style="text-decoration: none; color: #FFBC51">About</a>
+        <a href="B-Reviews.dc.html" style="text-decoration: none">Reviews</a>
+        <a href="Contact.dc.html" style="text-decoration: none">Contact</a>
+      </nav>
+      <button type="button" id="ab-menu-btn" onClick="{{ openMenu }}" aria-label="Open menu" aria-expanded="{{ menuExpanded }}" aria-haspopup="dialog" aria-controls="ab-menu" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 0; cursor: pointer; background: radial-gradient(circle at 40% 40%, #FFE6B0, #FFBC51 45%, #FF5C5E)"></button>
+    </header>
+  </div>
+
+  <main id="main" tabindex="-1">
+  <section class="ff-dark" aria-labelledby="ab-h1" style="position: relative; padding: 80px clamp(16px, 3.4cqi, 48px) clamp(64px, 7cqi, 96px); margin-top: -80px; overflow: hidden">
+    <div style="position: relative; width: min(1280px, 100%); margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; padding-top: clamp(48px, 6cqi, 88px)">
+      <div style="position: relative; z-index: 2; flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+        <nav aria-label="Breadcrumb" class="ff-in" style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #C9C3BC; display: flex; flex-wrap: wrap; gap: 8px"><a href="B-Home.dc.html" style="text-decoration: none">HOME</a><span aria-hidden="true">/</span><span aria-current="page" style="color: #FFBC51">ABOUT</span></nav>
+        <span class="ff-in ab-eyebrow ab-eyebrow-d"><span class="ab-dot" style="background: #FFBC51"></span>GET TO KNOW US</span>
+        <h1 id="ab-h1" class="ff-in" style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-weight: 600; font-size: clamp(36px, 5.6cqi, 84px); line-height: 1.02; letter-spacing: -0.055em; animation-delay: .1s">We Think Beyond Digital. <span style="font-weight: 300; color: #FFBC51; -webkit-text-stroke: 1.2px #FFBC51">We Think About What's Possible.</span></h1>
+        <div class="ff-in" style="display: flex; flex-direction: column; gap: 14px; max-width: 640px; font-size: clamp(17px, 1.4cqi, 20px); line-height: 1.65; color: #E9E3DC; animation-delay: .2s">
+          <p style="margin: 0">We're a team of creative thinkers, strategists and technology enthusiasts helping businesses turn ideas into meaningful digital experiences.</p>
+          <p style="margin: 0">At Creative Propel, we bring strategy, creativity and technology together to help businesses build, evolve and grow in today's digital landscape.</p>
+        </div>
+        <div class="ff-in" style="animation-delay: .3s">
+          <a href="Contact.dc.html" class="ab-btn ab-btn-amber">Discuss Your Project <span class="ab-btn-ic"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+        </div>
+      </div>
+      <div aria-hidden="true" style="position: relative; flex: 1 1 360px; min-width: 0; max-width: 500px; aspect-ratio: 1; margin: 0 auto">
+        <div class="ff-core" style="position: absolute; inset: 22%; border-radius: 50%; background: radial-gradient(circle at 42% 40%, #FFF1D2 0%, #FFE6B0 6%, #FFBC51 22%, rgba(255,92,94,0.75) 44%, rgba(255,92,94,0.12) 62%, rgba(7,8,15,0) 72%)"></div>
+        <div style="position: absolute; inset: 8%; transform: rotate(-18deg) scaleY(0.6)"><div class="ff-orbit" style="position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(250,245,239,0.22)"><div style="position: absolute; left: 50%; top: -6px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: #FFBC51; box-shadow: 0 0 18px #FFBC51"></div></div></div>
+        <div style="position: absolute; inset: 0; border-radius: 50%; border: 1px dashed rgba(250,245,239,0.12)"></div>
+        <span class="ab-chip" style="left: 50%; top: 2%">STRATEGY</span>
+        <span class="ab-chip" style="left: 20%; top: 76%">CREATIVITY</span>
+        <span class="ab-chip" style="left: 80%; top: 76%">TECHNOLOGY</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2 · OUR STORY (Page / cream) ================= -->
+  <section class="ff-cream ab-sec" aria-labelledby="ab-story" style="background: #FAF5EF; color: #0B0C14; border-radius: 48px 48px 0 0">
+    <div class="ab-wrap" style="display: flex; flex-wrap: wrap; gap: clamp(32px, 6cqi, 96px); align-items: flex-start">
+      <div class="ab-sticky" style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+        <span class="ab-eyebrow ab-eyebrow-c"><span class="ab-dot" style="background: #FF5C5E"></span>OUR STORY</span>
+        <h2 id="ab-story" class="ab-h2">Built on Ideas. <span style="color: #C93A3C">Driven by Possibilities.</span></h2>
+      </div>
+      <div style="flex: 999 1 520px; min-width: 0; max-width: 720px; display: flex; flex-direction: column; gap: 22px; font-size: 18px; line-height: 1.75; color: #2A2830">
+        <p style="margin: 0">Every great business starts with an idea. But turning that idea into something meaningful takes the right thinking, the right people and the courage to do things differently.</p>
+        <p style="margin: 0; padding: 18px 0 18px 22px; border-left: 3px solid #FF5C5E; font-family: 'Unbounded', sans-serif; font-size: clamp(20px, 2cqi, 26px); font-weight: 500; line-height: 1.35; letter-spacing: -0.035em; color: #0B0C14">Creative Propel was built around this belief.</p>
+        <p style="margin: 0">We set out to bring creative thinking and technical expertise together, giving businesses access to the digital capabilities they need to move forward. What began with a passion for creating better digital solutions has grown into a multidisciplinary agency working across technology, design and marketing.</p>
+        <p style="margin: 0">Today, we work with businesses at different stages of their journey, helping them solve challenges, explore opportunities and bring their ambitions to life.</p>
+        <p style="margin: 0">We don't believe in one-size-fits-all solutions. Every business has its own story, goals and challenges. Our job is to understand them and create the right way forward.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3 · OUR APPROACH (Stage / dark) ================= -->
+  <section class="ff-dark ab-sec" aria-labelledby="ab-approach" style="background: #07080F; border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; left: -200px; bottom: -260px; width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(circle, rgba(255,92,94,0.28), rgba(255,188,81,0.08) 45%, transparent 68%)"></div>
+    <div class="ab-wrap" style="position: relative; display: flex; flex-direction: column; gap: clamp(36px, 4cqi, 56px)">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 28px">
+        <div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+          <span class="ab-eyebrow ab-eyebrow-d"><span class="ab-dot" style="background: #FFBC51"></span>WHAT MAKES US DIFFERENT</span>
+          <h2 id="ab-approach" class="ab-h2">The Right Ideas. The Right Strategy. <span style="font-weight: 200; color: transparent; -webkit-text-stroke: 1.3px #FAF5EF">The Right Execution.</span></h2>
+        </div>
+        <div style="flex: 0 1 440px; display: flex; flex-direction: column; gap: 12px; font-size: 17px; line-height: 1.7; color: #D9D3CC">
+          <p style="margin: 0">We believe successful digital work happens when different disciplines work together.</p>
+          <p style="margin: 0">That's why we approach every project with a balance of three essential elements.</p>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 4cqi, 56px); align-items: center">
+        <!-- three orbits meeting at the core (decorative) -->
+        <div aria-hidden="true" style="flex: 1 1 360px; min-width: 0; max-width: 480px; margin: 0 auto; aspect-ratio: 1; position: relative">
+          <svg viewBox="0 0 400 400" width="100%" height="100%" style="position: absolute; inset: 0; overflow: visible">
+            <defs><radialGradient id="ab-core-g" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FFF1D2"></stop><stop offset="30%" stop-color="#FFBC51"></stop><stop offset="70%" stop-color="#FF5C5E" stop-opacity="0.5"></stop><stop offset="100%" stop-color="#FF5C5E" stop-opacity="0"></stop></radialGradient></defs>
+            <circle cx="200" cy="138" r="104" fill="rgba(255,188,81,0.06)" stroke="#FFBC51" stroke-width="1.4"></circle>
+            <circle cx="146" cy="232" r="104" fill="rgba(255,92,94,0.06)" stroke="#FF5C5E" stroke-width="1.4"></circle>
+            <circle cx="254" cy="232" r="104" fill="rgba(250,245,239,0.04)" stroke="#FAF5EF" stroke-opacity="0.7" stroke-width="1.4"></circle>
+            <circle class="ff-core" cx="200" cy="200" r="46" fill="url(#ab-core-g)" style="transform-origin: 200px 200px"></circle>
+          </svg>
+          <span class="ab-orb-l" style="left: 50%; top: 4%; color: #FFBC51">STRATEGY</span>
+          <span class="ab-orb-l" style="left: 24%; top: 95%; color: #FF8A8C">CREATIVITY</span>
+          <span class="ab-orb-l" style="left: 76%; top: 95%; color: #FAF5EF">TECHNOLOGY</span>
+        </div>
+        <ol style="flex: 999 1 520px; min-width: 0; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+          <li class="ab-pillar"><span class="ab-num" style="color: #FFBC51; border-color: rgba(255,188,81,0.5)">01</span><div><h3 class="ab-h3">Strategy</h3><p>We start with the bigger picture. Understanding your business, audience and objectives helps us make decisions that serve a real purpose.</p></div></li>
+          <li class="ab-pillar"><span class="ab-num" style="color: #FF8A8C; border-color: rgba(255,92,94,0.55)">02</span><div><h3 class="ab-h3">Creativity</h3><p>We bring fresh perspectives and thoughtful design to every challenge, creating experiences that capture attention and communicate your brand's value.</p></div></li>
+          <li class="ab-pillar"><span class="ab-num" style="color: #FAF5EF; border-color: rgba(250,245,239,0.4)">03</span><div><h3 class="ab-h3">Technology</h3><p>We turn ideas into working solutions through reliable development and the right technology, building digital experiences that can evolve with your business.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4 · MISSION & VISION (Page / cream) ================= -->
+  <section class="ff-cream ab-sec" aria-label="What drives us" style="background: #FAF5EF; color: #0B0C14; border-radius: 48px 48px 0 0; margin-top: -48px; position: relative">
+    <div class="ab-wrap" style="display: flex; flex-direction: column; gap: 28px">
+      <span class="ab-eyebrow ab-eyebrow-c" style="align-self: flex-start"><span class="ab-dot" style="background: #FF5C5E"></span>WHAT DRIVES US</span>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 16px">
+        <article class="ab-mv" style="background: #0B0C14; color: #FAF5EF">
+          <h2 class="ab-mv-h" style="color: #FFBC51">Our Mission</h2>
+          <p class="ab-mv-p">To empower businesses with creative, strategic and technology-driven solutions that simplify challenges, unlock opportunities and support sustainable growth.</p>
+          <div aria-hidden="true" style="position: absolute; right: -90px; bottom: -110px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.45), rgba(255,92,94,0.12) 45%, transparent 70%)"></div>
+        </article>
+        <article class="ab-mv" style="background: #FFFFFF; border: 1px solid #E3DACE">
+          <h2 class="ab-mv-h" style="color: #C93A3C">Our Vision</h2>
+          <p class="ab-mv-p">To become a trusted digital growth partner for ambitious businesses worldwide, known for turning bold ideas into meaningful digital experiences.</p>
+          <div aria-hidden="true" style="position: absolute; right: -60px; bottom: -60px; width: 200px; height: 200px; border-radius: 50%; border: 1px solid #E3DACE"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5 · CORE VALUES (Page / cream-2) ================= -->
+  <section class="ff-cream ab-sec" aria-labelledby="ab-values" style="background: #F1EAE0; color: #0B0C14; border-radius: 48px 48px 0 0; margin-top: -48px; position: relative">
+    <div class="ab-wrap" style="display: flex; flex-direction: column; gap: 36px">
+      <div style="display: flex; flex-direction: column; gap: 18px; max-width: 820px">
+        <span class="ab-eyebrow ab-eyebrow-c" style="align-self: flex-start; background: #FAF5EF"><span class="ab-dot" style="background: #FF5C5E"></span>WHAT WE BELIEVE IN</span>
+        <h2 id="ab-values" class="ab-h2">The Principles Behind <span style="color: #C93A3C">Everything We Do.</span></h2>
+      </div>
+      <ul class="ab-values" style="margin: 0; padding: 0; list-style: none">
+        <li class="ab-val"><span class="ab-val-n">01</span><h3 class="ab-h3">Think Creatively</h3><p>We challenge the obvious, explore new perspectives and look for better ways to solve problems.</p></li>
+        <li class="ab-val"><span class="ab-val-n">02</span><h3 class="ab-h3">Put People First</h3><p>Behind every business is a team, a vision and a set of ambitions. We value relationships and make collaboration part of everything we do.</p></li>
+        <li class="ab-val"><span class="ab-val-n">03</span><h3 class="ab-h3">Deliver With Purpose</h3><p>We don't create for the sake of creating. Every solution should have a clear objective and contribute something of real value.</p></li>
+        <li class="ab-val"><span class="ab-val-n">04</span><h3 class="ab-h3">Stay Curious</h3><p>Technology and digital experiences never stand still. We keep learning, adapting and exploring what's next.</p></li>
+        <li class="ab-val"><span class="ab-val-n">05</span><h3 class="ab-h3">Build With Integrity</h3><p>Honest communication, transparency and accountability are at the heart of how we work.</p></li>
+        <li class="ab-val"><span class="ab-val-n">06</span><h3 class="ab-h3">Grow Together</h3><p>We see our clients as partners. Their progress is what makes our work worthwhile.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 6 · EXPERTISE (Stage / dark) ================= -->
+  <section class="ff-dark ab-sec" aria-labelledby="ab-expertise" style="background: #07080F; border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; right: -180px; top: -220px; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.4), rgba(255,92,94,0.1) 45%, transparent 68%)"></div>
+    <div class="ab-wrap" style="position: relative; display: flex; flex-direction: column; gap: 36px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+        <div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+          <span class="ab-eyebrow ab-eyebrow-d"><span class="ab-dot" style="background: #FFBC51"></span>OUR EXPERTISE</span>
+          <h2 id="ab-expertise" class="ab-h2">Different Skills. <span style="font-weight: 300; color: #FFBC51; -webkit-text-stroke: 1.2px #FFBC51">One Shared Direction.</span></h2>
+        </div>
+        <p style="flex: 0 1 420px; margin: 0; font-size: 17px; line-height: 1.7; color: #D9D3CC">Our capabilities cover the essential areas of building and growing a modern business.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 14px">
+        <sc-for list="{{ expertise }}" as="x" hint-placeholder-count="4">
+          <article class="ab-x">
+            <span class="ab-x-n">{{ x.n }} / 04</span>
+            <h3 class="ab-h3" style="font-size: 21px">{{ x.name }}</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #D9D3CC">{{ x.desc }}</p>
+            <a href="{{ x.href }}" class="ab-x-primary" aria-label="{{ x.aria }}">Explore {{ x.primaryName }} <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+            <sc-if value="{{ x.hasMore }}" hint-placeholder-val="{{ true }}">
+              <div style="display: flex; flex-direction: column; gap: 2px; padding-top: 12px; border-top: 1px solid rgba(250,245,239,0.14)">
+                <span style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: #A7A9B8">RELATED SERVICES</span>
+                <ul style="margin: 0; padding: 0; list-style: none">
+                  <sc-for list="{{ x.more }}" as="m" hint-placeholder-count="3">
+                    <li><a href="{{ m.href }}" class="ab-x-link">{{ m.name }}</a></li>
+                  </sc-for>
+                </ul>
+              </div>
+            </sc-if>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7 · WHO WE WORK WITH (Page / cream) ================= -->
+  <section class="ff-cream ab-sec" aria-labelledby="ab-who" style="background: #FAF5EF; color: #0B0C14; border-radius: 48px 48px 0 0; margin-top: -48px; position: relative">
+    <div class="ab-wrap" style="display: flex; flex-direction: column; gap: 36px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+        <div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+          <span class="ab-eyebrow ab-eyebrow-c"><span class="ab-dot" style="background: #FF5C5E"></span>BUILT AROUND YOUR AMBITION</span>
+          <h2 id="ab-who" class="ab-h2">Wherever You Are in Your Journey, <span style="color: #C93A3C">Let's Move Forward.</span></h2>
+        </div>
+        <p style="flex: 0 1 420px; margin: 0; font-size: 17px; line-height: 1.7; color: #2A2830">We collaborate with ambitious people and businesses looking to make their next move.</p>
+      </div>
+      <div class="ab-who">
+        <ol class="ab-track" style="margin: 0; padding: 0; list-style: none">
+          <li class="ab-stage"><span class="ab-stage-dot" aria-hidden="true"></span><h3 class="ab-h3">Startups &amp; Entrepreneurs</h3><p>Turning early ideas into brands, products and businesses ready for the market.</p></li>
+          <li class="ab-stage"><span class="ab-stage-dot" aria-hidden="true"></span><h3 class="ab-h3">Growing Businesses</h3><p>Strengthening digital presence, improving customer experiences and creating new opportunities.</p></li>
+          <li class="ab-stage"><span class="ab-stage-dot" aria-hidden="true"></span><h3 class="ab-h3">Established Brands</h3><p>Evolving existing platforms, improving digital operations and exploring new ways to connect with customers.</p></li>
+        </ol>
+        <div class="ab-going">
+          <div aria-hidden="true" style="position: absolute; right: -70px; top: -70px; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.5), rgba(255,92,94,0.14) 45%, transparent 70%)"></div>
+          <h3 class="ab-h3" style="position: relative; color: #FAF5EF">Businesses Going Digital</h3>
+          <p style="position: relative">Bringing traditional operations and business ideas into the digital space through the right technology and strategy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8 · OUR TEAM (Page / cream-2) — intro only; team grid hidden until genuine team info is supplied ================= -->
+  <section class="ff-cream ab-sec" aria-labelledby="ab-team" style="background: #F1EAE0; color: #0B0C14; border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; padding-bottom: clamp(120px, 12cqi, 168px)">
+    <div class="ab-wrap" style="display: flex; flex-wrap: wrap; gap: clamp(32px, 6cqi, 96px); align-items: flex-start">
+      <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+        <span class="ab-eyebrow ab-eyebrow-c" style="align-self: flex-start; background: #FAF5EF"><span class="ab-dot" style="background: #FF5C5E"></span>THE PEOPLE BEHIND THE WORK</span>
+        <h2 id="ab-team" class="ab-h2">Good Work Starts <span style="color: #C93A3C">With Good People.</span></h2>
+      </div>
+      <div style="flex: 999 1 520px; min-width: 0; max-width: 680px; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.75; color: #2A2830">
+        <p style="margin: 0">Creative ideas become real results when the right people come together.</p>
+        <p style="margin: 0">Our work brings together creative, strategic and technical thinking, with collaboration at the centre of every project.</p>
+      </div>
+    </div>
+    <sc-if value="{{ hasTeam }}" hint-placeholder-val="{{ false }}">
+      <ul class="ab-wrap" style="margin-top: 40px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 14px">
+        <sc-for list="{{ team }}" as="t" hint-placeholder-count="0">
+          <li style="padding: 20px; border-radius: 28px; background: #FFFFFF; border: 1px solid #E3DACE"><strong>{{ t.name }}</strong><br><span>{{ t.role }}</span></li>
+        </sc-for>
+      </ul>
+    </sc-if>
+    <div class="ab-wrap ff-dark" style="margin-top: clamp(40px, 5cqi, 64px); padding: clamp(36px, 5cqi, 72px) clamp(20px, 4cqi, 56px); border-radius: 36px; background: #0B0C14; color: #FAF5EF">
+          <section aria-labelledby="ab-cta" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+            <span class="ab-eyebrow ab-eyebrow-d" style="align-self: center"><span class="ab-dot" style="background: #FFBC51"></span>LET'S CREATE SOMETHING MEANINGFUL</span>
+            <h2 id="ab-cta" style="margin: 0; max-width: 1000px; font-family: 'Unbounded', sans-serif; font-size: clamp(36px, 6cqi, 88px); font-weight: 600; line-height: 1; letter-spacing: -0.06em">Have an Idea? <span style="font-weight: 300; color: #FFBC51; -webkit-text-stroke: 1.4px #FFBC51">We'd Love to Hear About It.</span></h2>
+            <div style="max-width: 640px; display: flex; flex-direction: column; gap: 10px; font-size: 19px; line-height: 1.65; color: #E9E3DC">
+              <p style="margin: 0">Whether you're starting something new, improving what already exists or exploring your next opportunity, we're ready to help you take the next step.</p>
+              <p style="margin: 0; font-weight: 600; color: #FAF5EF">Let's turn your ambition into action.</p>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 6px">
+              <a href="Contact.dc.html" class="ab-btn ab-btn-amber" style="min-height: 64px; font-size: 17px">Discuss Your Project <span class="ab-btn-ic" style="width: 46px; height: 46px"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+              <a href="B-Home.dc.html#hp-services" class="ab-btn ab-btn-ghost" style="min-height: 64px; font-size: 17px">Explore Our Services</a>
+            </div>
+          </section>
+    </div>
+  </section>
+
+  <!-- ================= 9 · FOOTER (approved global footer; the About closing CTA, copy unchanged, now sits as a dark panel at the end of section 8) ================= -->
+  </main>
+
+  <footer class="ff-dark" style="background: #07080F; padding: clamp(96px, 10cqi, 144px) clamp(16px, 3.4cqi, 48px) 32px; border-radius: 48px 48px 0 0; margin-top: -48px; position: relative; overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; left: 50%; top: -420px; width: 900px; height: 900px; margin-left: -450px; border-radius: 50%; background: radial-gradient(circle at 50% 70%, rgba(255,188,81,0.5), rgba(255,92,94,0.14) 36%, transparent 60%)"></div>
+    <div style="position: relative; width: min(1280px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 64px">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+        <h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: clamp(40px, 7cqi, 104px); font-weight: 600; line-height: 0.98; letter-spacing: -0.06em">Let's Build <span style="font-weight: 300; color: #FFBC51; -webkit-text-stroke: 1.4px #FFBC51">What's Next.</span></h2>
+        <p style="margin: 0; max-width: 600px; font-size: 19px; line-height: 1.65; color: #E9E3DC">Your business has potential. Let's give it the digital direction, creativity and technology to go further.</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; margin-top: 6px">
+          <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 12px; min-height: 64px; padding: 0 10px 0 30px; border-radius: 999px; background: #FFBC51; color: #0B0C14; text-decoration: none; font-weight: 700; font-size: 17px">Discuss Your Project <span style="width: 46px; height: 46px; border-radius: 50%; background: #0B0C14; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#FFBC51" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+          <a href="mailto:info@creativepropel.com" style="font-size: 17px; font-weight: 600">info@creativepropel.com</a>
+        </div>
+      </div>
+
+      <div class="hp-offices" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 14px">
+        <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(250,245,239,0.08); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em">UNITED STATES</span><span style="font-family: 'Geist Mono', monospace; font-size: 14px; color: #FFBC51">{{ tAus }}</span></div>
+          <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">Austin</p>
+          <address style="font-style: normal; font-size: 15px; line-height: 1.6; color: #D9D3CC">5900 Balcones Dr STE 14405<br>Austin, TX 78731<br>United States</address>
+          
+        </div>
+        <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(250,245,239,0.08); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em">UNITED KINGDOM</span><span style="font-family: 'Geist Mono', monospace; font-size: 14px; color: #FFBC51">{{ tLon }}</span></div>
+          <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">London</p>
+          <address style="font-style: normal; font-size: 15px; line-height: 1.6; color: #D9D3CC">30 Churchill Pl<br>Canary Wharf Estate<br>London E14 5RE<br>United Kingdom</address>
+          
+        </div>
+        <div style="padding: 26px; border-radius: 32px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; justify-content: space-between; align-items: center"><span style="display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; background: rgba(250,245,239,0.08); font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em">FRANCE</span><span style="font-family: 'Geist Mono', monospace; font-size: 14px; color: #FFBC51">{{ tFra }}</span></div>
+          <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">Nancy</p>
+          <address style="font-style: normal; font-size: 15px; line-height: 1.6; color: #D9D3CC">2 Allée de l'Arno<br>54500 Vandœuvre-lès-Nancy<br>France</address>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 32px">
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <img src="/_blob/f8348b2d676579851b5f399effbbfeb9" alt="Creative Propel" style="width: 110px; height: auto">
+          <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.14em; color: #FAF5EF">STRATEGY. CREATIVITY. TECHNOLOGY. <span style="color: #FFBC51">GROWTH.</span></p>
+        </div>
+        <div style="flex: 0 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+        <nav aria-label="Footer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 40px; font-size: 15px">
+          <a href="B-Home.dc.html#hp-services" style="text-decoration: none">Services</a>
+          <a href="B-Projects.dc.html" style="text-decoration: none">Projects</a>
+          <a href="About.dc.html" style="text-decoration: none">About</a>
+          <a href="B-Reviews.dc.html" style="text-decoration: none">Reviews</a>
+          <a href="Contact.dc.html" style="text-decoration: none">Contact</a>
+        </nav>
+        <!-- Social: official platform icons from Font Awesome Free 7.3.1 brand set (CC BY 4.0, fontawesome.com/license/free), shown in a single colour -->
+        <ul aria-label="Creative Propel on social media" style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 12px">
+          <li><a class="ff-soc" href="https://www.linkedin.com/company/creativepropel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on LinkedIn (opens in a new tab)" title="LinkedIn"><svg width="17.5" height="20" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.instagram.com/creativepropel/" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on Instagram (opens in a new tab)" title="Instagram"><svg width="17.5" height="20" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.facebook.com/creativepropelllc/" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on Facebook (opens in a new tab)" title="Facebook"><svg width="20.0" height="20" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.tiktok.com/@creativepropel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on TikTok (opens in a new tab)" title="TikTok"><svg width="17.5" height="20" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M448.5 209.9c-44 .1-87-13.6-122.8-39.2l0 178.7c0 33.1-10.1 65.4-29 92.6s-45.6 48-76.6 59.6-64.8 13.5-96.9 5.3-60.9-25.9-82.7-50.8-35.3-56-39-88.9 2.9-66.1 18.6-95.2 40-52.7 69.6-67.7 62.9-20.5 95.7-16l0 89.9c-15-4.7-31.1-4.6-46 .4s-27.9 14.6-37 27.3-14 28.1-13.9 43.9 5.2 31 14.5 43.7 22.4 22.1 37.4 26.9 31.1 4.8 46-.1 28-14.4 37.2-27.1 14.2-28.1 14.2-43.8l0-349.4 88 0c-.1 7.4 .6 14.9 1.9 22.2 3.1 16.3 9.4 31.9 18.7 45.7s21.3 25.6 35.2 34.6c19.9 13.1 43.2 20.1 67 20.1l0 87.4z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.behance.net/Creative_propel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on Behance (opens in a new tab)" title="Behance"><svg width="22.5" height="20" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8l-167.1 0 0 354.4 171.8 0c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9l73.1 0c28.1 0 53.4 7.9 53.4 40.5 0 30.1-19.7 42.2-47.5 42.2l-79 0 0-82.7zm83.3 233.7l-83.3 0 0-97.6 84.9 0c34.3 0 56 14.3 56 50.6 0 35.8-25.9 47-57.6 47zM519.7 128.9l-143.7 0 0-34.9 143.7 0 0 34.9zM576 305.2c0-75.9-44.4-139.2-124.9-139.2-78.2 0-131.3 58.8-131.3 135.8 0 79.9 50.3 134.7 131.3 134.7 61.3 0 101-27.6 120.1-86.3l-62.2 0c-6.7 21.9-34.3 33.5-55.7 33.5-41.3 0-63-24.2-63-65.3l185.1 0c.3-4.2 .6-8.7 .6-13.2zM390.4 274c2.3-33.7 24.7-54.8 58.5-54.8 35.4 0 53.2 20.8 56.2 54.8l-114.7 0z"></path></svg></a></li>
+          <li><a class="ff-soc" href="https://www.youtube.com/@CreativePropel" target="_blank" rel="noopener noreferrer" aria-label="Creative Propel on YouTube (opens in a new tab)" title="YouTube"><svg width="22.5" height="20" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z"></path></svg></a></li>
+        </ul>
+        </div>
+      </div>
+      <div style="height: 1px; background: linear-gradient(90deg, transparent, rgba(250,245,239,0.3), transparent)"></div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #A7A9B8">
+        <span>© 2026 Creative Propel · creativepropel.com</span>
+        <span style="display: flex; gap: 20px"><a href="Privacy.dc.html" style="text-decoration: none; text-transform: uppercase">Privacy Policy</a><a href="Cookies.dc.html" style="text-decoration: none; text-transform: uppercase">Cookies Policy</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menu: false, grp: '', tAus: '--:--', tLon: '--:--', tFra: '--:--' };
+  }
+  componentDidMount() { this.tick(); this.timer = setInterval(() => this.tick(), 30000); if (typeof IntersectionObserver !== 'undefined') { this.animIO = new IntersectionObserver((entries) => { entries.forEach((en) => { en.target.dataset.offscreen = en.isIntersecting ? '0' : '1'; }); }); new Set([...document.querySelectorAll('.ff-core, .ff-orbit')].map((el) => el.closest('section, footer, header') || el.parentElement)).forEach((sec) => this.animIO.observe(sec)); } }
+  componentWillUnmount() { clearInterval(this.timer); if (this.animIO) this.animIO.disconnect(); }
+  tick() {
+    const f = (tz) => { try { return new Date().toLocaleTimeString('en-GB', { timeZone: tz, hour: '2-digit', minute: '2-digit' }); } catch (e) { return '--:--'; } };
+    this.setState({ tAus: f('America/Chicago'), tLon: f('Europe/London'), tFra: f('Europe/Paris') });
+  }
+  renderVals() {
+    const S = this.state;
+    const focusSoon = (id) => setTimeout(() => { const el = document.getElementById(id); if (el) el.focus(); }, 40);
+    const pad = (n) => String(n).padStart(2, '0');
+    const SLUG = {
+      'Brand Identity Design': 'brand-identity-design', 'Digital & Web Design (UI/UX)': 'digital-web-design', 'Marketing & Advertising Design': 'marketing-advertising-design', 'Print & Publication Design': 'print-publication-design', 'Motion Graphics & Video': 'motion-graphics-video',
+      'Website & E-commerce Development': 'website-ecommerce-development', 'Development by Product Type': 'development-by-product-type', 'Development by Technology Focus': 'development-by-technology-focus', 'Quality, Testing & Maintenance': 'quality-testing-maintenance', 'Strategy & Consulting': 'software-strategy-consulting',
+      'Digital Marketing & Traffic Generation': 'digital-marketing-traffic-generation', 'Content & Brand Engagement': 'content-brand-engagement', 'Social Media & Community': 'social-media-community', 'Conversion & Customer Nurturing': 'conversion-customer-nurturing', 'Strategy & Analytics': 'marketing-strategy-analytics'
+    };
+    const groupData = [
+      { id: 'design', name: 'Design Services', dot: '#FFBC51', pages: ['Brand Identity Design', 'Digital & Web Design (UI/UX)', 'Marketing & Advertising Design', 'Print & Publication Design', 'Motion Graphics & Video'] },
+      { id: 'dev', name: 'Web, App & Software Development', dot: '#FF5C5E', pages: ['Website & E-commerce Development', 'Development by Product Type', 'Development by Technology Focus', 'Quality, Testing & Maintenance', 'Strategy & Consulting'] },
+      { id: 'mkt', name: 'Marketing Services', dot: '#FAF5EF', pages: ['Digital Marketing & Traffic Generation', 'Content & Brand Engagement', 'Social Media & Community', 'Conversion & Customer Nurturing', 'Strategy & Analytics'] }
+    ];
+    let pn = 0;
+    const groups = groupData.map((g) => {
+      const open = S.grp === g.id;
+      return {
+        name: g.name, listId: 'ab-grp-' + g.id, count: pad(g.pages.length),
+        expanded: open ? 'true' : 'false', listClass: open ? 'ff-grp ff-open' : 'ff-grp',
+        dotStyle: 'width: 8px; height: 8px; flex: none; border-radius: 50%; background: ' + g.dot + ';',
+        chevStyle: 'width: 28px; height: 28px; flex: none; border-radius: 50%; border: 1px solid rgba(250,245,239,0.3); display: inline-flex; align-items: center; justify-content: center; color: #FAF5EF; font-size: 16px; transform: rotate(' + (open ? '45' : '0') + 'deg); transition: transform .3s;',
+        toggle: () => this.setState({ grp: open ? '' : g.id }),
+        pages: g.pages.map((nm) => { pn += 1; return { name: nm, n: pad(pn), href: ({ 'brand-identity-design': 'B-Svc-Brand.dc.html', 'digital-web-design': 'Svc-DigitalWeb.dc.html', 'marketing-advertising-design': 'Svc-Marketing.dc.html', 'print-publication-design': 'Svc-Print.dc.html', 'motion-graphics-video': 'Svc-Motion.dc.html', 'website-ecommerce-development': 'Svc-WebDev.dc.html', 'development-by-product-type': 'Svc-DevProduct.dc.html', 'development-by-technology-focus': 'Svc-DevTech.dc.html', 'quality-testing-maintenance': 'Svc-QA.dc.html', 'software-strategy-consulting': 'Svc-Strategy.dc.html', 'digital-marketing-traffic-generation': 'Svc-MktDigital.dc.html', 'content-brand-engagement': 'Svc-MktContent.dc.html', 'social-media-community': 'Svc-MktSocial.dc.html', 'conversion-customer-nurturing': 'Svc-MktConversion.dc.html', 'marketing-strategy-analytics': 'Svc-MktStrategy.dc.html' })[SLUG[nm]] || '', built: !!({ 'brand-identity-design': 'B-Svc-Brand.dc.html', 'digital-web-design': 'Svc-DigitalWeb.dc.html', 'marketing-advertising-design': 'Svc-Marketing.dc.html', 'print-publication-design': 'Svc-Print.dc.html', 'motion-graphics-video': 'Svc-Motion.dc.html', 'website-ecommerce-development': 'Svc-WebDev.dc.html', 'development-by-product-type': 'Svc-DevProduct.dc.html', 'development-by-technology-focus': 'Svc-DevTech.dc.html', 'quality-testing-maintenance': 'Svc-QA.dc.html', 'software-strategy-consulting': 'Svc-Strategy.dc.html', 'digital-marketing-traffic-generation': 'Svc-MktDigital.dc.html', 'content-brand-engagement': 'Svc-MktContent.dc.html', 'social-media-community': 'Svc-MktSocial.dc.html', 'conversion-customer-nurturing': 'Svc-MktConversion.dc.html', 'marketing-strategy-analytics': 'Svc-MktStrategy.dc.html' })[SLUG[nm]], unbuilt: !({ 'brand-identity-design': 'B-Svc-Brand.dc.html', 'digital-web-design': 'Svc-DigitalWeb.dc.html', 'marketing-advertising-design': 'Svc-Marketing.dc.html', 'print-publication-design': 'Svc-Print.dc.html', 'motion-graphics-video': 'Svc-Motion.dc.html', 'website-ecommerce-development': 'Svc-WebDev.dc.html', 'development-by-product-type': 'Svc-DevProduct.dc.html', 'development-by-technology-focus': 'Svc-DevTech.dc.html', 'quality-testing-maintenance': 'Svc-QA.dc.html', 'software-strategy-consulting': 'Svc-Strategy.dc.html', 'digital-marketing-traffic-generation': 'Svc-MktDigital.dc.html', 'content-brand-engagement': 'Svc-MktContent.dc.html', 'social-media-community': 'Svc-MktSocial.dc.html', 'conversion-customer-nurturing': 'Svc-MktConversion.dc.html', 'marketing-strategy-analytics': 'Svc-MktStrategy.dc.html' })[SLUG[nm]] }; })
+      };
+    });
+
+
+    /* Expertise: homepage category names; approved descriptions. Brand Identity Design is the only designed service page; others use their frozen route placeholders. */
+    const svc = (nm) => ({ name: nm, href: ({ 'brand-identity-design': 'B-Svc-Brand.dc.html', 'digital-web-design': 'Svc-DigitalWeb.dc.html', 'marketing-advertising-design': 'Svc-Marketing.dc.html', 'print-publication-design': 'Svc-Print.dc.html', 'motion-graphics-video': 'Svc-Motion.dc.html', 'website-ecommerce-development': 'Svc-WebDev.dc.html', 'development-by-product-type': 'Svc-DevProduct.dc.html', 'development-by-technology-focus': 'Svc-DevTech.dc.html', 'quality-testing-maintenance': 'Svc-QA.dc.html', 'software-strategy-consulting': 'Svc-Strategy.dc.html', 'digital-marketing-traffic-generation': 'Svc-MktDigital.dc.html', 'content-brand-engagement': 'Svc-MktContent.dc.html', 'social-media-community': 'Svc-MktSocial.dc.html', 'conversion-customer-nurturing': 'Svc-MktConversion.dc.html', 'marketing-strategy-analytics': 'Svc-MktStrategy.dc.html' })[SLUG[nm]] || '' });
+    const X = [
+      { name: 'Web Design & Development', desc: 'Websites, eCommerce platforms and user-focused digital experiences.', primary: 'Website & E-commerce Development', more: ['Digital & Web Design (UI/UX)'] },
+      { name: 'Software & Digital Products', desc: 'Custom software, mobile applications and digital products built around business needs.', primary: 'Development by Product Type', more: ['Development by Technology Focus', 'Quality, Testing & Maintenance', 'Strategy & Consulting'] },
+      { name: 'Branding & Creative Design', desc: 'Brand identity, creative design and intuitive user experiences that make businesses stand out.', primary: 'Brand Identity Design', more: ['Marketing & Advertising Design', 'Print & Publication Design', 'Motion Graphics & Video'] },
+      { name: 'Digital Marketing & Growth', desc: 'Digital marketing, SEO, social media and paid campaigns that connect brands with the right audiences.', primary: 'Digital Marketing & Traffic Generation', more: ['Content & Brand Engagement', 'Social Media & Community', 'Conversion & Customer Nurturing', 'Strategy & Analytics'] }
+    ];
+    const expertise = X.map((x, i) => { const p = svc(x.primary); return { n: pad(i + 1), name: x.name, desc: x.desc, href: p.href, primaryName: x.primary, aria: 'Explore ' + x.primary + ' (' + x.name + ')', hasMore: x.more.length > 0, more: x.more.map(svc) }; });
+    /* Team: no genuine team information supplied yet, so the grid stays hidden. Never add placeholder people. */
+    const team = [];
+    return {
+      expertise: expertise, team: team, hasTeam: team.length > 0, groups: groups,
+      menuOpen: S.menu, menuExpanded: S.menu ? 'true' : 'false',
+      openMenu: () => { const t = document.activeElement; this.menuReturn = t && t.id ? t.id : 'ab-menu-btn'; this.setState({ menu: true }); focusSoon('ab-menu-close'); },
+      closeMenu: () => { this.setState({ menu: false }); focusSoon(this.menuReturn || 'ab-menu-btn'); },
+      menuKey: (e) => {
+        if (e.key === 'Escape') { e.preventDefault(); this.setState({ menu: false }); focusSoon(this.menuReturn || 'ab-menu-btn'); return; }
+        if (e.key !== 'Tab') return;
+        const dlg = document.getElementById('ab-menu'); if (!dlg) return;
+        const items = [...dlg.querySelectorAll('a[href], button:not([disabled])')].filter((el) => el.offsetParent !== null);
+        if (!items.length) return;
+        const first = items[0], last = items[items.length - 1], cur = document.activeElement;
+        if (e.shiftKey && (cur === first || !dlg.contains(cur))) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && (cur === last || !dlg.contains(cur))) { e.preventDefault(); first.focus(); }
+      },
+      skipToMain: (e) => { if (e && e.preventDefault) e.preventDefault(); const m = document.getElementById('main'); if (m) { m.focus(); if (m.scrollIntoView) m.scrollIntoView({ block: 'start' }); } },
+      tAus: S.tAus, tLon: S.tLon, tFra: S.tFra
+    };
+  }
+}
+</script>
+</body>
+</html>

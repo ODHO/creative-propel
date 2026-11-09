@@ -1,0 +1,2004 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "A-Home.dc.html": {
+      "expand": "fill",
+      "h": 7800,
+      "is_interactive": true,
+      "page": "archive",
+      "title": "A2 · Kinetic Editorial — signature sections (archived)",
+      "w": 1440,
+      "x": 1520,
+      "y": 2780
+    },
+    "A-System.dc.html": {
+      "h": 3200,
+      "page": "archive",
+      "title": "A1 · Kinetic Editorial — design system (archived)",
+      "w": 1440,
+      "x": 0,
+      "y": 2780
+    },
+    "About-Mobile-2.dc.html": {
+      "h": 4370,
+      "is_interactive": true,
+      "page": "official",
+      "title": "11c · About Us — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 3818,
+      "y": 63300
+    },
+    "About-Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "11c · About Us — mobile 390 (part 1)",
+      "w": 390,
+      "x": 3348,
+      "y": 63300
+    },
+    "About-Tablet-2.dc.html": {
+      "h": 1267,
+      "is_interactive": true,
+      "page": "official",
+      "title": "11b · About Us — tablet 834 (part 2, page end)",
+      "w": 834,
+      "x": 2434,
+      "y": 63300
+    },
+    "About-Tablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "11b · About Us — tablet 834 (part 1)",
+      "w": 834,
+      "x": 1520,
+      "y": 63300
+    },
+    "About.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "11 · About Us — desktop 1440 (route /about/)",
+      "w": 1440,
+      "x": 0,
+      "y": 63300
+    },
+    "Asset-Readiness.dc.html": {
+      "h": 5240,
+      "page": "official",
+      "title": "S6 · Portfolio asset-readiness checklist — five active projects (internal, for approval)",
+      "w": 1440,
+      "x": 9120,
+      "y": 53180
+    },
+    "B-Article.dc.html": {
+      "expand": "fill",
+      "h": 5200,
+      "page": "official",
+      "title": "08 · Blog article (long-form)",
+      "w": 1440,
+      "x": 7600,
+      "y": 3700
+    },
+    "B-Case.dc.html": {
+      "expand": "fill",
+      "h": 5627,
+      "is_interactive": true,
+      "page": "official",
+      "title": "06 · Case study template (data-driven, slug prop) — Giuliana Brandon default",
+      "w": 1440,
+      "x": 4560,
+      "y": 3700
+    },
+    "B-Home.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "03 · Homepage — desktop · CURRENT DESIGN REFERENCE (part 1)",
+      "w": 1440,
+      "x": 0,
+      "y": 3700
+    },
+    "B-Projects.dc.html": {
+      "expand": "fill",
+      "h": 2001,
+      "is_interactive": true,
+      "page": "official",
+      "title": "05 · Projects portfolio — desktop · case studies (part 1)",
+      "w": 1440,
+      "x": 3040,
+      "y": 3700
+    },
+    "B-Reviews.dc.html": {
+      "expand": "fill",
+      "h": 4622,
+      "is_interactive": true,
+      "page": "official",
+      "title": "07 · Reviews page — desktop (15 verified reviews)",
+      "w": 1440,
+      "x": 6080,
+      "y": 3700
+    },
+    "B-Service.dc.html": {
+      "expand": "fill",
+      "h": 6200,
+      "is_interactive": true,
+      "page": "archive",
+      "title": "Early service template draft (superseded)",
+      "w": 1440,
+      "x": 3040,
+      "y": 2780
+    },
+    "B-Svc-Brand.dc.html": {
+      "expand": "fill",
+      "h": 4335,
+      "is_interactive": true,
+      "page": "official",
+      "title": "04 · Brand Identity Design — desktop 1440 (part 1) · APPROVED v95",
+      "w": 1440,
+      "x": 1520,
+      "y": 3700
+    },
+    "B-System.dc.html": {
+      "h": 3200,
+      "page": "official",
+      "title": "01 · Design system (refined)",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Brand-Desktop-2.dc.html": {
+      "h": 3946,
+      "is_interactive": true,
+      "page": "official",
+      "title": "04 · Brand Identity Design desktop — part 2 (Selected Work, FAQ, page end)",
+      "w": 1440,
+      "x": 5808,
+      "y": 12100
+    },
+    "Brand-Mobile-2.dc.html": {
+      "h": 6641,
+      "is_interactive": true,
+      "page": "official",
+      "title": "04c · Brand Identity Design mobile — part 2 (page end)",
+      "w": 390,
+      "x": 3818,
+      "y": 20500
+    },
+    "Brand-Mobile.dc.html": {
+      "h": 5833,
+      "is_interactive": true,
+      "page": "official",
+      "title": "04c · Brand Identity Design — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 20500
+    },
+    "Brand-Tablet-2.dc.html": {
+      "h": 4595,
+      "is_interactive": true,
+      "page": "official",
+      "title": "04b · Brand Identity Design tablet — part 2 (page end)",
+      "w": 834,
+      "x": 2904,
+      "y": 20500
+    },
+    "Brand-Tablet.dc.html": {
+      "h": 5077,
+      "is_interactive": true,
+      "page": "official",
+      "title": "04b · Brand Identity Design — tablet 834 (part 1)",
+      "w": 834,
+      "x": 1520,
+      "y": 20500
+    },
+    "Case-EMotionSports.dc.html": {
+      "expand": "fill",
+      "h": 5140,
+      "is_interactive": true,
+      "page": "official",
+      "title": "06.2 · Case study — E-Motion Sports (desktop)",
+      "w": 1440,
+      "x": 1520,
+      "y": 36700
+    },
+    "Case-FitFaction.dc.html": {
+      "expand": "fill",
+      "h": 5024,
+      "is_interactive": true,
+      "page": "official",
+      "title": "ON HOLD · Case study — The Fit Faction (archived, not in active portfolio)",
+      "w": 1440,
+      "x": 1520,
+      "y": 58000
+    },
+    "Case-Fortico-2.dc.html": {
+      "h": 824,
+      "is_interactive": true,
+      "page": "official",
+      "title": "06.4 · Case study — desktop 1440 (part 2, page end)",
+      "w": 1440,
+      "x": 7600,
+      "y": 36700
+    },
+    "Case-Fortico.dc.html": {
+      "expand": "fill",
+      "h": 5120,
+      "is_interactive": true,
+      "page": "official",
+      "title": "06.4 · Case study — Fortico Security Services (desktop)",
+      "w": 1440,
+      "x": 4560,
+      "y": 36700
+    },
+    "Case-GiulianaBrandon-2.dc.html": {
+      "h": 1027,
+      "is_interactive": true,
+      "page": "official",
+      "title": "06.1 · Case study — desktop 1440 (part 2, page end)",
+      "w": 1440,
+      "x": 9120,
+      "y": 36700
+    },
+    "Case-GiulianaBrandon.dc.html": {
+      "expand": "fill",
+      "h": 5120,
+      "is_interactive": true,
+      "page": "official",
+      "title": "06.1 · Case study — Giuliana Brandon (desktop)",
+      "w": 1440,
+      "x": 0,
+      "y": 36700
+    },
+    "Case-Mobile-2.dc.html": {
+      "h": 590,
+      "is_interactive": true,
+      "page": "official",
+      "title": "Case study template — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 6080,
+      "y": 41900
+    },
+    "Case-Mobile.dc.html": {
+      "h": 7900,
+      "is_interactive": true,
+      "page": "official",
+      "title": "06c · Case study (E-Motion Sports) — mobile 390",
+      "w": 390,
+      "x": 2298,
+      "y": 41900
+    },
+    "Case-NewHeights.dc.html": {
+      "expand": "fill",
+      "h": 5061,
+      "is_interactive": true,
+      "page": "official",
+      "title": "06.5 · Case study — New Heights Collective (desktop)",
+      "w": 1440,
+      "x": 6080,
+      "y": 36700
+    },
+    "Case-PassportToLife.dc.html": {
+      "expand": "fill",
+      "h": 5051,
+      "is_interactive": true,
+      "page": "official",
+      "title": "06.3 · Case study — Passport to Life (desktop)",
+      "w": 1440,
+      "x": 3040,
+      "y": 36700
+    },
+    "Case-Tablet.dc.html": {
+      "h": 6076,
+      "is_interactive": true,
+      "page": "official",
+      "title": "06b · Case study (E-Motion Sports) — tablet 834",
+      "w": 834,
+      "x": 1384,
+      "y": 41900
+    },
+    "Contact-Mobile-2.dc.html": {
+      "h": 1833,
+      "is_interactive": true,
+      "page": "official",
+      "title": "Contact Us — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 4424,
+      "y": 72180
+    },
+    "Contact-Mobile.dc.html": {
+      "h": 5400,
+      "is_interactive": true,
+      "page": "official",
+      "title": "12c · Contact Us — mobile 390",
+      "w": 390,
+      "x": 2434,
+      "y": 72180
+    },
+    "Contact-States.dc.html": {
+      "h": 2520,
+      "is_interactive": true,
+      "page": "official",
+      "title": "12d · Contact form states — design examples only (not a real submission)",
+      "w": 1440,
+      "x": 2904,
+      "y": 72180
+    },
+    "Contact-Tablet.dc.html": {
+      "h": 5079,
+      "is_interactive": true,
+      "page": "official",
+      "title": "12b · Contact Us — tablet 834",
+      "w": 834,
+      "x": 1520,
+      "y": 72180
+    },
+    "Contact.dc.html": {
+      "expand": "fill",
+      "h": 4195,
+      "is_interactive": true,
+      "page": "official",
+      "title": "12 · Contact Us — desktop 1440 (route /contact/) · form is a PROTOTYPE, not connected",
+      "w": 1440,
+      "x": 0,
+      "y": 72180
+    },
+    "Cookies-Mobile-2.dc.html": {
+      "h": 1633,
+      "is_interactive": true,
+      "page": "official",
+      "title": "Cookies Policy — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 3884,
+      "y": 86400
+    },
+    "Cookies-Mobile.dc.html": {
+      "h": 7800,
+      "is_interactive": true,
+      "page": "official",
+      "title": "14c · Cookies Policy — mobile 390",
+      "w": 390,
+      "x": 2434,
+      "y": 86400
+    },
+    "Cookies-Tablet.dc.html": {
+      "h": 6502,
+      "is_interactive": true,
+      "page": "official",
+      "title": "14b · Cookies Policy — tablet 834",
+      "w": 834,
+      "x": 1520,
+      "y": 86400
+    },
+    "Cookies.dc.html": {
+      "expand": "fill",
+      "h": 6181,
+      "is_interactive": true,
+      "page": "official",
+      "title": "14 · Cookies Policy — desktop 1440 (route /cookies-policy/)",
+      "w": 1440,
+      "x": 0,
+      "y": 86400
+    },
+    "Home-Desktop-2.dc.html": {
+      "h": 1528,
+      "is_interactive": true,
+      "page": "official",
+      "title": "03 · desktop — part 2 (page end)",
+      "w": 1440,
+      "x": 2768,
+      "y": 12100
+    },
+    "Home-Mobile-2.dc.html": {
+      "h": 4777,
+      "is_interactive": true,
+      "page": "official",
+      "title": "03c · mobile — part 2",
+      "w": 390,
+      "x": 2298,
+      "y": 12100
+    },
+    "Home-Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "03c · Homepage — mobile 390",
+      "w": 390,
+      "x": 914,
+      "y": 12100
+    },
+    "Home-Tablet-2.dc.html": {
+      "h": 2912,
+      "is_interactive": true,
+      "page": "official",
+      "title": "03b · tablet — part 2",
+      "w": 834,
+      "x": 1384,
+      "y": 12100
+    },
+    "Home-Tablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "03b · Homepage — tablet 834",
+      "w": 834,
+      "x": 0,
+      "y": 12100
+    },
+    "Main.dc.html": {
+      "h": 1700,
+      "page": "official",
+      "title": "00 · Future Forward — final design decisions",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Motion.dc.html": {
+      "h": 2400,
+      "is_interactive": true,
+      "page": "official",
+      "title": "02 · Motion direction",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "Privacy-Desktop-2.dc.html": {
+      "h": 1928,
+      "is_interactive": true,
+      "page": "official",
+      "title": "13 · Privacy Policy — desktop part 2 (page end)",
+      "w": 1440,
+      "x": 1520,
+      "y": 77680
+    },
+    "Privacy-Mobile-2.dc.html": {
+      "h": 6020,
+      "is_interactive": true,
+      "page": "official",
+      "title": "13c · Privacy Policy — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 5338,
+      "y": 77680
+    },
+    "Privacy-Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "13c · Privacy Policy — mobile 390 (part 1)",
+      "w": 390,
+      "x": 4868,
+      "y": 77680
+    },
+    "Privacy-Tablet-2.dc.html": {
+      "h": 2320,
+      "is_interactive": true,
+      "page": "official",
+      "title": "13b · Privacy Policy — tablet 834 (part 2, page end)",
+      "w": 834,
+      "x": 3954,
+      "y": 77680
+    },
+    "Privacy-Tablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "13b · Privacy Policy — tablet 834 (part 1)",
+      "w": 834,
+      "x": 3040,
+      "y": 77680
+    },
+    "Privacy.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "13 · Privacy Policy — desktop 1440 (route /privacy-policy/) · part 1",
+      "w": 1440,
+      "x": 0,
+      "y": 77680
+    },
+    "Projects-Desktop-2.dc.html": {
+      "h": 7379,
+      "is_interactive": true,
+      "page": "official",
+      "title": "05 · Projects desktop — part 2 (Creative Work, page end)",
+      "w": 1440,
+      "x": 4288,
+      "y": 12100
+    },
+    "Projects-Mobile-2.dc.html": {
+      "h": 7476,
+      "is_interactive": true,
+      "page": "official",
+      "title": "05c · Projects mobile — part 2",
+      "w": 390,
+      "x": 3682,
+      "y": 41900
+    },
+    "Projects-Mobile-3.dc.html": {
+      "h": 6656,
+      "is_interactive": true,
+      "page": "official",
+      "title": "05c · Projects mobile — part 3",
+      "w": 390,
+      "x": 4152,
+      "y": 41900
+    },
+    "Projects-Mobile.dc.html": {
+      "h": 6014,
+      "is_interactive": true,
+      "page": "official",
+      "title": "05c · Projects — mobile 390 (part 1)",
+      "w": 390,
+      "x": 914,
+      "y": 41900
+    },
+    "Projects-Tablet-2.dc.html": {
+      "h": 5090,
+      "is_interactive": true,
+      "page": "official",
+      "title": "05b · Projects tablet — part 2",
+      "w": 834,
+      "x": 2768,
+      "y": 41900
+    },
+    "Projects-Tablet.dc.html": {
+      "h": 6268,
+      "is_interactive": true,
+      "page": "official",
+      "title": "05b · Projects — tablet 834 (part 1)",
+      "w": 834,
+      "x": 0,
+      "y": 41900
+    },
+    "Research-EMotionSports.dc.html": {
+      "h": 3680,
+      "page": "official",
+      "title": "S2 · Asset research — E-Motion Sports (internal, not for publication)",
+      "w": 1440,
+      "x": 3040,
+      "y": 53180
+    },
+    "Research-FitFaction.dc.html": {
+      "h": 2400,
+      "page": "official",
+      "title": "ON HOLD · Asset research — The Fit Faction (archived, internal)",
+      "w": 1440,
+      "x": 4560,
+      "y": 58000
+    },
+    "Research-Fortico.dc.html": {
+      "h": 2980,
+      "page": "official",
+      "title": "S4 · Asset research — Fortico Security Services (internal, not for publication)",
+      "w": 1440,
+      "x": 6080,
+      "y": 53180
+    },
+    "Research-GiulianaBrandon.dc.html": {
+      "h": 4290,
+      "page": "official",
+      "title": "S1 · Asset research — Giuliana Brandon (internal, not for publication)",
+      "w": 1440,
+      "x": 1520,
+      "y": 53180
+    },
+    "Research-NewHeights.dc.html": {
+      "h": 3740,
+      "page": "official",
+      "title": "S5 · Asset research — New Heights Collective (internal, not for publication)",
+      "w": 1440,
+      "x": 7600,
+      "y": 53180
+    },
+    "Research-Overview.dc.html": {
+      "h": 5390,
+      "page": "official",
+      "title": "S0 · Asset research — decisions, fact updates & logo-led visual direction (internal)",
+      "w": 1440,
+      "x": 0,
+      "y": 53180
+    },
+    "Research-PassportToLife.dc.html": {
+      "h": 4160,
+      "page": "official",
+      "title": "S3 · Asset research — Passport to Life (internal, not for publication)",
+      "w": 1440,
+      "x": 4560,
+      "y": 53180
+    },
+    "Review-EMotionSports.dc.html": {
+      "h": 2540,
+      "page": "official",
+      "title": "R3 · Approved content — E-Motion Sports",
+      "w": 1440,
+      "x": 3040,
+      "y": 49880
+    },
+    "Review-FitFaction.dc.html": {
+      "h": 2650,
+      "page": "official",
+      "title": "ON HOLD · Approved content — The Fit Faction (archived)",
+      "w": 1440,
+      "x": 3040,
+      "y": 58000
+    },
+    "Review-Fortico.dc.html": {
+      "h": 2440,
+      "page": "official",
+      "title": "R5 · Approved content — Fortico Security Services",
+      "w": 1440,
+      "x": 6080,
+      "y": 49880
+    },
+    "Review-GiulianaBrandon.dc.html": {
+      "h": 2580,
+      "page": "official",
+      "title": "R2 · Approved content — Giuliana Brandon",
+      "w": 1440,
+      "x": 1520,
+      "y": 49880
+    },
+    "Review-Intro.dc.html": {
+      "h": 1670,
+      "page": "official",
+      "title": "R0 · Approved content — Projects page, card texts & writing notes",
+      "w": 1440,
+      "x": 0,
+      "y": 49880
+    },
+    "Review-Kit.dc.html": {
+      "h": 1720,
+      "page": "official",
+      "title": "10 · Review component kit & service matching",
+      "w": 1440,
+      "x": 1854,
+      "y": 28300
+    },
+    "Review-NewHeights.dc.html": {
+      "h": 2610,
+      "page": "official",
+      "title": "R6 · Approved content — New Heights Collective",
+      "w": 1440,
+      "x": 7600,
+      "y": 49880
+    },
+    "Review-PassportToLife.dc.html": {
+      "h": 2400,
+      "page": "official",
+      "title": "R4 · Approved content — Passport to Life",
+      "w": 1440,
+      "x": 4560,
+      "y": 49880
+    },
+    "Reviews-Mobile-2.dc.html": {
+      "h": 4806,
+      "is_interactive": true,
+      "page": "official",
+      "title": "07c · Reviews mobile — part 2 (page end)",
+      "w": 390,
+      "x": 1384,
+      "y": 28300
+    },
+    "Reviews-Mobile.dc.html": {
+      "h": 4287,
+      "is_interactive": true,
+      "page": "official",
+      "title": "07c · Reviews — mobile 390 (part 1)",
+      "w": 390,
+      "x": 914,
+      "y": 28300
+    },
+    "Reviews-Tablet.dc.html": {
+      "h": 5764,
+      "is_interactive": true,
+      "page": "official",
+      "title": "07b · Reviews — tablet 834",
+      "w": 834,
+      "x": 0,
+      "y": 28300
+    },
+    "Svc-DevProduct-Mobile-2.dc.html": {
+      "h": 5355,
+      "is_interactive": true,
+      "page": "official",
+      "title": "19c · Development by Product Type — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 125282
+    },
+    "Svc-DevProduct-Mobile.dc.html": {
+      "h": 5854,
+      "is_interactive": true,
+      "page": "official",
+      "title": "19c · Development by Product Type — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 125282
+    },
+    "Svc-DevProduct-Tablet-2.dc.html": {
+      "h": 3669,
+      "is_interactive": true,
+      "page": "official",
+      "title": "19b · Development by Product Type tablet — part 2 (page end)",
+      "w": 834,
+      "x": 3374,
+      "y": 127260
+    },
+    "Svc-DevProduct-Tablet.dc.html": {
+      "h": 4923,
+      "is_interactive": true,
+      "page": "official",
+      "title": "19b · Development by Product Type — tablet 834 (part 1)",
+      "w": 834,
+      "x": 1520,
+      "y": 125282
+    },
+    "Svc-DevProduct.dc.html": {
+      "expand": "fill",
+      "h": 7806,
+      "is_interactive": true,
+      "page": "official",
+      "title": "19 · Development by Product Type — desktop 1440 (route /services/software-development-by-product-type/) · APPROVED v106",
+      "w": 1440,
+      "x": 0,
+      "y": 125282
+    },
+    "Svc-DevTech-Mobile-2.dc.html": {
+      "h": 6064,
+      "is_interactive": true,
+      "page": "official",
+      "title": "20c · Development by Technology Focus — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 3818,
+      "y": 133682
+    },
+    "Svc-DevTech-Mobile.dc.html": {
+      "h": 6023,
+      "is_interactive": true,
+      "page": "official",
+      "title": "20c · Development by Technology Focus — mobile 390 (part 1)",
+      "w": 390,
+      "x": 3348,
+      "y": 133682
+    },
+    "Svc-DevTech-Tablet-2.dc.html": {
+      "h": 4067,
+      "is_interactive": true,
+      "page": "official",
+      "title": "20b · Development by Technology Focus — tablet 834 (part 2, page end)",
+      "w": 834,
+      "x": 2434,
+      "y": 133682
+    },
+    "Svc-DevTech-Tablet.dc.html": {
+      "h": 4974,
+      "is_interactive": true,
+      "page": "official",
+      "title": "20b · Development by Technology Focus — tablet 834 (part 1)",
+      "w": 834,
+      "x": 1520,
+      "y": 133682
+    },
+    "Svc-DevTech.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "20 · Development by Technology Focus — desktop 1440 (route /services/software-development-by-technology-focus/) · APPROV",
+      "w": 1440,
+      "x": 0,
+      "y": 133682
+    },
+    "Svc-DigitalWeb-Desktop-2.dc.html": {
+      "h": 4010,
+      "is_interactive": true,
+      "page": "official",
+      "title": "15 · Digital & Web Design (UI/UX) desktop — part 2 (Selected Work, FAQ, page end)",
+      "w": 1440,
+      "x": 4174,
+      "y": 94280
+    },
+    "Svc-DigitalWeb-Mobile-2.dc.html": {
+      "h": 6872,
+      "is_interactive": true,
+      "page": "official",
+      "title": "15c · Digital & Web Design (UI/UX) — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 94280
+    },
+    "Svc-DigitalWeb-Mobile.dc.html": {
+      "h": 6945,
+      "is_interactive": true,
+      "page": "official",
+      "title": "15c · Digital & Web Design (UI/UX) — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 94280
+    },
+    "Svc-DigitalWeb-Tablet-2.dc.html": {
+      "h": 4994,
+      "is_interactive": true,
+      "page": "official",
+      "title": "15b · Digital & Web Design (UI/UX) tablet — part 2 (page end)",
+      "w": 834,
+      "x": 5694,
+      "y": 94280
+    },
+    "Svc-DigitalWeb-Tablet.dc.html": {
+      "h": 5792,
+      "is_interactive": true,
+      "page": "official",
+      "title": "15b · Digital & Web Design (UI/UX) — tablet 834 (part 1)",
+      "w": 834,
+      "x": 1520,
+      "y": 94280
+    },
+    "Svc-DigitalWeb.dc.html": {
+      "expand": "fill",
+      "h": 5066,
+      "is_interactive": true,
+      "page": "official",
+      "title": "15 · Digital & Web Design (UI/UX) — desktop 1440 (route /services/digital-web-design/) · part 1 · APPROVED v98",
+      "w": 1440,
+      "x": 0,
+      "y": 94280
+    },
+    "Svc-Map.dc.html": {
+      "h": 1640,
+      "page": "official",
+      "title": "09 · Service architecture, template blocks & frozen URLs",
+      "w": 1440,
+      "x": 0,
+      "y": 20500
+    },
+    "Svc-Marketing-Desktop-2.dc.html": {
+      "h": 3451,
+      "is_interactive": true,
+      "page": "official",
+      "title": "16 · Marketing & Advertising Design desktop — part 2 (Selected Work, FAQ, page end)",
+      "w": 1440,
+      "x": 4288,
+      "y": 102680
+    },
+    "Svc-Marketing-Mobile-2.dc.html": {
+      "h": 4920,
+      "is_interactive": true,
+      "page": "official",
+      "title": "16c · Marketing & Advertising Design mobile — part 2 (page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 102680
+    },
+    "Svc-Marketing-Mobile.dc.html": {
+      "h": 5960,
+      "is_interactive": true,
+      "page": "official",
+      "title": "16c · Marketing & Advertising Design — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 102680
+    },
+    "Svc-Marketing-Tablet-2.dc.html": {
+      "h": 3597,
+      "is_interactive": true,
+      "page": "official",
+      "title": "16b · Marketing & Advertising Design tablet — part 2 (page end)",
+      "w": 834,
+      "x": 3374,
+      "y": 102680
+    },
+    "Svc-Marketing-Tablet.dc.html": {
+      "h": 5177,
+      "is_interactive": true,
+      "page": "official",
+      "title": "16b · Marketing & Advertising Design — tablet 834 (part 1)",
+      "w": 834,
+      "x": 1520,
+      "y": 102680
+    },
+    "Svc-Marketing.dc.html": {
+      "expand": "fill",
+      "h": 4408,
+      "is_interactive": true,
+      "page": "official",
+      "title": "16 · Marketing & Advertising Design — desktop 1440 (route /services/marketing-advertising-design/) · part 1 · APPROVED v",
+      "w": 1440,
+      "x": 0,
+      "y": 102680
+    },
+    "Svc-MktContent-Mobile-2.dc.html": {
+      "h": 3980,
+      "is_interactive": true,
+      "page": "official",
+      "title": "24c · Content & Brand Engagement — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 167562
+    },
+    "Svc-MktContent-Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "24c · Content & Brand Engagement — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 167562
+    },
+    "Svc-MktContent-Tablet-2.dc.html": {
+      "h": 1369,
+      "is_interactive": true,
+      "page": "official",
+      "title": "24b · Content & Brand Engagement — tablet 834 (part 2, page end)",
+      "w": 834,
+      "x": 4174,
+      "y": 167562
+    },
+    "Svc-MktContent-Tablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "24b · Content & Brand Engagement — tablet 834 (part 1)",
+      "w": 834,
+      "x": 1520,
+      "y": 167562
+    },
+    "Svc-MktContent.dc.html": {
+      "expand": "fill",
+      "h": 7553,
+      "is_interactive": true,
+      "page": "official",
+      "title": "24 · Content & Brand Engagement — desktop 1440 (route /services/content-brand-engagement/) · APPROVED v119",
+      "w": 1440,
+      "x": 0,
+      "y": 167562
+    },
+    "Svc-MktConversion-Mobile-2.dc.html": {
+      "h": 3772,
+      "is_interactive": true,
+      "page": "official",
+      "title": "26c · Conversion & Customer Nurturing — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 184362
+    },
+    "Svc-MktConversion-Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "26c · Conversion & Customer Nurturing — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 184362
+    },
+    "Svc-MktConversion-Tablet-2.dc.html": {
+      "h": 1441,
+      "is_interactive": true,
+      "page": "official",
+      "title": "26b · Conversion & Customer Nurturing — tablet 834 (part 2, page end)",
+      "w": 834,
+      "x": 4174,
+      "y": 184362
+    },
+    "Svc-MktConversion-Tablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "26b · Conversion & Customer Nurturing — tablet 834 (part 1)",
+      "w": 834,
+      "x": 1520,
+      "y": 184362
+    },
+    "Svc-MktConversion.dc.html": {
+      "expand": "fill",
+      "h": 7404,
+      "is_interactive": true,
+      "page": "official",
+      "title": "26 · Conversion & Customer Nurturing — desktop 1440 (route /services/conversion-customer-nurturing/) · APPROVED v123",
+      "w": 1440,
+      "x": 0,
+      "y": 184362
+    },
+    "Svc-MktDigital-Desktop-2.dc.html": {
+      "h": 1800,
+      "is_interactive": true,
+      "page": "official",
+      "title": "23 · Digital Marketing & Traffic Generation — desktop part 2 (page end)",
+      "w": 1440,
+      "x": 1520,
+      "y": 159162
+    },
+    "Svc-MktDigital-Mobile-2.dc.html": {
+      "h": 6841,
+      "is_interactive": true,
+      "page": "official",
+      "title": "23c · Digital Marketing & Traffic Generation — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 5338,
+      "y": 159162
+    },
+    "Svc-MktDigital-Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "23c · Digital Marketing & Traffic Generation — mobile 390 (part 1)",
+      "w": 390,
+      "x": 4868,
+      "y": 159162
+    },
+    "Svc-MktDigital-Tablet-2.dc.html": {
+      "h": 3175,
+      "is_interactive": true,
+      "page": "official",
+      "title": "23b · Digital Marketing & Traffic Generation — tablet 834 (part 2, page end)",
+      "w": 834,
+      "x": 3954,
+      "y": 159162
+    },
+    "Svc-MktDigital-Tablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "23b · Digital Marketing & Traffic Generation — tablet 834 (part 1)",
+      "w": 834,
+      "x": 3040,
+      "y": 159162
+    },
+    "Svc-MktDigital.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "23 · Digital Marketing & Traffic Generation — desktop 1440 (route /services/digital-marketing-traffic-generation/) · par",
+      "w": 1440,
+      "x": 0,
+      "y": 159162
+    },
+    "Svc-MktSocial-Mobile-2.dc.html": {
+      "h": 3709,
+      "is_interactive": true,
+      "page": "official",
+      "title": "25c · Social Media & Community — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 175962
+    },
+    "Svc-MktSocial-Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "25c · Social Media & Community — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 175962
+    },
+    "Svc-MktSocial-Tablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "25b · Social Media & Community — tablet 834",
+      "w": 834,
+      "x": 1520,
+      "y": 175962
+    },
+    "Svc-MktSocial.dc.html": {
+      "expand": "fill",
+      "h": 7605,
+      "is_interactive": true,
+      "page": "official",
+      "title": "25 · Social Media & Community — desktop 1440 (route /services/social-media-community/) · APPROVED v121",
+      "w": 1440,
+      "x": 0,
+      "y": 175962
+    },
+    "Svc-MktStrategy-Mobile-2.dc.html": {
+      "h": 3717,
+      "is_interactive": true,
+      "page": "official",
+      "title": "27c · Strategy & Analytics — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 192762
+    },
+    "Svc-MktStrategy-Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "27c · Strategy & Analytics — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 192762
+    },
+    "Svc-MktStrategy-Tablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "27b · Strategy & Analytics — tablet 834",
+      "w": 834,
+      "x": 1520,
+      "y": 192762
+    },
+    "Svc-MktStrategy.dc.html": {
+      "expand": "fill",
+      "h": 7648,
+      "is_interactive": true,
+      "page": "official",
+      "title": "27 · Strategy & Analytics — desktop 1440 (route /services/marketing-strategy-analytics/) · APPROVED v125",
+      "w": 1440,
+      "x": 0,
+      "y": 192762
+    },
+    "Svc-Motion-Desktop-2.dc.html": {
+      "h": 3925,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18 · Motion Graphics & Video desktop — part 2 (Selected Work, FAQ, page end)",
+      "w": 1440,
+      "x": 4288,
+      "y": 117550
+    },
+    "Svc-Motion-Mobile-2.dc.html": {
+      "h": 6857,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18c · Motion Graphics & Video mobile — part 2 (page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 117550
+    },
+    "Svc-Motion-Mobile.dc.html": {
+      "h": 5773,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18c · Motion Graphics & Video — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 117550
+    },
+    "Svc-Motion-Tablet-2.dc.html": {
+      "h": 4479,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18b · Motion Graphics & Video tablet — part 2 (page end)",
+      "w": 834,
+      "x": 3374,
+      "y": 117550
+    },
+    "Svc-Motion-Tablet.dc.html": {
+      "h": 5076,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18b · Motion Graphics & Video — tablet 834 (part 1)",
+      "w": 834,
+      "x": 1520,
+      "y": 117550
+    },
+    "Svc-Motion.dc.html": {
+      "expand": "fill",
+      "h": 4156,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18 · Motion Graphics & Video — desktop 1440 (route /services/motion-graphics-video/) · part 1 · APPROVED v104",
+      "w": 1440,
+      "x": 0,
+      "y": 117550
+    },
+    "Svc-Print-Desktop-2.dc.html": {
+      "h": 3260,
+      "is_interactive": true,
+      "page": "official",
+      "title": "17 · Print & Publication Design desktop — part 2 (Selected Work, FAQ, page end)",
+      "w": 1440,
+      "x": 4288,
+      "y": 110216
+    },
+    "Svc-Print-Mobile-2.dc.html": {
+      "h": 4922,
+      "is_interactive": true,
+      "page": "official",
+      "title": "17c · Print & Publication Design mobile — part 2 (page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 110216
+    },
+    "Svc-Print-Mobile.dc.html": {
+      "h": 5699,
+      "is_interactive": true,
+      "page": "official",
+      "title": "17c · Print & Publication Design — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 110216
+    },
+    "Svc-Print-Tablet-2.dc.html": {
+      "h": 3475,
+      "is_interactive": true,
+      "page": "official",
+      "title": "17b · Print & Publication Design tablet — part 2 (page end)",
+      "w": 834,
+      "x": 3374,
+      "y": 110216
+    },
+    "Svc-Print-Tablet.dc.html": {
+      "h": 4932,
+      "is_interactive": true,
+      "page": "official",
+      "title": "17b · Print & Publication Design — tablet 834 (part 1)",
+      "w": 834,
+      "x": 1520,
+      "y": 110216
+    },
+    "Svc-Print.dc.html": {
+      "expand": "fill",
+      "h": 4169,
+      "is_interactive": true,
+      "page": "official",
+      "title": "17 · Print & Publication Design — desktop 1440 (route /services/print-publication-design/) · part 1 · APPROVED v102",
+      "w": 1440,
+      "x": 0,
+      "y": 110216
+    },
+    "Svc-QA-Mobile-2.dc.html": {
+      "h": 4453,
+      "is_interactive": true,
+      "page": "official",
+      "title": "21c · Quality, Testing & Maintenance — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 142082
+    },
+    "Svc-QA-Mobile.dc.html": {
+      "h": 5829,
+      "is_interactive": true,
+      "page": "official",
+      "title": "21c · Quality, Testing & Maintenance — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 142082
+    },
+    "Svc-QA-Tablet.dc.html": {
+      "h": 7959,
+      "is_interactive": true,
+      "page": "official",
+      "title": "21b · Quality, Testing & Maintenance — tablet 834",
+      "w": 834,
+      "x": 1520,
+      "y": 142082
+    },
+    "Svc-QA.dc.html": {
+      "expand": "fill",
+      "h": 7118,
+      "is_interactive": true,
+      "page": "official",
+      "title": "21 · Quality, Testing & Maintenance — desktop 1440 (route /services/quality-testing-maintenance/) · APPROVED v111",
+      "w": 1440,
+      "x": 0,
+      "y": 142082
+    },
+    "Svc-Strategy-Mobile-2.dc.html": {
+      "h": 4414,
+      "is_interactive": true,
+      "page": "official",
+      "title": "22c · Strategy & Consulting — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 2904,
+      "y": 150482
+    },
+    "Svc-Strategy-Mobile.dc.html": {
+      "h": 5551,
+      "is_interactive": true,
+      "page": "official",
+      "title": "22c · Strategy & Consulting — mobile 390 (part 1)",
+      "w": 390,
+      "x": 2434,
+      "y": 150482
+    },
+    "Svc-Strategy-Tablet.dc.html": {
+      "h": 7812,
+      "is_interactive": true,
+      "page": "official",
+      "title": "22b · Strategy & Consulting — tablet 834",
+      "w": 834,
+      "x": 1520,
+      "y": 150482
+    },
+    "Svc-Strategy.dc.html": {
+      "expand": "fill",
+      "h": 6990,
+      "is_interactive": true,
+      "page": "official",
+      "title": "22 · Strategy & Consulting — desktop 1440 (route /services/software-strategy-consulting/) · APPROVED v114",
+      "w": 1440,
+      "x": 0,
+      "y": 150482
+    },
+    "Svc-WebDev-Desktop-2.dc.html": {
+      "h": 1672,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18 · Website & E-commerce Development — desktop 1440 (part 2, page end)",
+      "w": 1440,
+      "x": 9488,
+      "y": 125282
+    },
+    "Svc-WebDev-Mobile-2.dc.html": {
+      "h": 6004,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18c · Website & E-commerce Development — mobile 390 (part 2, page end)",
+      "w": 390,
+      "x": 8218,
+      "y": 125282
+    },
+    "Svc-WebDev-Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18c · Website & E-commerce Development — mobile 390 (part 1)",
+      "w": 390,
+      "x": 7748,
+      "y": 125282
+    },
+    "Svc-WebDev-Tablet-2.dc.html": {
+      "h": 2770,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18b · Website & E-commerce Development — tablet 834 (part 2, page end)",
+      "w": 834,
+      "x": 6834,
+      "y": 125282
+    },
+    "Svc-WebDev-Tablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18b · Website & E-commerce Development — tablet 834 (part 1)",
+      "w": 834,
+      "x": 5920,
+      "y": 125282
+    },
+    "Svc-WebDev.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "page": "official",
+      "title": "18 · Website & E-commerce Development — desktop 1440 (route /services/website-ecommerce-development/) · APPROVED v86",
+      "w": 1440,
+      "x": 4400,
+      "y": 125282
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-11-04T16:20:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "page": "official",
+    "view": "canvas"
+  },
+  "noteOrder": [
+    "titleA",
+    "titleB",
+    "titlePages",
+    "titleResp",
+    "titleSvc",
+    "titleRev",
+    "titleCase",
+    "titleCaseResp",
+    "titleReview",
+    "titleResearch",
+    "titleOnHold",
+    "titleAbout",
+    "aboutTeamNote",
+    "titleContact",
+    "contactPrivacyNote",
+    "contactBackendNote",
+    "titlePrivacy",
+    "privacyReviewNote",
+    "titleCookies",
+    "cookiesLaunchNote",
+    "titleDesignSvc",
+    "dsTestimonialNote",
+    "dsStrategyCtaNote",
+    "dsWorkNote",
+    "dsLinksNote",
+    "dsBrandCopyNote",
+    "titleDev",
+    "devNote_product",
+    "devSharedNote",
+    "devNavNote",
+    "devNote_tech",
+    "devNote_qa",
+    "devNote_strategy",
+    "titleMkt",
+    "mktNote_digital",
+    "mktSharedNote",
+    "mktNavNote",
+    "mktNote_content",
+    "mktNote_social",
+    "mktNote_conversion",
+    "mktNote_strategy",
+    "webdevTitle",
+    "webdevNote",
+    "siteBacklog",
+    "dwApprovalNote",
+    "mkApprovalNote",
+    "prApprovalNote",
+    "moApprovalNote"
+  ],
+  "notes": {
+    "aboutTeamNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. Our Team: add genuine team photographs, names, roles and short biographies in this section. The team grid stays hidden until real team information is supplied. Do not add placeholder people.",
+      "w": 640,
+      "x": 0,
+      "y": 71502
+    },
+    "contactBackendNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — the form is a visual prototype. Still to choose, configure and test before launch: form plugin or handler, email delivery service with SPF/DKIM/DMARC, notification recipient(s), optional confirmation email, spam protection (honeypot, time check, rate limit, Turnstile or hCaptcha), and data storage and retention. Until then, nothing is sent.",
+      "w": 640,
+      "x": 720,
+      "y": 76415
+    },
+    "contactPrivacyNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL LAUNCH NOTE — The Privacy Policy page now exists on the canvas (route /privacy-policy/) and is linked from the shared footer; its text still needs legal review before publication. The Cookies Policy page now exists (route /cookies-policy/) and is linked from the footer; it still needs a cookie audit and legal review. The privacy wording under the Contact form (“We’ll only use your details to respond to your enquiry.”) must also be reviewed. A “Privacy Policy” link now follows that sentence (added 5 Nov 2026).",
+      "w": 640,
+      "x": 0,
+      "y": 76415
+    },
+    "cookiesLaunchNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL LAUNCH NOTE — Before launch, audit and verify the actual cookies and tracking technologies on the live site (names, providers, purposes, durations; any analytics, pixels, tags, embeds or local storage). If any non-essential cookies or similar technologies are used, implement an appropriate consent mechanism (for example a cookie banner or preference tool) before they run, and make sure section 6 matches what is actually in place. No banner, consent tool or tracking has been configured on the canvas. Also: set the “Last updated” date, and have the policy reviewed by a qualified adviser.",
+      "w": 900,
+      "x": 2904,
+      "y": 86400
+    },
+    "devNavNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — navigation (updated v76). The group is now “Web, App & Software Development” with five pages; Website & E-commerce Development is first. The homepage “What we do” card for Web Design & Development opens it, and every service page is listed under exactly one homepage category (15 in all).",
+      "w": 720,
+      "x": 3374,
+      "y": 126682
+    },
+    "devNote_product": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Development by Product Type, version 106, as the private design and content reference (7 Nov 2026). Approved: supplied source copy plus the hero supporting line, Website & E-commerce Development cross-link, offices paragraph, responsive four-step process, Digital & Web Design (UI/UX) related cross-link and the global footer. Selected work: only Self Care and HeartBeat (\"App Development | UI/UX Design\"), labelled as Behance work, not verified client app builds; do not imply client relationships, completed software deployments or outcomes. Closing CTA: \"Have a Product Idea? Let's Build It Together.\" panel at the end of related services, button \"Discuss Your Project\", email link kept; the generic \"Let's Talk About Your Project.\" panel and old footer stay removed. Hero: core and orbit only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 3374,
+      "y": 125282
+    },
+    "devNote_qa": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Quality, Testing & Maintenance, version 111, as the private design and content reference (7 Nov 2026). Approved: supplied source copy plus the hero supporting line, Development by Product Type cross-link, offices paragraph, responsive four-step process, Digital & Web Design (UI/UX) related cross-link and the global footer; both buttons read \"Discuss Your Project\". Selected work: deliberately no project cards. Keep the supplied heading, intro and \"Explore Our Work\". Do not add E-Motion Sports (a store completion) or unrelated Behance work as evidence of testing, maintenance or software improvement; add verified examples only when they exist. Closing CTA: \"Give Your Software the Attention It Deserves.\" panel with the email link; the generic closing panel and old footer stay removed. Hero: core and orbit only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 3374,
+      "y": 142082
+    },
+    "devNote_strategy": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Strategy & Consulting, version 114, as the private design and content reference (7 Nov 2026). Approved: supplied source copy plus the hero supporting line, Development by Product Type cross-link, offices paragraph, responsive consulting process steps, Digital & Web Design (UI/UX) related cross-link and the global footer; both buttons read \"Discuss Your Project\" and link to Contact. Selected work: deliberately no project cards. No verified discovery, consulting, prototyping or product-planning project exists; keep the supplied heading, intro and \"Explore Our Work\". Do not add unrelated Behance work or imply verified consulting, prototyping or product-planning case studies; add confirmed examples only when they exist. Closing CTA: \"Have an Idea? Let's Give It a Direction.\" dark panel with its lead text, button and email link; the generic closing panel and old footer stay removed. Hero: core and orbit only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 3374,
+      "y": 150482
+    },
+    "devNote_tech": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Development by Technology Focus, version 108, as the private design and content reference (7 Nov 2026). Approved: supplied source copy plus the hero supporting line, Development by Product Type cross-link, offices paragraph, responsive four-step process, Digital & Web Design (UI/UX) related cross-link and the global footer; both buttons read \"Discuss Your Project\". Selected work: Fortico Security Services only, limited to the verified React website development and brand identity work; do not add cloud, API, database, integration or other technical claims. Technology & Expertise: do not add technologies, logos or badges without verified source information. Closing CTA: \"Let's Find the Right Technology for Your Next Project.\" panel with the email link; the generic closing panel and old footer stay removed. Hero: core and orbit only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 4288,
+      "y": 133682
+    },
+    "devSharedNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — applies to all four App & Software Development pages. Content note from the source: “Add specific technology logos, client testimonials, project case studies, performance statistics, and technical credentials only after confirming they are accurate for Creative Propel. This keeps the website credible while still giving the pages a polished, established agency feel.” Shared project enquiry: the headline and body are shown on every page, but no form was built. The section links to the existing Contact page prototype (/contact/) with a “Go to the Contact Form” button. That button label is not in the source copy (the source’s “Send Project Inquiry” is a form-submit label), so please confirm or supply it. The suggested form fields and service dropdown options (Full Name, Work Email, Company / Organization, Service Required, Project Budget, Project Details; Web Application Development … Other) are kept here for reference only: the Contact form’s service list was not changed. No backend, booking link or new data collection exists. Update v106 (Development by Product Type only): the generic shared enquiry panel is replaced by the approved global footer; the page's own supplied CTA (\"Have a Product Idea? Let's Build It Together.\") is kept as a panel at the end of the related-services section, with \"Discuss Your Project\" (was \"Start Your Project\") and the email link.",
+      "w": 720,
+      "x": 3374,
+      "y": 125902
+    },
+    "dsBrandCopyNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Brand Identity Design, version 95, as the private design and content reference (7 Nov 2026), with one approved follow-up in v96: the hero button \"See What’s Included\" now scrolls to \"What Your Brand Identity Can Include\" (smooth; instant with reduced motion). Approved copy: the 5 Nov source text (hero, overview, five capabilities, four process steps, five FAQs) plus the v94 additions (offices paragraph, explorer heading and intro, six \"can include\" items, FAQs 6 and 7, Website & E-commerce cross-link). Evidence limits: Fortico Security Services is the only case study shown (brand identity and logo verified); the three Behance Branding & Logos presentations are not presented as client work; New Heights Collective excluded (on hold); no brand-specific testimonials. Not deployed to WordPress.",
+      "w": 1440,
+      "x": 1520,
+      "y": 9470
+    },
+    "dsLinksNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — Updated 5 Nov 2026. (1) The service name is now “Digital & Web Design (UI/UX)” everywhere it appears on the canvas: menus, breadcrumbs, service cards, More Design Services links, the Contact form service list and board titles. Route unchanged: /services/digital-web-design/. (2) All five Design Services pages now link to one another in the menu and the More Design Services cards, and every other page’s menu links to them too. (3) Every service menu entry now links to a built page; no “#/services/…” placeholders remain (audit fixes, 5 Nov 2026). (4) The footer Blog link is hidden on all pages until a Blog index page exists.",
+      "w": 720,
+      "x": 3374,
+      "y": 95960
+    },
+    "dsStrategyCtaNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — The document’s secondary hero CTA “Get a Free Strategy Call” has been omitted on all four pages because there is no real booking or call action to link it to. It can be added once a working destination exists (for example a booking page or scheduling link). The primary hero CTAs and the shared final CTA “Discuss Your Project” link to the Contact page (/contact/). No form was built on these pages.",
+      "w": 720,
+      "x": 3374,
+      "y": 94840
+    },
+    "dsTestimonialNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on any page. “Add verified client testimonials here.” Applies to the Client Feedback section on all four Design Services pages. No testimonial is displayed until a verified, service-relevant client review is supplied; until then the section shows the supplied heading and intro plus the Trustpilot and Clutch rating links to the Reviews page.",
+      "w": 720,
+      "x": 3374,
+      "y": 94280
+    },
+    "dsWorkNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — Selected work. Digital & Web Design shows two verified projects with website design deliverables: Giuliana Brandon and Fortico Security Services. Marketing & Advertising, Print & Publication and Motion Graphics & Video show the supplied heading and intro with “Explore Our Work” (Projects page) only — no verified projects in these categories yet. Possible Print candidates, pending your confirmation: Giuliana Brandon (standees, business cards, printed collateral) and Passport to Life (custom T-shirt designs). No Marketing or Motion candidates found. Update 7 Nov 2026 (v97): Digital & Web Design also shows three Behance presentations from the Projects page (Self Care and HeartBeat, UI/UX & Apps; Abmokraccuka, website redesign), presented as Behance work, not client case studies. Brand Identity Design (approved v95) shows Fortico plus three Branding & Logos presentations. Update (v100): Marketing & Advertising Design shows the Social Media Management – Creatives Portfolio presentation on Behance (no verified client case study for this service). Update (v102): Print & Publication Design shows the Giuliana Brandon case study only (printed collateral was in the project scope; who designed or printed it is not stated). Passport to Life T-shirt designs not added (merchandise, not one of the print capabilities). Update (v104): Motion Graphics & Video shows six Motion & 3D presentations on Behance (Logo Animation, Starar, Smart Solar Panel, Passive House, CV Check, Mnet Music), labelled as Behance work, not client case studies; the full set of 18 is on the Projects page.",
+      "w": 720,
+      "x": 3374,
+      "y": 95400
+    },
+    "dwApprovalNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Digital & Web Design (UI/UX), version 98, as the private design and content reference (7 Nov 2026). Approved: supplied document copy (hero, introduction, six capabilities, four steps, five FAQs including the Figma reference) plus the hero supporting line, offices paragraph, explorer heading and intro, six \"can include\" items and the design-and-development comparison. Evidence: Giuliana Brandon and Fortico case studies (website design verified); Self Care, HeartBeat and Abmokraccuka shown as Behance presentations, not client case studies. Hero: core and orbit only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 3374,
+      "y": 96520
+    },
+    "mkApprovalNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Marketing & Advertising Design, version 100, as the private design and content reference (7 Nov 2026). Approved: supplied document copy plus the hero supporting line, offices paragraph, explorer heading and intro, six \"can include\" items and the Digital Marketing & Traffic Generation cross-links (hero and related services). Selected work: only the \"Social Media Management – Creatives Portfolio\" Behance presentation, labelled as Behance work, not a client case study; do not add unrelated items to increase the count. Hero: core and orbit only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 5808,
+      "y": 102680
+    },
+    "mktNavNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — navigation. All five pages are in the Marketing Services group of the menu on every page; all 14 service menu entries now link to built pages. The homepage Digital Marketing & Growth card and the About page marketing service links now open these pages. No “#/services/…” placeholder links remain.",
+      "w": 720,
+      "x": 5808,
+      "y": 160662
+    },
+    "mktNote_content": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Content & Brand Engagement, version 119, as the private design and content reference (7 Nov 2026). Approved: supplied source copy plus the hero supporting line, Brand Identity Design cross-link, offices paragraph, responsive four-step process (4 / 2 / 1 columns), Motion Graphics & Video related cross-link and the global footer; hero, closing and menu buttons read \"Discuss Your Project\" and link to Contact. Hero: core and orbit only (mock-ups removed). Closing: one dark panel with “Give Your Brand Something Worth Saying.”, its lead, the shared “Bridging the Gap Between Strategy and Growth.” enquiry, one button and the email link. Selected work: deliberately no project cards; keep the heading, intro and \"Explore Our Work\". Do not reuse the six Motion & 3D Behance presentations here (motion-design work, not verified content campaigns), and do not add unverified content marketing, copywriting or video marketing projects or results. Source note kept: “Add verified content marketing, copywriting, or video projects here. Include actual project details and results only where confirmed.” Client testimonials: none; verified feedback only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 3374,
+      "y": 167562
+    },
+    "mktNote_conversion": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Conversion & Customer Nurturing, version 123, as the private design and content reference (7 Nov 2026). Approved: supplied source copy plus the hero supporting line, Digital & Web Design (UI/UX) cross-link, offices paragraph, responsive four-step process (4 / 2 / 1 columns), Website & E-commerce Development related cross-link and the global footer; hero, closing and menu buttons read \"Discuss Your Project\" and link to Contact. Hero: core and orbit only (mock-ups and dashed path removed). Closing: one dark panel with “Every Customer Journey Has an Opportunity to Improve.”, its lead, the shared “Bridging the Gap Between Strategy and Growth.” enquiry, one button and the email link. Selected work: deliberately no project cards; keep the heading, intro and \"Explore Our Work\". Do not add unrelated projects or claim verified email marketing, CRM, automation or CRO experience without supporting evidence; do not invent conversion improvements, revenue results or performance figures. Source note kept: “Add verified email marketing, CRM, automation, or CRO projects here. Do not attribute conversion improvements or revenue results without supporting evidence.” Client testimonials: none; verified feedback only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 3374,
+      "y": 184362
+    },
+    "mktNote_digital": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Digital Marketing & Traffic Generation, version 117, as the private design and content reference (7 Nov 2026). Approved: supplied source copy plus the hero supporting line, Marketing & Advertising Design cross-link, offices paragraph, Website & E-commerce Development related cross-link and the global footer; hero, closing and menu buttons read \"Discuss Your Project\" and link to Contact. Six-step process unchanged. Hero: core and orbit only (mock-ups and dotted path removed). Closing: one dark panel with “Ready to Bring More People to Your Business?”, its lead, the shared “Bridging the Gap Between Strategy and Growth.” enquiry, one button and the email link. Selected work: deliberately no project cards; keep the heading, intro and \"Explore Our Work\". Do not add unverified SEO, PPC, paid social or traffic projects, and do not invent campaign results, client relationships or performance figures. Source note kept: “Add verified SEO, PPC, paid social, or traffic generation projects here. Include actual campaign objectives, platforms, deliverables, and results only when confirmed.” Client testimonials: none; verified feedback only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 5808,
+      "y": 159162
+    },
+    "mktNote_social": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Social Media & Community, version 121, as the private design and content reference (7 Nov 2026). Approved: supplied source copy plus the hero supporting line, Marketing & Advertising Design cross-link, offices paragraph, responsive four-step process (4 / 2 / 1 columns), Motion Graphics & Video related cross-link and the global footer; hero, closing and menu buttons read \"Discuss Your Project\" and link to Contact. Hero: core and orbit only (mock-ups removed). Closing: one dark panel with “Let's Build a Social Presence People Remember.”, its lead, the shared “Bridging the Gap Between Strategy and Growth.” enquiry, one button and the email link. Selected work: deliberately no project cards; keep the heading, intro and \"Explore Our Work\". Do not use the “Social Media Management – Creatives Portfolio” Behance presentation as proof of social media account management (it shows creative work, not verified account management), and do not add unverified clients, managed platforms, campaign details or results. Source note kept: “Add verified social media management examples here, including the platforms managed, content scope, campaign details, and confirmed performance results.” Client testimonials: none; verified feedback only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 3374,
+      "y": 175962
+    },
+    "mktNote_strategy": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Strategy & Analytics, version 125, as the private design and content reference (7 Nov 2026), with one change made at approval and recorded in v126: the related-services cross-link is Digital & Web Design (UI/UX) instead of Website & E-commerce Development (the closer connection to analytics, user behaviour and website experience). Approved: supplied source copy plus the hero supporting line, Brand Identity Design cross-link, offices paragraph, responsive four-step process (4 / 2 / 1 columns) and the global footer; hero, closing and menu buttons read \"Discuss Your Project\" and link to Contact. Hero: core and orbit only (mock-ups removed). Closing: one dark panel with “Let's Turn Your Marketing Questions Into a Clear Strategy.”, its lead, the shared “Bridging the Gap Between Strategy and Growth.” enquiry, one button and the email link. Selected work: deliberately no project cards; keep the heading, intro and \"Explore Our Work\". Do not use brand identity case studies as evidence of market research, brand strategy or analytics work, and do not add unverified deliverables, measurable results or performance claims. Source note kept: “Add verified market research, brand strategy, or analytics projects here. Include only confirmed deliverables and measurable results.” Client testimonials: none; verified feedback only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 3374,
+      "y": 192762
+    },
+    "mktSharedNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — applies to all five Marketing Services pages. Shared enquiry: “Bridging the Gap Between Strategy and Growth.” and its body are shown on every page with a “Discuss Your Project” button to the Contact page (/contact/). No form was built. The source’s suggested form fields (Full Name, Work Email, Contact Number, Company / Brand, Select a Service, Select a Budget Range, Discuss Your Project & Ideas), service dropdown options and “Get Started” submit button are kept here for reference only; the Contact form was not changed. Do not add campaign results, rankings, growth figures, testimonials, case studies or certifications until verified. The source’s “Client testimonials (genuine feedback only)” slot is intentionally omitted.",
+      "w": 720,
+      "x": 5808,
+      "y": 159862
+    },
+    "moApprovalNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Motion Graphics & Video, version 104, as the private design and content reference (7 Nov 2026). Approved: supplied document copy plus the hero supporting line, Marketing & Advertising Design cross-link, offices paragraph, explorer heading and intro and six \"can include\" items. Selected work: Logo Animation – 3D & 2D, Starar, Mnet Music, Smart Solar Panel, Passive House and CV Check, each labelled as Behance work, not a client case study; do not add client relationships, outcomes or extra descriptions. \"Explore Our Work\" leads to the full collection of 18 Motion & 3D presentations on the Projects page. Hero: core and orbit only. With this, all five Design service pages are approved. Not deployed to WordPress.",
+      "w": 720,
+      "x": 5808,
+      "y": 117550
+    },
+    "prApprovalNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Print & Publication Design, version 102, as the private design and content reference (7 Nov 2026). Approved: supplied document copy plus the hero supporting line, Brand Identity Design cross-link, offices paragraph, explorer heading and intro and six \"can include\" items. Selected work: Giuliana Brandon is the only example; keep the wording exactly \"The project also included standees, business cards and other printed collateral\" and do not claim that Creative Propel designed or printed these materials. Passport to Life T-shirt designs stay out (merchandise, not one of the five print services). Do not add unrelated work to increase the number of examples. Hero: core and orbit only. Not deployed to WordPress.",
+      "w": 720,
+      "x": 5808,
+      "y": 110216
+    },
+    "privacyReviewNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — before publication: set the “Last updated” date; confirm the legal entity (data controller) name and jurisdiction; confirm every “where applicable” provider category (payments, analytics, project tools) matches the tools actually used; confirm marketing emails have an opt-in and unsubscribe mechanism; confirm a cookie-consent mechanism exists if non-essential cookies are used; confirm the safeguards used for international transfers; confirm retention practices and security measures; publish the Cookies Policy that sections 6 and 13 refer to; and have the whole policy reviewed by a qualified adviser.",
+      "w": 1200,
+      "x": 1520,
+      "y": 79648
+    },
+    "siteBacklog": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the site. SITE-WIDE CONSISTENCY PASS and LATER TASKS (updated 7 Nov 2026). All 15 service pages are approved. STEP 1 — APPROVED by the user as the private canvas reference (version 127, 7 Nov 2026): Website & E-commerce Development menu button \"Discuss Your Project\", its approved “Let's Talk About Your Project.” enquiry as a dark panel at the end of the related section, approved global footer; the closing-panel email link wraps instead of being clipped at 390px on Development by Product Type, Technology Focus, Quality, Testing & Maintenance and Strategy & Consulting; homepage Trustpilot and Clutch links use rel=\"noopener noreferrer\". STEP 2 — APPROVED by the user as the private canvas reference (version 128, 7 Nov 2026): About, Contact, Privacy Policy, Cookies Policy and the case-study template use the approved global footer and the menu button \"Discuss Your Project\"; About hero and closing buttons and the case-study hero and closing buttons read \"Discuss Your Project\"; the About closing CTA (copy unchanged) is a dark panel at the end of “Our Team”; external links use rel=\"noopener noreferrer\". Decisions: Contact keeps the partial footer (no footer CTA block, no repeated offices); the case-study hero button follows the site-wide wording \"Discuss Your Project\". FINAL FIXES — FOR REVIEW, not approved (no copy, layout or other functionality changed): 1 · About, Contact and every case study: the core/orbit animations pause while their section is off-screen and resume when it returns, as on the service pages. 2 · Case-study image placeholders: the small \"Asset needed\" labels use #B83234 (the site's link red) instead of #C93A3C, raising contrast from 4.01:1 to 4.7:1; wording and treatment unchanged. 3 · Canvas: the On Hold row (The Fit Faction case, review and research boards) moved one column right, so it no longer overlaps Research Overview; no board on the canvas now overlaps another. PRE-LAUNCH (separate, outstanding): add the original, verbatim review text to the 15 Reviews cards (supplied by the user from Trustpilot and Clutch; do not invent or paraphrase), then re-verify ratings, counts and the checked date. Nothing deployed to WordPress.",
+      "w": 1440,
+      "x": 1520,
+      "y": 8150
+    },
+    "titleA": {
+      "kind": "title1",
+      "maxW": 2960,
+      "page": "archive",
+      "text": "Concept A — Kinetic Editorial (archived exploration)",
+      "w": 240,
+      "x": 0,
+      "y": 2500
+    },
+    "titleAbout": {
+      "kind": "title1",
+      "maxW": 4208,
+      "page": "official",
+      "text": "About Us — nine sections, approved copy (built 4 Nov 2026)",
+      "w": 240,
+      "x": 0,
+      "y": 63020
+    },
+    "titleB": {
+      "kind": "title1",
+      "maxW": 4480,
+      "page": "official",
+      "text": "Future Forward — official design direction",
+      "w": 240,
+      "x": 0,
+      "y": -280
+    },
+    "titleCase": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "official",
+      "text": "Projects & case studies — five active projects (verified)",
+      "w": 240,
+      "x": 0,
+      "y": 36420
+    },
+    "titleCaseResp": {
+      "kind": "title1",
+      "maxW": 2688,
+      "page": "official",
+      "text": "Projects & case study — tablet / mobile (verified)",
+      "w": 240,
+      "x": 0,
+      "y": 41620
+    },
+    "titleContact": {
+      "kind": "title1",
+      "maxW": 4344,
+      "page": "official",
+      "text": "Contact Us — enquiry form prototype, offices & form states (built 4 Nov 2026)",
+      "w": 240,
+      "x": 0,
+      "y": 71900
+    },
+    "titleCookies": {
+      "kind": "title1",
+      "maxW": 2824,
+      "page": "official",
+      "text": "Cookies Policy — supplied text, pending cookie audit and legal review (built 5 Nov 2026)",
+      "w": 240,
+      "x": 0,
+      "y": 86120
+    },
+    "titleDesignSvc": {
+      "kind": "title1",
+      "maxW": 4800,
+      "page": "official",
+      "text": "Design Services — all five service pages APPROVED (Brand Identity v95, Digital & Web Design v98, Marketing & Advertising v100, Print & Publication v102, Motion Graphics & Video v104; 7 Nov 2026)",
+      "w": 240,
+      "x": 0,
+      "y": 94000
+    },
+    "titleDev": {
+      "kind": "title1",
+      "maxW": 4200,
+      "page": "official",
+      "text": "Web, App & Software Development — all five service pages APPROVED (Website & E-commerce v87, Development by Product Type v106, Technology Focus v108, Quality, Testing & Maintenance v111, Strategy & Consulting v114; 7 Nov 2026)",
+      "w": 240,
+      "x": 0,
+      "y": 125002
+    },
+    "titleMkt": {
+      "kind": "title1",
+      "maxW": 5200,
+      "page": "official",
+      "text": "Marketing Services — all five service pages APPROVED (Digital Marketing & Traffic Generation v117, Content & Brand Engagement v119, Social Media & Community v121, Conversion & Customer Nurturing v123, Strategy & Analytics v125; 7 Nov 2026)",
+      "w": 240,
+      "x": 0,
+      "y": 158882
+    },
+    "titleOnHold": {
+      "kind": "title1",
+      "maxW": 4480,
+      "page": "official",
+      "text": "On Hold – The Fit Faction (archived: not featured until original assets are supplied and accuracy is confirmed)",
+      "w": 240,
+      "x": 0,
+      "y": 57720
+    },
+    "titlePages": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "official",
+      "text": "How the direction works across the site",
+      "w": 240,
+      "x": 0,
+      "y": 3420
+    },
+    "titlePrivacy": {
+      "kind": "title1",
+      "maxW": 5728,
+      "page": "official",
+      "text": "Privacy Policy — supplied text, pending legal and operational review (built 5 Nov 2026)",
+      "w": 240,
+      "x": 0,
+      "y": 77400
+    },
+    "titleResearch": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "official",
+      "text": "Client Website & Portfolio Asset Research — decisions recorded 4 Nov 2026 (internal)",
+      "w": 240,
+      "x": 0,
+      "y": 52900
+    },
+    "titleResp": {
+      "kind": "title1",
+      "maxW": 4208,
+      "page": "official",
+      "text": "Homepage — tablet, mobile & page ends (verified)",
+      "w": 240,
+      "x": 0,
+      "y": 11840
+    },
+    "titleRev": {
+      "kind": "title1",
+      "maxW": 3294,
+      "page": "official",
+      "text": "Reviews — tablet / mobile & review component kit (verified)",
+      "w": 240,
+      "x": 0,
+      "y": 28020
+    },
+    "titleReview": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "official",
+      "text": "Case Study Content Review — approved 4 Nov 2026 (The Fit Faction board moved to On Hold)",
+      "w": 240,
+      "x": 0,
+      "y": 49600
+    },
+    "titleSvc": {
+      "kind": "title1",
+      "maxW": 2824,
+      "page": "official",
+      "text": "Service architecture & template — tablet / mobile (verified)",
+      "w": 240,
+      "x": 0,
+      "y": 20220
+    },
+    "webdevNote": {
+      "fill": "orange",
+      "page": "official",
+      "text": "INTERNAL NOTE — not shown on the page. APPROVED: the user formally approved Website & E-commerce Development, version 86, as the approved design and content reference (Nov 2026), after a full audit (structure, copy, hero, project evidence, links, navigation, responsive layouts, accessibility). Approved copy includes the hero line, both introduction paragraphs, the design-and-development comparison and its closing line, and the FAQ 8 answer. Hero shows the globe only (mock-up cards removed in v86). Evidence limits: Shopify = setup, configuration and completion only; E-Motion Sports = completion, not a build; New Heights Collective excluded; Giuliana Brandon print named without saying who designed or printed it; no hosting, maintenance, migration or SEO claims. Contact form: the new service checkbox is confirmed. Not deployed to WordPress.",
+      "w": 720,
+      "x": 8688,
+      "y": 125282
+    },
+    "webdevTitle": {
+      "kind": "title1",
+      "maxW": 5200,
+      "page": "official",
+      "text": "Website & E-commerce Development — new in v76 (first page of the group)",
+      "w": 240,
+      "x": 4400,
+      "y": 125002
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "B-System.dc.html",
+    "Motion.dc.html",
+    "B-Home.dc.html",
+    "B-Svc-Brand.dc.html",
+    "Brand-Desktop-2.dc.html",
+    "Svc-Map.dc.html",
+    "Brand-Tablet.dc.html",
+    "Brand-Tablet-2.dc.html",
+    "Brand-Mobile.dc.html",
+    "Brand-Mobile-2.dc.html",
+    "B-Service.dc.html",
+    "B-Projects.dc.html",
+    "B-Case.dc.html",
+    "B-Reviews.dc.html",
+    "B-Article.dc.html",
+    "Home-Tablet.dc.html",
+    "Home-Mobile.dc.html",
+    "Home-Tablet-2.dc.html",
+    "Home-Mobile-2.dc.html",
+    "Home-Desktop-2.dc.html",
+    "Reviews-Tablet.dc.html",
+    "Reviews-Mobile.dc.html",
+    "Reviews-Mobile-2.dc.html",
+    "Review-Kit.dc.html",
+    "Case-FitFaction.dc.html",
+    "Case-GiulianaBrandon.dc.html",
+    "Case-GiulianaBrandon-2.dc.html",
+    "Case-EMotionSports.dc.html",
+    "Case-PassportToLife.dc.html",
+    "Case-Fortico.dc.html",
+    "Case-Fortico-2.dc.html",
+    "Case-NewHeights.dc.html",
+    "Projects-Tablet.dc.html",
+    "Projects-Mobile.dc.html",
+    "Case-Tablet.dc.html",
+    "Case-Mobile.dc.html",
+    "Case-Mobile-2.dc.html",
+    "A-System.dc.html",
+    "A-Home.dc.html",
+    "Review-Intro.dc.html",
+    "Review-FitFaction.dc.html",
+    "Review-GiulianaBrandon.dc.html",
+    "Review-EMotionSports.dc.html",
+    "Review-PassportToLife.dc.html",
+    "Review-Fortico.dc.html",
+    "Review-NewHeights.dc.html",
+    "Research-Overview.dc.html",
+    "Research-FitFaction.dc.html",
+    "Research-GiulianaBrandon.dc.html",
+    "Research-EMotionSports.dc.html",
+    "Research-PassportToLife.dc.html",
+    "Research-Fortico.dc.html",
+    "Research-NewHeights.dc.html",
+    "Asset-Readiness.dc.html",
+    "About.dc.html",
+    "About-Tablet.dc.html",
+    "About-Tablet-2.dc.html",
+    "About-Mobile.dc.html",
+    "About-Mobile-2.dc.html",
+    "Contact.dc.html",
+    "Contact-Tablet.dc.html",
+    "Contact-Mobile.dc.html",
+    "Contact-Mobile-2.dc.html",
+    "Contact-States.dc.html",
+    "Privacy.dc.html",
+    "Privacy-Desktop-2.dc.html",
+    "Privacy-Tablet.dc.html",
+    "Privacy-Tablet-2.dc.html",
+    "Privacy-Mobile.dc.html",
+    "Privacy-Mobile-2.dc.html",
+    "Cookies.dc.html",
+    "Cookies-Tablet.dc.html",
+    "Cookies-Mobile.dc.html",
+    "Cookies-Mobile-2.dc.html",
+    "Svc-DigitalWeb.dc.html",
+    "Svc-DigitalWeb-Desktop-2.dc.html",
+    "Svc-DigitalWeb-Tablet.dc.html",
+    "Svc-DigitalWeb-Tablet-2.dc.html",
+    "Svc-DigitalWeb-Mobile.dc.html",
+    "Svc-DigitalWeb-Mobile-2.dc.html",
+    "Svc-Marketing.dc.html",
+    "Svc-Marketing-Desktop-2.dc.html",
+    "Svc-Marketing-Tablet.dc.html",
+    "Svc-Marketing-Tablet-2.dc.html",
+    "Svc-Marketing-Mobile.dc.html",
+    "Svc-Marketing-Mobile-2.dc.html",
+    "Svc-Print.dc.html",
+    "Svc-Print-Desktop-2.dc.html",
+    "Svc-Print-Tablet.dc.html",
+    "Svc-Print-Tablet-2.dc.html",
+    "Svc-Print-Mobile.dc.html",
+    "Svc-Print-Mobile-2.dc.html",
+    "Svc-Motion.dc.html",
+    "Svc-Motion-Desktop-2.dc.html",
+    "Svc-Motion-Tablet.dc.html",
+    "Svc-Motion-Tablet-2.dc.html",
+    "Svc-Motion-Mobile.dc.html",
+    "Svc-Motion-Mobile-2.dc.html",
+    "Svc-WebDev.dc.html",
+    "Svc-WebDev-Desktop-2.dc.html",
+    "Svc-WebDev-Tablet.dc.html",
+    "Svc-WebDev-Tablet-2.dc.html",
+    "Svc-WebDev-Mobile.dc.html",
+    "Svc-WebDev-Mobile-2.dc.html",
+    "Svc-DevProduct.dc.html",
+    "Svc-DevProduct-Tablet.dc.html",
+    "Svc-DevProduct-Tablet-2.dc.html",
+    "Svc-DevProduct-Mobile.dc.html",
+    "Svc-DevProduct-Mobile-2.dc.html",
+    "Svc-DevTech.dc.html",
+    "Svc-DevTech-Tablet.dc.html",
+    "Svc-DevTech-Tablet-2.dc.html",
+    "Svc-DevTech-Mobile.dc.html",
+    "Svc-DevTech-Mobile-2.dc.html",
+    "Svc-QA.dc.html",
+    "Svc-QA-Tablet.dc.html",
+    "Svc-QA-Mobile.dc.html",
+    "Svc-QA-Mobile-2.dc.html",
+    "Svc-Strategy.dc.html",
+    "Svc-Strategy-Tablet.dc.html",
+    "Svc-Strategy-Mobile.dc.html",
+    "Svc-Strategy-Mobile-2.dc.html",
+    "Svc-MktDigital.dc.html",
+    "Svc-MktDigital-Desktop-2.dc.html",
+    "Svc-MktDigital-Tablet.dc.html",
+    "Svc-MktDigital-Tablet-2.dc.html",
+    "Svc-MktDigital-Mobile.dc.html",
+    "Svc-MktDigital-Mobile-2.dc.html",
+    "Svc-MktContent.dc.html",
+    "Svc-MktContent-Tablet.dc.html",
+    "Svc-MktContent-Tablet-2.dc.html",
+    "Svc-MktContent-Mobile.dc.html",
+    "Svc-MktContent-Mobile-2.dc.html",
+    "Svc-MktSocial.dc.html",
+    "Svc-MktSocial-Tablet.dc.html",
+    "Svc-MktSocial-Mobile.dc.html",
+    "Svc-MktSocial-Mobile-2.dc.html",
+    "Svc-MktConversion.dc.html",
+    "Svc-MktConversion-Tablet.dc.html",
+    "Svc-MktConversion-Tablet-2.dc.html",
+    "Svc-MktConversion-Mobile.dc.html",
+    "Svc-MktConversion-Mobile-2.dc.html",
+    "Svc-MktStrategy.dc.html",
+    "Svc-MktStrategy-Tablet.dc.html",
+    "Svc-MktStrategy-Mobile.dc.html",
+    "Svc-MktStrategy-Mobile-2.dc.html",
+    "Projects-Desktop-2.dc.html",
+    "Projects-Tablet-2.dc.html",
+    "Projects-Mobile-2.dc.html",
+    "Projects-Mobile-3.dc.html"
+  ],
+  "pages": [
+    {
+      "id": "official",
+      "name": "Future Forward — official direction"
+    },
+    {
+      "id": "archive",
+      "name": "Exploration archive"
+    }
+  ],
+  "title": "Creative Propel — Future Forward"
+}

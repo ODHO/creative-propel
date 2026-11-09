@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Asset research — Fortico Security Services</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FAF5EF}
+a{color:inherit}
+:focus-visible{outline:3px solid #C93A3C;outline-offset:3px}
+.rv{container-type:inline-size;width:100%;background:#FAF5EF;color:#0B0C14;font-family:'Manrope',Arial,sans-serif}
+.mono{font-family:'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+.uh{font-family:'Unbounded',sans-serif;letter-spacing:-.045em;font-weight:600}
+.top{background:#07080F;color:#FAF5EF;padding:48px clamp(16px,3.4cqi,48px) 72px;position:relative;overflow:hidden}
+.glow{position:absolute;right:-200px;top:-320px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(255,188,81,.42),rgba(255,92,94,.12) 45%,transparent 68%)}
+.wrap{position:relative;width:min(1280px,100%);margin:0 auto}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:30px;padding:0 12px;border-radius:999px;font-size:11px}
+.cd{background:rgba(250,245,239,.07);border:1px solid rgba(250,245,239,.2)}
+.ca{background:#FFBC51;color:#0B0C14}
+.cw{border:1px dashed rgba(255,188,81,.7);color:#FFBC51}
+.body{border-radius:48px 48px 0 0;margin-top:-40px;position:relative;background:#FAF5EF;padding:56px clamp(16px,3.4cqi,48px) 96px}
+.cols{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}
+.main{flex:999 1 620px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.side{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:16px;position:sticky;top:20px}
+.f{background:#FFFFFF;border:1px solid #E3DACE;border-radius:28px;padding:24px 26px;display:flex;flex-direction:column;gap:14px}
+.fh{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center}
+.id{font-size:12px;color:#C93A3C}
+.st{font-size:10px;padding:0 10px;min-height:24px;border-radius:999px;display:inline-flex;align-items:center}
+.st-n{background:#0B0C14;color:#FAF5EF}.st-u{border:1px solid #D8CCBD;color:#5A5560}
+.pt{font-size:18px;line-height:1.65;margin:0}
+.pt-h{font-family:'Unbounded',sans-serif;font-size:clamp(22px,2.4cqi,30px);font-weight:600;letter-spacing:-.045em;line-height:1.15;margin:0}
+.cur{border-top:1px dashed #D8CCBD;padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.cur .mono{font-size:10px;color:#8A8390}
+.cur p,.cur li{margin:0;font-size:14px;line-height:1.6;color:#6A6470}
+ol.ap{margin:0;padding:0;list-style:none}
+ol.ap li{display:grid;grid-template-columns:minmax(120px,150px) 1fr;gap:14px;padding:12px 0;border-top:1px solid #EEE6DA;font-size:16px;line-height:1.6}
+ol.ap li:first-child{border-top:0}
+ol.ap b{font-weight:700}ol.ap .n{font-family:'Geist Mono',monospace;font-size:11px;color:#C93A3C;margin-right:8px}
+ul.dl{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:8px}
+ul.dl li{padding:10px 14px;border-radius:16px;background:#F7F1E8;font-size:15px;line-height:1.45}
+.card{background:#0B0C14;color:#FAF5EF;border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font-size:12px;font-weight:500;color:#FFBC51}
+.card dl{margin:0}.card dl div{padding:9px 0;border-top:1px solid rgba(250,245,239,.14);display:flex;flex-direction:column;gap:3px}
+.card dt{font-size:10px;color:#A7A9B8}.card dd{margin:0;font-weight:700;font-size:15px;line-height:1.45}
+.tc{color:#FFBC51 !important;font-weight:600 !important}
+.lst{background:#FFFFFF;border:1px solid #E3DACE;border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.lst h3{margin:0;font-size:12px;font-weight:500}
+.lst ul{margin:0;padding:0 0 0 18px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.55}
+.miss{border:1px dashed rgba(201,58,60,.55);background:rgba(201,58,60,.04)}
+.miss h3{color:#C93A3C}
+.note{border-left:3px solid #FFBC51;padding:10px 14px;background:#F7F1E8;border-radius:0 14px 14px 0;font-size:15px;line-height:1.6;margin:0}
+.lnk{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:700;color:#FFBC51;text-decoration:none}
+@container (max-width:760px){ol.ap li{grid-template-columns:1fr;gap:4px}.side{position:static}}
+</style>
+<style>
+.sec{display:flex;flex-direction:column;gap:12px}
+.sec h2{margin:0;font-family:'Unbounded',sans-serif;font-size:clamp(20px,2cqi,26px);font-weight:600;letter-spacing:-.04em}
+.fact{display:flex;flex-direction:column;gap:4px;padding:12px 0;border-top:1px solid #EEE6DA;font-size:16px;line-height:1.55}
+.fact:first-of-type{border-top:0}
+.src{font-family:'Geist Mono',monospace;font-size:11px;color:#C93A3C;word-break:break-all;text-decoration:none;display:inline-flex;align-items:center;min-height:24px}
+.asset{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:10px 18px;padding:16px 0;border-top:1px solid #EEE6DA}
+.asset:first-of-type{border-top:0}
+.k{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8A8390;display:block;margin-bottom:3px}
+.v{font-size:14px;line-height:1.5}
+.badge{display:inline-flex;align-items:center;min-height:24px;padding:0 10px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.b-cap{background:#0B0C14;color:#FAF5EF}.b-sup{border:1px dashed #C93A3C;color:#C93A3C}.b-img{background:#F1EAE0;color:#2A2830}
+.warn{background:#FFF4E0;border:1px solid #F1D29A;border-radius:14px;padding:10px 12px;font-size:13px;line-height:1.5;color:#5A4320}
+table.cmp{width:100%;border-collapse:collapse;font-size:13px;line-height:1.45}
+table.cmp th,table.cmp td{text-align:left;vertical-align:top;padding:10px 8px;border-top:1px solid #EEE6DA}
+table.cmp th{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8A8390;font-weight:500}
+.scroll{overflow-x:auto}
+.shot{border:1px dashed #C93A3C;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:6px;background:rgba(201,58,60,.04)}
+</style>
+</helmet>
+<div class="rv">
+<header class="top"><div class="glow" aria-hidden="true"></div><div class="wrap" style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-wrap:wrap;gap:8px"><span class="mono chip cd"><span style="width:7px;height:7px;border-radius:50%;background:#FFBC51"></span>Asset research · 04 / 05</span><span class="mono chip cw">Internal research only · not for publication</span><span class="mono chip ca">Metadata only</span></div>
+<h1 class="uh" style="margin:0;font-size:clamp(34px,4.6cqi,64px);line-height:1.04">Fortico Security Services</h1>
+<p style="margin:0;max-width:880px;font-size:17px;line-height:1.65;color:#E9E3DC">Source: <a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a> · Access: Only the page’s metadata was readable. The visible content is drawn by JavaScript after the page loads, and the text-only reader cannot run it.</p>
+</div></header><main class="body"><div class="wrap cols"><div class="main"><section class="shot" aria-label="Permission and screenshot status" style="border-style:solid;background:#EEF6F0;border-color:#9CC9A8"><span class="mono" style="font-size:11px;color:#1F6B3A">Permission confirmed · 4 Nov 2026</span><span style="font-size:15px;line-height:1.55">You confirmed that Creative Propel has permission from the client to feature the project name, logo and relevant website screenshots. Ownership notes below still apply: manufacturer, photographer and third-party material is never presented as Creative Propel work.</span></section><section class="shot" aria-label="Screenshot status"><span class="mono" style="font-size:11px;color:#C93A3C">Screenshots · capture attempted 4 Nov 2026 · none captured</span><span style="font-size:15px;line-height:1.55">Exact reason: this session’s network gateway rejects connections to the client domains (“gateway answered 403 to CONNECT” for giulianabrandon.com, emotionsportsnb.com, passporttolife.org, forticosecurityservices.org and app.squareup.com). This was not bypassed. No mockups or recreated interfaces were made. Each “Screenshot to capture” item stays outstanding.</span></section>
+<section class="f sec"><div class="fh"><span class="mono id">FSS · Publicly verified facts</span><span class="mono st st-u">Stated on the client site</span></div><div class="fact"><span>The site describes “24/7 professional security services in Seattle, WA”.</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a></div><div class="fact"><span>Services named in the metadata: unarmed and mobile patrols, construction site security, event security, commercial protection and custom protection solutions.</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a></div><div class="fact"><span>The metadata mentions “Licensed &amp; insured” and a “free consultation”. These are the client’s own statements.</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a></div><div class="fact"><span>Logo file: forticosecurityservices.org/logo.jpeg. Social handle: @ForticoSecurity. Theme colour: #06E6D1.</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a></div></section>
+<section class="f sec"><div class="fh"><span class="mono id">FSS · Not verified, or assumptions</span><span class="mono st st-u">Needs your confirmation</span></div><div class="fact"><span>The page loads as an empty shell filled in by JavaScript. That fits a React build, but doesn’t prove it.</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a></div><div class="fact"><span>The contact and quote request forms couldn’t be seen from here.</span></div><div class="fact"><span>A web search found no third-party listings for this exact business name in Seattle. Similarly named businesses (for example, Fortress Security Services) are different companies and were excluded.</span></div></section>
+<section class="f sec"><div class="fh"><span class="mono id">FSS · Asset inventory</span><span class="mono st st-u">6 items</span></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">FSS-A01 · Homepage, desktop</strong><span class="badge b-cap">Screenshot to capture</span></div>
+<div><span class="k">Description</span><span class="v">Live homepage of the React site.</span></div><div><span class="k">Type</span><span class="v">Website screenshot</span></div><div><span class="k">Recommended placement</span><span class="v">Project visuals 01 (lead image)</span></div><div style="grid-column:1/-1"><span class="k">Source</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> Needs a browser that runs JavaScript. Needs client permission.</div></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">FSS-A02 · Quote request form</strong><span class="badge b-cap">Screenshot to capture</span></div>
+<div><span class="k">Description</span><span class="v">The quote request form screen.</span></div><div><span class="k">Type</span><span class="v">Website screenshot (functionality)</span></div><div><span class="k">Recommended placement</span><span class="v">Project visuals 02</span></div><div style="grid-column:1/-1"><span class="k">Source</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a> <span class="v" style="color:#5A5560">(page address unknown)</span></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> Capture it empty. Never include submitted data.</div></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">FSS-A03 · Homepage, mobile</strong><span class="badge b-cap">Screenshot to capture</span></div>
+<div><span class="k">Description</span><span class="v">Mobile view of the homepage.</span></div><div><span class="k">Type</span><span class="v">Website screenshot</span></div><div><span class="k">Recommended placement</span><span class="v">Project visuals 03</span></div><div style="grid-column:1/-1"><span class="k">Source</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> As above.</div></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">FSS-A04 · Logo (master files)</strong><span class="badge b-sup">To be supplied</span></div>
+<div><span class="k">Description</span><span class="v">Logo created by Creative Propel, as original artwork.</span></div><div><span class="k">Type</span><span class="v">Brand logo</span></div><div><span class="k">Recommended placement</span><span class="v">Hero / project visuals</span></div><div style="grid-column:1/-1"><span class="k">Source</span><span class="src" style="color:#5A5560">Your project files (the site copy is forticosecurityservices.org/logo.jpeg)</span></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> Use the original files rather than the website JPEG. Needs client permission.</div></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">FSS-A05 · Brand identity sheet</strong><span class="badge b-sup">To be supplied</span></div>
+<div><span class="k">Description</span><span class="v">Colours, typography and logo variations.</span></div><div><span class="k">Type</span><span class="v">Visual identity</span></div><div><span class="k">Recommended placement</span><span class="v">Project visuals 04</span></div><div style="grid-column:1/-1"><span class="k">Source</span><span class="src" style="color:#5A5560">Your project files</span></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> This is Creative Propel’s own work, so it’s strong portfolio material.</div></div><div class="asset"><div style="grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center"><strong style="font-size:16px">FSS-A06 · Contact form</strong><span class="badge b-cap">Screenshot to capture</span></div>
+<div><span class="k">Description</span><span class="v">The contact form screen.</span></div><div><span class="k">Type</span><span class="v">Website screenshot (functionality)</span></div><div><span class="k">Recommended placement</span><span class="v">Optional</span></div><div style="grid-column:1/-1"><span class="k">Source</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a> <span class="v" style="color:#5A5560">(page address unknown)</span></div><div style="grid-column:1/-1" class="warn"><strong>Quality / permission:</strong> As for the quote form.</div></div></section><a class="lnk" style="color:#C93A3C" href="Case-Fortico.dc.html">Open the approved case study (unchanged)</a></div><aside class="side"><section class="card"><h3 class="mono">Approved visual direction · logo-led, not inserted</h3><h4 class="mono" style="margin:14px 0 4px;font-size:10px;font-weight:500;color:#FFBC51">Lead · original logo &amp; brand identity (Creative Propel work)</h4><div style="padding:10px 0;border-top:1px solid rgba(250,245,239,.14);display:flex;flex-direction:column;gap:4px"><strong style="font-size:15px">Logo master files</strong><span style="font-size:13px;color:#C9C3BC">Placement: Hero / Project visuals 01 (lead)</span><span class="src" style="color:#5A5560">Your project files (the website copy is forticosecurityservices.org/logo.jpeg, reference only)</span><span style="font-size:13px;line-height:1.5;color:#E9E3DC">Permission / caution: Brand identity and logo design are in Creative Propel’s confirmed scope. Use the original files, not the website JPEG. Client permission.</span></div><div style="padding:10px 0;border-top:1px solid rgba(250,245,239,.14);display:flex;flex-direction:column;gap:4px"><strong style="font-size:15px">Brand identity sheet</strong><span style="font-size:13px;color:#C9C3BC">Placement: Project visuals 02</span><span class="src" style="color:#5A5560">Your project files</span><span style="font-size:13px;line-height:1.5;color:#E9E3DC">Permission / caution: Client permission.</span></div><h4 class="mono" style="margin:14px 0 4px;font-size:10px;font-weight:500;color:#FFBC51">Supporting · website screenshots</h4><div style="padding:10px 0;border-top:1px solid rgba(250,245,239,.14);display:flex;flex-direction:column;gap:4px"><strong style="font-size:15px">Homepage, desktop and mobile</strong><span style="font-size:13px;color:#C9C3BC">Placement: Project visuals 03</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a><span style="font-size:13px;line-height:1.5;color:#E9E3DC">Permission / caution: Needs a full browser. Client permission. The detected technology list stays internal.</span></div><div style="padding:10px 0;border-top:1px solid rgba(250,245,239,.14);display:flex;flex-direction:column;gap:4px"><strong style="font-size:15px">Quote request form</strong><span style="font-size:13px;color:#C9C3BC">Placement: Project visuals 04</span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a> <span class="v" style="color:#5A5560">(page address unknown)</span><span style="font-size:13px;line-height:1.5;color:#E9E3DC">Permission / caution: Capture it empty, with no submitted data.</span></div></section>
+<section class="lst"><h3 class="mono">Fact decisions · approved values applied to the case study page</h3><div class="fact"><span class="k">FSS-08 Project details · Industry (approved: “Security services”)</span><span><strong>“No change: Security services”</strong></span><span style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span class="badge" style="background:#1F6B3A;color:#FAF5EF">Decision: Kept as approved</span><span class="badge b-img">Stated by the client</span></span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a></div><div class="fact"><span class="k">FSS-08 Project details · Location (new row)</span><span><strong>“Seattle, Washington”</strong></span><span style="display:flex;flex-wrap:wrap;gap:6px;align-items:center"><span class="badge" style="background:#1F6B3A;color:#FAF5EF">Decision: Approved</span><span class="badge b-img">Stated by the client</span></span><a class="src" href="https://forticosecurityservices.org/" target="_blank" rel="noopener">https://forticosecurityservices.org/</a></div><p style="margin:0;font-size:13px;color:#5A5560;line-height:1.5">Applied on 4 Nov 2026: the approved industries and locations now appear on the five case study pages, using the shared template. Rows without a confirmed value (Passport to Life and New Heights Collective locations, and live site links) are hidden. No “To confirm” placeholders appear on public pages.</p></section>
+<section class="lst miss"><h3 class="mono">Missing · to be supplied by you or the client</h3><ul><li>Logo master files and brand identity sheet</li><li>Addresses of the quote and contact form pages</li><li>Screenshots (the site needs a full browser)</li><li>Independent confirmation of the technology stack (kept internal)</li></ul></section>
+</aside></div></main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4000}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Content review — Passport to Life</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FAF5EF}
+a{color:inherit}
+:focus-visible{outline:3px solid #C93A3C;outline-offset:3px}
+.rv{container-type:inline-size;width:100%;background:#FAF5EF;color:#0B0C14;font-family:'Manrope',Arial,sans-serif}
+.mono{font-family:'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+.uh{font-family:'Unbounded',sans-serif;letter-spacing:-.045em;font-weight:600}
+.top{background:#07080F;color:#FAF5EF;padding:48px clamp(16px,3.4cqi,48px) 72px;position:relative;overflow:hidden}
+.glow{position:absolute;right:-200px;top:-320px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(255,188,81,.42),rgba(255,92,94,.12) 45%,transparent 68%)}
+.wrap{position:relative;width:min(1280px,100%);margin:0 auto}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:30px;padding:0 12px;border-radius:999px;font-size:11px}
+.cd{background:rgba(250,245,239,.07);border:1px solid rgba(250,245,239,.2)}
+.ca{background:#FFBC51;color:#0B0C14}
+.cw{border:1px dashed rgba(255,188,81,.7);color:#FFBC51}
+.body{border-radius:48px 48px 0 0;margin-top:-40px;position:relative;background:#FAF5EF;padding:56px clamp(16px,3.4cqi,48px) 96px}
+.cols{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}
+.main{flex:999 1 620px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.side{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:16px;position:sticky;top:20px}
+.f{background:#FFFFFF;border:1px solid #E3DACE;border-radius:28px;padding:24px 26px;display:flex;flex-direction:column;gap:14px}
+.fh{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center}
+.id{font-size:12px;color:#C93A3C}
+.st{font-size:10px;padding:0 10px;min-height:24px;border-radius:999px;display:inline-flex;align-items:center}
+.st-n{background:#0B0C14;color:#FAF5EF}.st-u{border:1px solid #D8CCBD;color:#5A5560}
+.pt{font-size:18px;line-height:1.65;margin:0}
+.pt-h{font-family:'Unbounded',sans-serif;font-size:clamp(22px,2.4cqi,30px);font-weight:600;letter-spacing:-.045em;line-height:1.15;margin:0}
+.cur{border-top:1px dashed #D8CCBD;padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.cur .mono{font-size:10px;color:#8A8390}
+.cur p,.cur li{margin:0;font-size:14px;line-height:1.6;color:#6A6470}
+ol.ap{margin:0;padding:0;list-style:none}
+ol.ap li{display:grid;grid-template-columns:minmax(120px,150px) 1fr;gap:14px;padding:12px 0;border-top:1px solid #EEE6DA;font-size:16px;line-height:1.6}
+ol.ap li:first-child{border-top:0}
+ol.ap b{font-weight:700}ol.ap .n{font-family:'Geist Mono',monospace;font-size:11px;color:#C93A3C;margin-right:8px}
+ul.dl{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:8px}
+ul.dl li{padding:10px 14px;border-radius:16px;background:#F7F1E8;font-size:15px;line-height:1.45}
+.card{background:#0B0C14;color:#FAF5EF;border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font-size:12px;font-weight:500;color:#FFBC51}
+.card dl{margin:0}.card dl div{padding:9px 0;border-top:1px solid rgba(250,245,239,.14);display:flex;flex-direction:column;gap:3px}
+.card dt{font-size:10px;color:#A7A9B8}.card dd{margin:0;font-weight:700;font-size:15px;line-height:1.45}
+.tc{color:#FFBC51 !important;font-weight:600 !important}
+.lst{background:#FFFFFF;border:1px solid #E3DACE;border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.lst h3{margin:0;font-size:12px;font-weight:500}
+.lst ul{margin:0;padding:0 0 0 18px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.55}
+.miss{border:1px dashed rgba(201,58,60,.55);background:rgba(201,58,60,.04)}
+.miss h3{color:#C93A3C}
+.note{border-left:3px solid #FFBC51;padding:10px 14px;background:#F7F1E8;border-radius:0 14px 14px 0;font-size:15px;line-height:1.6;margin:0}
+.lnk{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:700;color:#FFBC51;text-decoration:none}
+@container (max-width:760px){ol.ap li{grid-template-columns:1fr;gap:4px}.side{position:static}}
+</style>
+</helmet>
+<div class="rv">
+<header class="top"><div class="glow" aria-hidden="true"></div><div class="wrap" style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-wrap:wrap;gap:8px"><span class="mono chip cd"><span style="width:7px;height:7px;border-radius:50%;background:#FFBC51"></span>Case study content review · 04 / 06</span><span class="mono chip ca">WordPress</span><span class="mono chip ca" style="background:#FAF5EF">Approved · applied to the page</span></div>
+<h1 class="uh" style="margin:0;font-size:clamp(36px,5cqi,72px);line-height:1.02">Passport to Life</h1>
+<p style="margin:0;font-size:18px;color:#E9E3DC">Website, e-commerce &amp; merchandise · final approved content, with the previous draft under each revised field.</p>
+<a class="lnk" href="Case-PassportToLife.dc.html">Open the case study page <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+</div></header><main class="body"><div class="wrap cols"><div class="main"><section class="f" aria-label="PTL-01 Project title"><div class="fh"><span class="mono id">PTL-01 · Project title</span><span class="mono st st-n">Approved · revised</span></div><p class="pt-h">A website, an online store and the T-shirt designs, from one team.</p><div class="cur"><span class="mono">Previous draft</span><p>A WordPress website and online store, with merchandise designed to sell.</p></div></section><section class="f" aria-label="PTL-02 Subtitle · also the Projects card text"><div class="fh"><span class="mono id">PTL-02 · Subtitle · also the Projects card text</span><span class="mono st st-u">Approved · unchanged</span></div><p class="pt" style="font-weight:600">WordPress website and online store, plus custom T-shirt designs and mockups.</p></section><section class="f" aria-label="PTL-03 Overview"><div class="fh"><span class="mono id">PTL-03 · Overview</span><span class="mono st st-n">Approved · revised</span></div><p class="pt">Passport to Life’s project combined merchandise design with e-commerce. Creative Propel designed custom T-shirts and created merchandise mockups, and built a WordPress website with an online store, with products uploaded and payments and shipping configured.</p><div class="cur"><span class="mono">Previous draft</span><p>A new WordPress website and e-commerce setup for Passport to Life, with custom T-shirt designs and merchandise mockups, uploaded to the store with payments and shipping configured.</p></div></section><section class="f" aria-label="PTL-04 The brief"><div class="fh"><span class="mono id">PTL-04 · The brief</span><span class="mono st st-n">Approved · revised</span></div><div style="display:flex;flex-direction:column;gap:10px"><p class="pt">The project brought together custom T-shirt design and merchandise mockups with a WordPress website and online store. The scope also included product uploads and the configuration of payments and shipping.</p></div><div class="cur"><span class="mono">Previous draft</span><p>Passport to Life needed a website built from scratch with e-commerce, and merchandise to sell through it.</p><p>That meant designing the T-shirts, creating mockups and getting the products into the store, with payment and shipping configured.</p></div></section><section class="f" aria-label="PTL-05 Our approach"><div class="fh"><span class="mono id">PTL-05 · Our approach</span><span class="mono st st-n">Approved · revised</span></div><ol class="ap"><li><span><span class="n">01</span><b>Merchandise</b></span><span>Custom T-shirt designs created, with merchandise mockups.</span></li><li><span><span class="n">02</span><b>Website &amp; store</b></span><span>WordPress website and e-commerce set up from scratch.</span></li><li><span><span class="n">03</span><b>Products</b></span><span>Products uploaded and organised.</span></li><li><span><span class="n">04</span><b>Checkout</b></span><span>Payment and shipping configured.</span></li></ol><div class="cur"><span class="mono">Previous draft</span><ol class="ap" style="opacity:.75"><li style="font-size:14px"><span><b>Website &amp; store</b></span><span>WordPress website built from scratch, with the website and e-commerce setup.</span></li><li style="font-size:14px"><span><b>Merchandise</b></span><span>Custom T-shirt merchandise designed, with merchandise mockups created.</span></li><li style="font-size:14px"><span><b>Store setup</b></span><span>Products uploaded and organised, with payment and shipping configured.</span></li></ol></div></section><section class="f" aria-label="PTL-06 What we delivered · confirmed scope"><div class="fh"><span class="mono id">PTL-06 · What we delivered · confirmed scope</span><span class="mono st st-u">Approved · unchanged</span></div><ul class="dl"><li>Website built from scratch using WordPress</li><li>Website and e-commerce setup</li><li>Custom T-shirt merchandise design</li><li>Merchandise mockup creation</li><li>Product uploads and organisation</li><li>Payment and shipping configuration</li></ul></section><section class="f" aria-label="PTL-07 The outcome"><div class="fh"><span class="mono id">PTL-07 · The outcome</span><span class="mono st st-n">Approved · revised</span></div><p class="pt">The project resulted in custom T-shirt designs and merchandise mockups, alongside a WordPress website and online store with product uploads, payment configuration and shipping setup.</p><p class="mono" style="margin:0;font-size:10px;color:#8A8390;line-height:1.7">No performance figures. Verified results can be added if supplied.</p><div class="cur"><span class="mono">Previous draft</span><p>Passport to Life has a WordPress website with an online store, stocked with T-shirt designs created by Creative Propel and set up for payments and shipping.</p></div></section></div><aside class="side"><section class="card" aria-label="PTL-08 Project details"><div class="fh"><h3 class="mono">PTL-08 · Project details</h3><span class="mono st" style="border:1px solid rgba(250,245,239,.3);color:#E9E3DC">Revised</span></div><dl><div><dt class="mono">Client</dt><dd class="">Passport to Life</dd></div><div><dt class="mono">Industry</dt><dd class="tc">To confirm</dd></div><div><dt class="mono">Platform</dt><dd class="">WordPress</dd></div><div><dt class="mono">Project type</dt><dd class="">Website, online store &amp; merchandise design</dd></div><div><dt class="mono">Services</dt><dd class="">WordPress development · E-commerce setup · T-shirt design · Mockups</dd></div><div><dt class="mono">Live site</dt><dd class="tc">To confirm</dd></div></dl><p style="margin:0;font-size:13px;line-height:1.5;color:#A7A9B8">Project type was: New website, store &amp; merchandise design</p><p style="margin:0;font-size:13px;line-height:1.5;color:#A7A9B8">Services were: WordPress development · E-commerce setup · Merchandise design</p></section><section class="lst"><h3 class="mono">Approval log</h3><ul><li>Approved: PTL-01 to PTL-03, PTL-05, PTL-06, PTL-08.</li><li>PTL-04 and PTL-07 replaced at approval with the client’s wording.</li><li>No wording implies the store sells the T-shirts Creative Propel designed.</li></ul></section><section class="lst miss"><h3 class="mono">Outstanding information · not assumed</h3><ul><li>What Passport to Life is (organisation type and audience)</li><li>Whether the store sells the T-shirts Creative Propel designed</li><li>Number of T-shirt designs</li><li>T-shirt artwork and mockup files</li><li>Payment provider used</li><li>Live website URL</li><li>Shop and product page screenshots</li><li>Project year</li></ul></section></aside></div></main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5000}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

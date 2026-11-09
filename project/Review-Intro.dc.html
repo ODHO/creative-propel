@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Case Study Content Review</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FAF5EF}
+a{color:inherit}
+:focus-visible{outline:3px solid #C93A3C;outline-offset:3px}
+.rv{container-type:inline-size;width:100%;background:#FAF5EF;color:#0B0C14;font-family:'Manrope',Arial,sans-serif}
+.mono{font-family:'Geist Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+.uh{font-family:'Unbounded',sans-serif;letter-spacing:-.045em;font-weight:600}
+.top{background:#07080F;color:#FAF5EF;padding:48px clamp(16px,3.4cqi,48px) 72px;position:relative;overflow:hidden}
+.glow{position:absolute;right:-200px;top:-320px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(255,188,81,.42),rgba(255,92,94,.12) 45%,transparent 68%)}
+.wrap{position:relative;width:min(1280px,100%);margin:0 auto}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:30px;padding:0 12px;border-radius:999px;font-size:11px}
+.cd{background:rgba(250,245,239,.07);border:1px solid rgba(250,245,239,.2)}
+.ca{background:#FFBC51;color:#0B0C14}
+.cw{border:1px dashed rgba(255,188,81,.7);color:#FFBC51}
+.body{border-radius:48px 48px 0 0;margin-top:-40px;position:relative;background:#FAF5EF;padding:56px clamp(16px,3.4cqi,48px) 96px}
+.cols{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}
+.main{flex:999 1 620px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.side{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:16px;position:sticky;top:20px}
+.f{background:#FFFFFF;border:1px solid #E3DACE;border-radius:28px;padding:24px 26px;display:flex;flex-direction:column;gap:14px}
+.fh{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center}
+.id{font-size:12px;color:#C93A3C}
+.st{font-size:10px;padding:0 10px;min-height:24px;border-radius:999px;display:inline-flex;align-items:center}
+.st-n{background:#0B0C14;color:#FAF5EF}.st-u{border:1px solid #D8CCBD;color:#5A5560}
+.pt{font-size:18px;line-height:1.65;margin:0}
+.pt-h{font-family:'Unbounded',sans-serif;font-size:clamp(22px,2.4cqi,30px);font-weight:600;letter-spacing:-.045em;line-height:1.15;margin:0}
+.cur{border-top:1px dashed #D8CCBD;padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.cur .mono{font-size:10px;color:#8A8390}
+.cur p,.cur li{margin:0;font-size:14px;line-height:1.6;color:#6A6470}
+ol.ap{margin:0;padding:0;list-style:none}
+ol.ap li{display:grid;grid-template-columns:minmax(120px,150px) 1fr;gap:14px;padding:12px 0;border-top:1px solid #EEE6DA;font-size:16px;line-height:1.6}
+ol.ap li:first-child{border-top:0}
+ol.ap b{font-weight:700}ol.ap .n{font-family:'Geist Mono',monospace;font-size:11px;color:#C93A3C;margin-right:8px}
+ul.dl{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:8px}
+ul.dl li{padding:10px 14px;border-radius:16px;background:#F7F1E8;font-size:15px;line-height:1.45}
+.card{background:#0B0C14;color:#FAF5EF;border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font-size:12px;font-weight:500;color:#FFBC51}
+.card dl{margin:0}.card dl div{padding:9px 0;border-top:1px solid rgba(250,245,239,.14);display:flex;flex-direction:column;gap:3px}
+.card dt{font-size:10px;color:#A7A9B8}.card dd{margin:0;font-weight:700;font-size:15px;line-height:1.45}
+.tc{color:#FFBC51 !important;font-weight:600 !important}
+.lst{background:#FFFFFF;border:1px solid #E3DACE;border-radius:28px;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.lst h3{margin:0;font-size:12px;font-weight:500}
+.lst ul{margin:0;padding:0 0 0 18px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.55}
+.miss{border:1px dashed rgba(201,58,60,.55);background:rgba(201,58,60,.04)}
+.miss h3{color:#C93A3C}
+.note{border-left:3px solid #FFBC51;padding:10px 14px;background:#F7F1E8;border-radius:0 14px 14px 0;font-size:15px;line-height:1.6;margin:0}
+.lnk{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:700;color:#FFBC51;text-decoration:none}
+@container (max-width:760px){ol.ap li{grid-template-columns:1fr;gap:4px}.side{position:static}}
+</style>
+</helmet>
+<div class="rv">
+<header class="top"><div class="glow" aria-hidden="true"></div><div class="wrap" style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-wrap:wrap;gap:8px"><span class="mono chip cd"><span style="width:7px;height:7px;border-radius:50%;background:#FFBC51"></span>Content approval stage</span><span class="mono chip ca" style="background:#FAF5EF">Approved · applied to all pages</span></div>
+<h1 class="uh" style="margin:0;font-size:clamp(36px,5cqi,72px);line-height:1.02">Case Study Content Review</h1>
+<p style="margin:0;max-width:820px;font-size:18px;line-height:1.65;color:#E9E3DC">Final approved content for the Projects page and all six case studies, written from the confirmed project information only. Each field has an ID and its approved wording, with the previous draft beneath any revised field. This content is now applied to the pages.</p>
+</div></header>
+<main class="body"><div class="wrap cols"><div class="main">
+<section class="f" aria-label="PRJ-01 Projects page headline"><div class="fh"><span class="mono id">PRJ-01 · Projects page headline</span><span class="mono st st-u">Approved · unchanged</span></div><p class="pt-h">Our Work, Project by Project.</p></section>
+<section class="f" aria-label="PRJ-02 Projects page introduction"><div class="fh"><span class="mono id">PRJ-02 · Projects page introduction</span><span class="mono st st-n">Approved · revised</span></div><p class="pt">A selection of websites, online stores, brand identities and print work, built on WordPress, Shopify and React. Each project opens a case study covering the brief, the approach and what we delivered.</p><div class="cur"><span class="mono">Previous draft</span><p>Websites, online stores, brand identities and printed collateral, designed and built by Creative Propel on WordPress, Shopify and React. Each project opens a full case study.</p></div></section>
+<section class="f" aria-label="Projects card descriptions"><div class="fh"><span class="mono id">Projects and homepage cards · same text as each subtitle (-02)</span><span class="mono st st-n">Approved</span></div><ul style="margin:0;padding:0;list-style:none"><li style="display:grid;grid-template-columns:minmax(160px,220px) 1fr;gap:16px;padding:14px 0;border-top:1px solid #EEE6DA"><span><span class="mono id" style="font-size:11px">TFF-02</span><br><strong>The Fit Faction</strong></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600">New WordPress website: design, structure and copywriting, from scratch.</span><span style="font-size:13px;color:#6A6470">Previous: New WordPress website: complete design, build and copywriting, from scratch.</span></span></li><li style="display:grid;grid-template-columns:minmax(160px,220px) 1fr;gap:16px;padding:14px 0;border-top:1px solid #EEE6DA"><span><span class="mono id" style="font-size:11px">GB-02</span><br><strong>Giuliana Brandon</strong></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600">WordPress website with Square booking and payments, Google Business Profile and printed collateral.</span><span class="mono" style="font-size:10px;color:#8A8390">Unchanged</span></span></li><li style="display:grid;grid-template-columns:minmax(160px,220px) 1fr;gap:16px;padding:14px 0;border-top:1px solid #EEE6DA"><span><span class="mono id" style="font-size:11px">EMS-02</span><br><strong>E-Motion Sports</strong></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600">Completing an existing Shopify store: products, payments, shipping and taxes.</span><span style="font-size:13px;color:#6A6470">Previous: Completing an unfinished Shopify store: products, payments, shipping and taxes.</span></span></li><li style="display:grid;grid-template-columns:minmax(160px,220px) 1fr;gap:16px;padding:14px 0;border-top:1px solid #EEE6DA"><span><span class="mono id" style="font-size:11px">PTL-02</span><br><strong>Passport to Life</strong></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600">WordPress website and online store, plus custom T-shirt designs and mockups.</span><span class="mono" style="font-size:10px;color:#8A8390">Unchanged</span></span></li><li style="display:grid;grid-template-columns:minmax(160px,220px) 1fr;gap:16px;padding:14px 0;border-top:1px solid #EEE6DA"><span><span class="mono id" style="font-size:11px">FSS-02</span><br><strong>Fortico Security Services</strong></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600">Brand identity, logo and a custom React website with contact and quote request forms.</span><span style="font-size:13px;color:#6A6470">Previous: Brand identity, logo and a responsive React website with contact and quote request forms.</span></span></li><li style="display:grid;grid-template-columns:minmax(160px,220px) 1fr;gap:16px;padding:14px 0;border-top:1px solid #EEE6DA"><span><span class="mono id" style="font-size:11px">NHC-02</span><br><strong>New Heights Collective</strong></span><span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600">Brand identity and a WordPress store with a full product catalogue and product copy.</span><span style="font-size:13px;color:#6A6470">Previous: Brand identity and a complete WordPress e-commerce store, built from scratch.</span></span></li></ul></section>
+<section class="f"><div class="fh"><span class="mono id">Approval summary</span></div><ul style="margin:0;padding:0 0 0 18px;display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.6"><li>PRJ-01 and PRJ-02 approved as proposed.</li><li>Section label “The challenge” renamed “The brief” on all six case studies.</li><li>All “What we delivered” lists approved unchanged, except the TFF-06 correction.</li><li>Approved wording applied to the six case study pages, the Projects page cards and the homepage project cards.</li><li>No business objectives, results, metrics or comparative claims are stated anywhere.</li></ul></section>
+</div><aside class="side">
+<section class="card"><h3 class="mono">Approval status</h3><p style="margin:0;font-size:15px;line-height:1.6;color:#E9E3DC">Approved by the client on 4 November 2026, with the changes listed in each project’s approval log. Applied to the six case study pages, the Projects page and the homepage project cards. Not published to the live website.</p></section>
+<section class="lst"><h3 class="mono">Review order</h3><ul style="list-style:none;padding:0"><li><a href="Review-FitFaction.dc.html" style="font-weight:700;display:inline-flex;align-items:center;min-height:32px">01 · The Fit Faction</a> <span style="color:#5A5560">(TFF-01 to TFF-08)</span></li><li><a href="Review-GiulianaBrandon.dc.html" style="font-weight:700;display:inline-flex;align-items:center;min-height:32px">02 · Giuliana Brandon</a> <span style="color:#5A5560">(GB-01 to GB-08)</span></li><li><a href="Review-EMotionSports.dc.html" style="font-weight:700;display:inline-flex;align-items:center;min-height:32px">03 · E-Motion Sports</a> <span style="color:#5A5560">(EMS-01 to EMS-08)</span></li><li><a href="Review-PassportToLife.dc.html" style="font-weight:700;display:inline-flex;align-items:center;min-height:32px">04 · Passport to Life</a> <span style="color:#5A5560">(PTL-01 to PTL-08)</span></li><li><a href="Review-Fortico.dc.html" style="font-weight:700;display:inline-flex;align-items:center;min-height:32px">05 · Fortico Security Services</a> <span style="color:#5A5560">(FSS-01 to FSS-08)</span></li><li><a href="Review-NewHeights.dc.html" style="font-weight:700;display:inline-flex;align-items:center;min-height:32px">06 · New Heights Collective</a> <span style="color:#5A5560">(NHC-01 to NHC-08)</span></li></ul></section>
+<section class="lst miss"><h3 class="mono">Needed for every project · not assumed</h3><ul><li>Client permission to name each client and show screenshots</li><li>Project year or timeline for each project</li><li>Verified results (only if clients agree to share them)</li><li>Any client quotes beyond the existing public reviews (Giuliana Brandon and E-Motion Sports already link to their Trustpilot reviews)</li></ul></section>
+</aside></div></main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2400}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

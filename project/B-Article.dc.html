@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Blog article template</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#07080F}
+a{color:inherit}a:hover{color:#C93A3C}
+.st a:hover{color:#FFBC51}
+</style>
+</helmet>
+<div style="width: 100%; background: #FAF5EF; color: #0B0C14; font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif; overflow: hidden">
+
+  <section class="st" style="background: #07080F; color: #FAF5EF; position: relative; overflow: hidden; padding: 16px clamp(16px, 3.4vw, 48px) 0">
+    <div aria-hidden="true" style="position: absolute; right: 8%; top: 140px; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle at 42% 40%, #FFE6B0, #FFBC51 30%, rgba(255,92,94,0.6) 56%, rgba(255,92,94,0) 72%)"></div>
+    <div aria-hidden="true" style="position: absolute; right: -4%; top: 90px; width: 520px; height: 280px; border-radius: 50%; border: 1px solid rgba(250,245,239,0.14); transform: rotate(-14deg)"></div>
+    <header style="position: relative; z-index: 2; margin: 0 auto; width: min(1120px, 100%); height: 64px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); backdrop-filter: blur(24px); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 8px 0 22px; box-sizing: border-box">
+      <a href="B-Home.dc.html" aria-label="Creative Propel home" style="display: flex"><img src="/_blob/11cb7e45f87956fec08fde70311f542c" alt="Creative Propel" style="width: 150px; height: auto"></a>
+      <nav aria-label="Primary" style="display: flex; flex-wrap: wrap; gap: 26px; font-size: 15px; font-weight: 600"><a href="B-Service.dc.html" style="text-decoration: none">Services</a><a href="B-Projects.dc.html" style="text-decoration: none">Projects</a><a href="#" style="text-decoration: none">Pricing</a><a href="#" style="text-decoration: none; color: #FFBC51" aria-current="page">Blog</a><a href="Contact.dc.html" style="text-decoration: none">Contact</a></nav>
+      <a href="#" aria-label="Open menu" style="width: 48px; height: 48px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #FFE6B0, #FFBC51 45%, #FF5C5E); display: flex"></a>
+    </header>
+    <div style="position: relative; z-index: 1; width: min(920px, 100%); margin: 0 auto; padding: 96px 0 56px; display: flex; flex-direction: column; gap: 22px">
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+        <a href="#" style="display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 14px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); text-decoration: none; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em"><span style="width: 7px; height: 7px; border-radius: 50%; background: #FFBC51"></span>[CATEGORY]</a>
+        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #8C93AD">[DATE] · [X] MIN READ</span>
+      </div>
+      <h1 style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-size: clamp(34px, 5vw, 68px); font-weight: 600; line-height: 1.06; letter-spacing: -0.05em">[Article title — up to three lines at desktop size]</h1>
+      <p style="margin: 0; max-width: 680px; font-size: 20px; line-height: 1.6; color: #D9D3CC">[Article standfirst / excerpt]</p>
+      <div style="display: flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; border-radius: 50%; background: rgba(250,245,239,0.12); border: 1px solid rgba(250,245,239,0.24); box-sizing: border-box"></span><span style="display: flex; flex-direction: column; font-size: 14px"><strong>[Author name]</strong><span style="color: #A7A9B8">[Role]</span></span></div>
+    </div>
+    <div style="width: min(1200px, 100%); margin: 0 auto; height: clamp(260px, 36vw, 520px); border-radius: 40px 40px 0 0; overflow: hidden; position: relative; background: linear-gradient(160deg, #1E2236, #0B0D17)">
+      <div style="position: absolute; inset: 0; background: radial-gradient(circle at 20% 80%, rgba(255,92,94,0.7), transparent 50%)"></div>
+      <span style="position: absolute; left: 24px; bottom: 20px; font-family: 'Geist Mono', monospace; font-size: 12px">[Cover image]</span>
+    </div>
+  </section>
+
+  <section style="padding: 72px clamp(16px, 3.4vw, 48px) 96px">
+    <div style="width: min(1200px, 100%); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+      <nav aria-label="Contents" style="flex: 1 1 200px; position: sticky; top: 24px; display: flex; flex-direction: column; gap: 2px">
+        <p style="margin: 0 0 10px; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #5A5560">CONTENTS</p>
+        <a href="#" style="display: flex; gap: 10px; align-items: center; text-decoration: none; padding: 8px 0; font-weight: 700; font-size: 15px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #FF5C5E; flex: none"></span>[Heading 1]</a>
+        <a href="#" style="text-decoration: none; padding: 8px 0 8px 18px; font-size: 15px; color: #5A5560">[Heading 2]</a>
+        <a href="#" style="text-decoration: none; padding: 8px 0 8px 18px; font-size: 15px; color: #5A5560">[Heading 3]</a>
+        <a href="#" style="text-decoration: none; padding: 8px 0 8px 18px; font-size: 15px; color: #5A5560">[Heading 4]</a>
+        <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #5A5560">READING · 24%</span><div style="height: 3px; border-radius: 3px; background: #E3DACE"><div style="width: 24%; height: 3px; border-radius: 3px; background: linear-gradient(90deg, #FF5C5E, #FFBC51)"></div></div></div>
+      </nav>
+
+      <article style="flex: 999 1 600px; min-width: 0; max-width: 700px; display: flex; flex-direction: column; gap: 24px; font-size: 18px; line-height: 1.75; color: #2A2830">
+        <p style="margin: 0; font-size: 22px; line-height: 1.6; color: #0B0C14">[Opening paragraph — article copy]</p>
+        <p style="margin: 0">[Body paragraph. Running text is Manrope 18/1.75 in a ~68-character column, ink on cream, with no motion inside the article except images fading in.]</p>
+        <h2 style="margin: 24px 0 0; font-family: 'Unbounded', sans-serif; font-size: 30px; font-weight: 500; line-height: 1.2; letter-spacing: -0.04em; color: #0B0C14">[Heading 1]</h2>
+        <p style="margin: 0">[Body paragraph with an <a href="#" style="color: #C93A3C; text-decoration: underline; text-underline-offset: 3px">inline link</a> in Coral Ink at 4.9:1 contrast.]</p>
+        <ul style="margin: 0; padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 10px">
+          <li style="display: flex; gap: 14px"><span aria-hidden="true" style="width: 8px; height: 8px; margin-top: 11px; border-radius: 50%; background: #FFBC51; flex: none"></span>[List item]</li>
+          <li style="display: flex; gap: 14px"><span aria-hidden="true" style="width: 8px; height: 8px; margin-top: 11px; border-radius: 50%; background: #FFBC51; flex: none"></span>[List item]</li>
+          <li style="display: flex; gap: 14px"><span aria-hidden="true" style="width: 8px; height: 8px; margin-top: 11px; border-radius: 50%; background: #FFBC51; flex: none"></span>[List item]</li>
+        </ul>
+        <figure style="margin: 16px 0; display: flex; flex-direction: column; gap: 10px"><div style="height: 360px; border-radius: 28px; background: #F1EAE0; position: relative; overflow: hidden"><div style="position: absolute; left: 12%; top: 14%; right: 12%; bottom: 14%; border-radius: 18px; background: #0B0C14"></div></div><figcaption style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #5A5560">[Figure caption]</figcaption></figure>
+        <h2 style="margin: 24px 0 0; font-family: 'Unbounded', sans-serif; font-size: 30px; font-weight: 500; line-height: 1.2; letter-spacing: -0.04em; color: #0B0C14">[Heading 2]</h2>
+        <h3 style="margin: 0; font-size: 21px; font-weight: 700; color: #0B0C14">[Subheading]</h3>
+        <p style="margin: 0">[Body paragraph.]</p>
+        <aside style="margin: 8px 0; padding: 24px 26px; border-radius: 24px; background: #0B0C14; color: #FAF5EF; display: flex; gap: 16px; align-items: flex-start"><span aria-hidden="true" style="width: 28px; height: 28px; flex: none; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #FFE6B0, #FFBC51 45%, #FF5C5E)"></span><span style="font-size: 17px; line-height: 1.6">[Key takeaway / callout from the article]</span></aside>
+        <blockquote style="margin: 8px 0; font-family: 'Unbounded', sans-serif; font-size: 24px; font-weight: 400; line-height: 1.4; letter-spacing: -0.02em; color: #0B0C14">"[Pull-quote from the article]"</blockquote>
+        <p style="margin: 0">[Closing paragraph.]</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 24px; border-top: 1px solid #E3DACE"><a href="#" style="display: inline-flex; align-items: center; height: 36px; padding: 0 14px; border-radius: 999px; background: #F1EAE0; text-decoration: none; font-size: 14px">[Tag]</a><a href="#" style="display: inline-flex; align-items: center; height: 36px; padding: 0 14px; border-radius: 999px; background: #F1EAE0; text-decoration: none; font-size: 14px">[Tag]</a></div>
+      </article>
+
+      <aside style="flex: 1 1 240px; position: sticky; top: 24px; display: flex; flex-direction: column; gap: 14px">
+        <a href="B-Service.dc.html" style="text-decoration: none; padding: 22px; border-radius: 28px; background: #07080F; color: #FAF5EF; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 10px">
+          <span aria-hidden="true" style="position: absolute; right: -40px; top: -40px; width: 140px; height: 140px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.7), rgba(255,92,94,0.2) 50%, transparent 70%)"></span>
+          <span style="position: relative; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #FFBC51">RELATED SERVICE</span>
+          <strong style="position: relative; font-family: 'Unbounded', sans-serif; font-size: 22px; font-weight: 500; letter-spacing: -0.03em">Development</strong>
+          <span style="position: relative; font-size: 14px; color: #D9D3CC">[One-line service summary]</span>
+          <span style="position: relative; font-weight: 700; font-size: 14px">Explore →</span>
+        </a>
+        <div style="padding: 18px 20px; border-radius: 24px; border: 1px solid #E3DACE; display: flex; justify-content: space-between; align-items: center"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #5A5560">SHARE</span><span style="display: flex; gap: 8px"><a href="#" aria-label="Share on LinkedIn" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid #E3DACE; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 12px; font-weight: 700">in</a><a href="#" aria-label="Copy link" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid #E3DACE; display: flex; align-items: center; justify-content: center; text-decoration: none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B0C14" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"></path></svg></a></span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section style="padding: 0 clamp(16px, 3.4vw, 48px) 104px">
+    <div style="width: min(1200px, 100%); margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px"><h2 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 30px; font-weight: 500; letter-spacing: -0.04em">Keep reading</h2><a href="#" style="font-weight: 700">All articles →</a></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px">
+        <a href="#" style="text-decoration: none; display: flex; flex-direction: column; gap: 12px; padding: 14px 14px 22px; border-radius: 28px; background: #FFFFFF; border: 1px solid #E3DACE"><div style="height: 200px; border-radius: 20px; background: #07080F; position: relative; overflow: hidden"><div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(255,188,81,0.7), transparent 55%)"></div></div><span style="padding: 0 8px; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #5A5560">[CATEGORY] · [DATE]</span><strong style="padding: 0 8px; font-size: 18px; line-height: 1.4">[Article title]</strong></a>
+        <a href="#" style="text-decoration: none; display: flex; flex-direction: column; gap: 12px; padding: 14px 14px 22px; border-radius: 28px; background: #FFFFFF; border: 1px solid #E3DACE"><div style="height: 200px; border-radius: 20px; background: #F1EAE0"></div><span style="padding: 0 8px; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #5A5560">[CATEGORY] · [DATE]</span><strong style="padding: 0 8px; font-size: 18px; line-height: 1.4">[Article title]</strong></a>
+        <a href="#" style="text-decoration: none; display: flex; flex-direction: column; gap: 12px; padding: 14px 14px 22px; border-radius: 28px; background: #FFFFFF; border: 1px solid #E3DACE"><div style="height: 200px; border-radius: 20px; background: #10121C; position: relative; overflow: hidden"><div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 70%, rgba(255,92,94,0.7), transparent 55%)"></div></div><span style="padding: 0 8px; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #5A5560">[CATEGORY] · [DATE]</span><strong style="padding: 0 8px; font-size: 18px; line-height: 1.4">[Article title]</strong></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="st" style="background: #07080F; color: #FAF5EF; padding: 40px clamp(16px, 3.4vw, 48px)">
+    <div style="width: min(1200px, 100%); margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: center; font-size: 14px; color: #D9D3CC">
+      <img src="/_blob/e4b560fec40a32cb7bc0a3dd1caad304" alt="Creative Propel" style="width: 64px; height: auto">
+      <span>Austin · London · Nancy</span>
+      <a href="mailto:info@creativepropel.com" style="text-decoration: none">info@creativepropel.com</a>
+      <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8C93AD">FULL FOOTER AS ON HOMEPAGE</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

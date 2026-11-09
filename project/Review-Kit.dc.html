@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Review component kit</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.ph-c{display:flex;flex-direction:column;gap:6px;border-radius:16px;padding:12px 14px;box-sizing:border-box;border:1px dashed rgba(201,58,60,0.55);background:rgba(201,58,60,0.04)}
+.ph-d{display:flex;flex-direction:column;gap:6px;border-radius:16px;padding:12px 14px;box-sizing:border-box;border:1px dashed rgba(255,188,81,0.6);background:rgba(255,188,81,0.06)}
+.ph-l{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase}
+.ph-c .ph-l{color:#C93A3C}.ph-d .ph-l{color:#FFBC51}
+.ph-t{font-size:14px;line-height:1.5}.ph-c .ph-t{color:#2A2830}.ph-d .ph-t{color:#E9E3DC}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1720px; box-sizing: border-box; background: #FAF5EF; color: #0B0C14; font-family: 'Manrope', Arial, sans-serif; padding: 64px; display: flex; flex-direction: column; gap: 36px">
+  <header style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px">
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #C93A3C">10 · REVIEW COMPONENT KIT</p>
+      <h1 style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 52px; font-weight: 600; letter-spacing: -0.05em; line-height: 1">One review source, four components</h1>
+    </div>
+    <p style="margin: 0; max-width: 460px; font-size: 15px; line-height: 1.6; color: #2A2830">Every page reads from the same verified review list (in WordPress: a <strong>Reviews</strong> content type). Nothing is retyped per page, so wording can't drift from the original.</p>
+  </header>
+
+  <section style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
+    <!-- 1 platform pair -->
+    <div style="padding: 24px; border-radius: 28px; background: #07080F; color: #FAF5EF; display: flex; flex-direction: column; gap: 16px">
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #FFBC51">A · PLATFORM RATINGS · ALWAYS SHOWN, NEVER COMBINED</p>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap">
+        <span style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); font-size: 14px"><strong>4.5</strong><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path fill="#FFBC51" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.1 1.2 6-5.4-3-5.4 3 1.2-6L.8 7.8l6.1-.7z"></path></svg><span style="color: #C9C3BC">Trustpilot · 13 reviews</span></span>
+        <span style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border-radius: 999px; background: rgba(250,245,239,0.07); border: 1px solid rgba(250,245,239,0.18); font-size: 14px"><strong>5.0</strong><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path fill="#FFBC51" d="M10 1.5l2.6 5.6 6.1.7-4.5 4.1 1.2 6-5.4-3-5.4 3 1.2-6L.8 7.8l6.1-.7z"></path></svg><span style="color: #C9C3BC">Clutch · 2 reviews</span></span>
+      </div>
+      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #C9C3BC">Used in the homepage hero, the homepage reviews section, service pages and the Reviews hero (as large cards). Values come from site settings and are updated when the profiles change. Each chip links to its profile.</p>
+    </div>
+    <!-- 4 service slot -->
+    <div style="padding: 24px; border-radius: 28px; background: #07080F; color: #FAF5EF; display: flex; flex-direction: column; gap: 16px">
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #FFBC51">D · SERVICE-PAGE REVIEW SLOT · CONDITIONAL</p>
+      <div class="ph-d"><span class="ph-l">Rule</span><span class="ph-t">Shows the newest review tagged with the page's URL slug (e.g. <code>digital-web-design</code>). No match means no review, and only chip set A shows. Never filled with a general review.</span></div>
+      <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #C9C3BC">Layout: the featured card (C) on a dark band next to chip set A, as on the Brand Identity Design page.</p>
+    </div>
+    <!-- 2 full card -->
+    <div style="padding: 24px; border-radius: 28px; background: #F1EAE0; display: flex; flex-direction: column; gap: 14px">
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #C93A3C">B · FULL REVIEW CARD · REVIEWS PAGE</p>
+      <article style="padding: 22px; border-radius: 24px; background: #FFFFFF; border: 1px solid #E3DACE; display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; justify-content: space-between; align-items: center"><span style="display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: 999px; background: #0B0C14; color: #FAF5EF; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.12em">TRUSTPILOT</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px">★ rating as published</span></div>
+        <strong style="font-family: 'Unbounded', sans-serif; font-size: 17px; font-weight: 500; letter-spacing: -0.03em">Title · verbatim</strong>
+        <div class="ph-c"><span class="ph-l">Body · verbatim, full length</span><span class="ph-t">Never shortened. Long reviews stay readable thanks to a 68-character column.</span></div>
+        <span style="font-size: 13px; color: #5A5560">Name as displayed · country/company · posted date · experience date · link to the original</span>
+      </article>
+    </div>
+    <!-- 3 featured -->
+    <div style="padding: 24px; border-radius: 28px; background: #F1EAE0; display: flex; flex-direction: column; gap: 14px">
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.14em; color: #C93A3C">C · FEATURED CARD · HOMEPAGE AND SERVICE PAGES</p>
+      <article style="padding: 22px; border-radius: 24px; background: #FFFFFF; border: 1px solid #E3DACE; display: flex; flex-direction: column; gap: 12px">
+        <strong style="font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 500; letter-spacing: -0.03em">“Title or headline quote · verbatim”</strong>
+        <div class="ph-c"><span class="ph-l">Excerpt · verbatim</span><span class="ph-t">An excerpt may be a continuous passage; it is never edited. "Read on Trustpilot/Clutch" always links to the full original.</span></div>
+        <span style="font-size: 13px; color: #5A5560">Name · date · platform chip · link</span>
+      </article>
+    </div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 14px">
+    <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #5A5560">SERVICE MATCHING · FROM WHAT EACH REVIEW SAYS IT WAS ABOUT · TO RECONFIRM WHEN THE FULL TEXT IS ADDED</p>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+      <div style="padding: 18px 20px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E3DACE; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 15px">Digital &amp; Web Design (UI/UX)</strong><span style="font-size: 13px; line-height: 1.6; color: #2A2830">Kingdom Sanctuary of Eden · JFC NYC Joe OPS · Schon N · Cynthia Harris · E-MOTION SPORTS · Mike Mwerhs Snr · Olivia T. · Matthew William · Clutch: Electric Bike Retailer · Clutch: Daniel Smith</span></div>
+      <div style="padding: 18px 20px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E3DACE; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 15px">Development by Product Type</strong><span style="font-size: 13px; line-height: 1.6; color: #2A2830">Cynthia Harris (e-commerce) · Clutch: Electric Bike Retailer (Shopify)</span></div>
+      <div style="padding: 18px 20px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E3DACE; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 15px">Quality, Testing &amp; Maintenance</strong><span style="font-size: 13px; line-height: 1.6; color: #2A2830">Cynthia Harris (mentions ongoing maintenance)</span></div>
+      <div style="padding: 18px 20px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E3DACE; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 15px">Digital Marketing &amp; Traffic Generation</strong><span style="font-size: 13px; line-height: 1.6; color: #2A2830">Clutch: Daniel Smith (SEO)</span></div>
+      <div style="padding: 18px 20px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E3DACE; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 15px">Social Media &amp; Community</strong><span style="font-size: 13px; line-height: 1.6; color: #2A2830">Hector Rodricks · Clutch: Daniel Smith</span></div>
+      <div style="padding: 18px 20px; border-radius: 22px; background: #FFFFFF; border: 1px solid #E3DACE; display: flex; flex-direction: column; gap: 6px"><strong style="font-size: 15px">Marketing Strategy &amp; Analytics</strong><span style="font-size: 13px; line-height: 1.6; color: #2A2830">S.A. (marketing plan)</span></div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+      <div class="ph-c"><span class="ph-l">No current match · slot hidden</span><span class="ph-t">Brand Identity Design · Marketing &amp; Advertising Design · Print &amp; Publication Design · Motion Graphics &amp; Video · Development by Technology Focus · Software Strategy &amp; Consulting · Content &amp; Brand Engagement · Conversion &amp; Customer Nurturing</span></div>
+      <div style="padding: 14px 16px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E3DACE; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #5A5560">GENERAL ONLY · HOMEPAGE + REVIEWS PAGE</span><span style="font-size: 14px; line-height: 1.5; color: #2A2830">Jayson Rosado · ONeal Wilburn · Giuliana Brandon Makeup (service not stated in the visible review details)</span></div>
+    </div>
+  </section>
+
+  <section style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+    <div style="padding: 18px 20px; border-radius: 22px; background: #0B0C14; color: #FAF5EF; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFBC51">FIELD</span><span style="font-size: 13px; line-height: 1.7">platform · name · location/company · rating · title · body · posted · experience · source URL · service tags · featured (yes/no)</span></div>
+    <div style="padding: 18px 20px; border-radius: 22px; background: #0B0C14; color: #FAF5EF; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFBC51">INTEGRITY</span><span style="font-size: 13px; line-height: 1.7">Text pasted from the platform, unedited. Each entry links to its original. Remove an entry here when it's removed from the platform.</span></div>
+    <div style="padding: 18px 20px; border-radius: 22px; background: #0B0C14; color: #FAF5EF; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFBC51">ACCESSIBILITY</span><span style="font-size: 13px; line-height: 1.7">Stars have text equivalents ("Rated 5 out of 5 on Trustpilot"). External links say they open in a new tab. Filters announce the result count.</span></div>
+    <div style="padding: 18px 20px; border-radius: 22px; background: #0B0C14; color: #FAF5EF; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.16em; color: #FFBC51">PLATFORM RULES</span><span style="font-size: 13px; line-height: 1.7">Before launch, confirm Trustpilot's and Clutch's current rules for showing reviews and ratings on your own site (attribution, logos, widgets).</span></div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1720}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

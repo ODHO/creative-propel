@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Future Forward final design decisions</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#FAF5EF}a:hover{color:#FFBC51}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1700px; box-sizing: border-box; background: #07080F; color: #FAF5EF; font-family: 'Manrope', Arial, sans-serif; position: relative; overflow: hidden; display: flex; flex-direction: column">
+  <div aria-hidden="true" style="position: absolute; right: -200px; top: -240px; width: 820px; height: 820px; border-radius: 50%; background: radial-gradient(circle at 45% 45%, #FFE6B0 0%, #FFBC51 14%, rgba(255,92,94,0.55) 34%, rgba(255,92,94,0.08) 56%, rgba(7,8,15,0) 70%)"></div>
+  <div aria-hidden="true" style="position: absolute; right: -60px; top: 30px; width: 1100px; height: 440px; border: 1px solid rgba(250,245,239,0.14); border-radius: 50%; transform: rotate(-14deg)"></div>
+
+  <header style="position: relative; padding: 72px 64px 48px; display: flex; flex-direction: column; gap: 20px">
+    <div style="display: flex; align-items: center; gap: 16px">
+      <img src="/_blob/e4b560fec40a32cb7bc0a3dd1caad304" alt="Creative Propel logo mark" style="width: 84px; height: auto">
+      <span style="display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 14px; border-radius: 999px; background: rgba(255,188,81,0.14); border: 1px solid rgba(255,188,81,0.5); font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #FFBC51"><span style="width: 7px; height: 7px; border-radius: 50%; background: #FFBC51"></span>OFFICIAL DIRECTION · v2</span>
+    </div>
+    <h1 style="margin: 0; font-family: 'Unbounded', 'Arial Black', sans-serif; font-size: 96px; line-height: 0.95; font-weight: 600; letter-spacing: -0.05em">Future <span style="font-weight: 200; color: transparent; -webkit-text-stroke: 1.5px #FAF5EF">Forward</span></h1>
+    <p style="margin: 0; max-width: 640px; font-size: 19px; line-height: 1.6; color: #D9D3CC">The Core and its orbit are the identity. Dark "stage" sections create the atmosphere, and cream "page" sections carry the reading. One light source, used with discipline, runs across all 18 pages.</p>
+  </header>
+
+  <!-- palette -->
+  <section style="position: relative; padding: 0 64px 40px; display: grid; grid-template-columns: 1.4fr repeat(6, minmax(0, 1fr)); gap: 14px">
+    <div style="border-radius: 24px; background: #0E1020; border: 1px solid rgba(250,245,239,0.12); position: relative; overflow: hidden; height: 170px; padding: 16px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end">
+      <div style="position: absolute; left: 50%; top: 40%; width: 150px; height: 150px; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle at 45% 45%, #FFE6B0, #FFBC51 24%, #FF5C5E 54%, rgba(255,92,94,0) 72%)"></div>
+      <p style="margin: 0; position: relative; font-weight: 700; font-size: 15px">The Core</p>
+      <p style="margin: 0; position: relative; font-family: 'Geist Mono', monospace; font-size: 11px; color: #A7A9B8">Amber → Coral · the only gradient</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px"><div style="height: 110px; border-radius: 18px; background: #FF5C5E"></div><p style="margin: 0; font-weight: 700; font-size: 14px">Coral</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; color: #A7A9B8">#FF5C5E · brand</p></div>
+    <div style="display: flex; flex-direction: column; gap: 8px"><div style="height: 110px; border-radius: 18px; background: #FFBC51"></div><p style="margin: 0; font-weight: 700; font-size: 14px">Amber</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; color: #A7A9B8">#FFBC51 · brand</p></div>
+    <div style="display: flex; flex-direction: column; gap: 8px"><div style="height: 110px; border-radius: 18px; background: #FAF5EF"></div><p style="margin: 0; font-weight: 700; font-size: 14px">Cream</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; color: #A7A9B8">#FAF5EF · brand · light sections + text on dark</p></div>
+    <div style="display: flex; flex-direction: column; gap: 8px"><div style="height: 110px; border-radius: 18px; background: #07080F; border: 1px solid rgba(250,245,239,0.24); box-sizing: border-box"></div><p style="margin: 0; font-weight: 700; font-size: 14px">Void</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; color: #A7A9B8">#07080F · stage</p></div>
+    <div style="display: flex; flex-direction: column; gap: 8px"><div style="height: 110px; border-radius: 18px; background: #0B0C14"></div><p style="margin: 0; font-weight: 700; font-size: 14px">Ink</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; color: #A7A9B8">#0B0C14 · text on cream</p></div>
+    <div style="display: flex; flex-direction: column; gap: 8px"><div style="height: 110px; border-radius: 18px; background: linear-gradient(90deg, #8C93AD 50%, #5A5560 50%)"></div><p style="margin: 0; font-weight: 700; font-size: 14px">Signal / Stone</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; color: #A7A9B8">labels on dark / muted on cream</p></div>
+  </section>
+
+  <!-- stage + page -->
+  <section style="position: relative; padding: 0 64px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+    <div style="border-radius: 28px; background: #0E1020; border: 1px solid rgba(250,245,239,0.12); padding: 28px; display: flex; flex-direction: column; gap: 12px">
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #FFBC51">MODE 1 · STAGE (DARK)</p>
+      <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 500; letter-spacing: -0.03em">For arrival, atmosphere and decisions</p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #D9D3CC">Heroes, navigation, the services orbit, the process loop, review highlights, CTAs and the footer. The Core lives here. Short copy only.</p>
+    </div>
+    <div style="border-radius: 28px; background: #FAF5EF; color: #0B0C14; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #C93A3C">MODE 2 · PAGE (CREAM)</p>
+      <p style="margin: 0; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 500; letter-spacing: -0.03em">For reading, comparing and trust</p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5A5560">Service detail, case study stories, blog articles, pricing, review lists, FAQs and forms. Editorial column, calm motion, no glow behind text.</p>
+    </div>
+  </section>
+
+  <!-- decisions -->
+  <section style="position: relative; padding: 0 64px 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+    <div style="border-radius: 28px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8C93AD">READABILITY RULES</p>
+      <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: #D9D3CC">
+        <li>Body: Manrope 18/1.75, max 68 characters per line</li>
+        <li>Unbounded for headings only, 3 lines max</li>
+        <li>Outline type is decorative, ≥56 px, never the only copy</li>
+        <li>No glow or image behind running text</li>
+        <li>4.5:1 minimum contrast everywhere</li>
+        <li>Sticky table of contents on long pages</li>
+      </ul>
+    </div>
+    <div style="border-radius: 28px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8C93AD">PERFORMANCE RULES</p>
+      <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: #D9D3CC">
+        <li><strong>No WebGL.</strong> The Core is CSS gradients + SVG orbit</li>
+        <li>Background blur on the nav capsule only</li>
+        <li>GSAP + ScrollTrigger loaded only on pages that use them</li>
+        <li>Lenis on desktop only; native scroll on touch</li>
+        <li>Ambient loops pause off-screen and with reduced motion</li>
+        <li>Targets: LCP &lt; 2.5 s, CLS &lt; 0.1, INP &lt; 200 ms</li>
+      </ul>
+    </div>
+    <div style="border-radius: 28px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.12); padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8C93AD">IDENTITY RULES</p>
+      <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: #D9D3CC">
+        <li>One Core per view: hero, or CTA, never both on screen</li>
+        <li>Amber = active / now; Coral = energy / links</li>
+        <li>Orbit arcs frame heroes and selectors only</li>
+        <li>Pills for actions, 28 px cards, glass edges</li>
+        <li>Every page: opens on Stage → reads on Page → closes on Stage</li>
+        <li>Page transition: the portal opens from the dot</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- templates -->
+  <section style="position: relative; padding: 0 64px 56px; display: flex; flex-direction: column; gap: 16px">
+    <p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #8C93AD">TEMPLATE SYSTEM · 18 PAGES · OPEN EACH ARTBOARD BELOW</p>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px">
+      <a href="B-Home.dc.html" style="text-decoration: none; padding: 20px; border-radius: 24px; background: rgba(255,188,81,0.1); border: 1px solid rgba(255,188,81,0.45); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">03 · HOME</span><span style="font-weight: 700; font-size: 17px">Homepage</span><span style="font-size: 13px; color: #A7A9B8">Home</span></a>
+      <a href="B-Service.dc.html" style="text-decoration: none; padding: 20px; border-radius: 24px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">04 · SERVICE</span><span style="font-weight: 700; font-size: 17px">Service page</span><span style="font-size: 13px; color: #A7A9B8">Services overview + each service page</span></a>
+      <a href="B-Projects.dc.html" style="text-decoration: none; padding: 20px; border-radius: 24px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">05 · INDEX</span><span style="font-weight: 700; font-size: 17px">Projects index</span><span style="font-size: 13px; color: #A7A9B8">Projects (also drives the blog index)</span></a>
+      <a href="B-Case.dc.html" style="text-decoration: none; padding: 20px; border-radius: 24px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">06 · STORY</span><span style="font-weight: 700; font-size: 17px">Case study</span><span style="font-size: 13px; color: #A7A9B8">Each project</span></a>
+      <a href="B-Reviews.dc.html" style="text-decoration: none; padding: 20px; border-radius: 24px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">07 · TRUST</span><span style="font-weight: 700; font-size: 17px">Reviews</span><span style="font-size: 13px; color: #A7A9B8">Reviews (15 verified reviews)</span></a>
+      <a href="B-Article.dc.html" style="text-decoration: none; padding: 20px; border-radius: 24px; background: rgba(250,245,239,0.05); border: 1px solid rgba(250,245,239,0.14); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #FFBC51">08 · READ</span><span style="font-weight: 700; font-size: 17px">Long-form</span><span style="font-size: 13px; color: #A7A9B8">Blog articles, legal, About-style pages</span></a>
+      <div style="padding: 20px; border-radius: 24px; border: 1px dashed rgba(250,245,239,0.24); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8C93AD">NEXT · HOMEPAGE ROUND</span><span style="font-weight: 700; font-size: 17px">Pricing · Contact</span><span style="font-size: 13px; color: #A7A9B8">Built from the same Page-mode parts</span></div>
+      <div style="padding: 20px; border-radius: 24px; border: 1px dashed rgba(250,245,239,0.24); display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #8C93AD">PENDING</span><span style="font-weight: 700; font-size: 17px">[Remaining pages]</span><span style="font-size: 13px; color: #A7A9B8">Mapped to a template once your page list arrives</span></div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1700}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Motion direction for both concepts</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;family=Unbounded:wght@200..800&amp;family=Manrope:wght@400..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.mo *{animation-duration:4s;animation-iteration-count:infinite;animation-timing-function:cubic-bezier(.16,1,.3,1)}
+.mo-paused *{animation-play-state:paused !important}
+@keyframes a-rise{0%{transform:translateY(110%)}30%,82%{transform:translateY(0)}100%{transform:translateY(-110%)}}
+@keyframes a-stretch{0%{font-stretch:88%}35%,100%{font-stretch:120%}}
+@keyframes a-rule{0%{transform:scaleX(0)}30%,90%{transform:scaleX(1)}100%{transform:scaleX(1);opacity:0}}
+@keyframes a-up{0%,20%{transform:translateY(30px);opacity:0}50%,90%{transform:none;opacity:1}100%{opacity:0}}
+@keyframes a-wipe{0%{clip-path:polygon(0 100%,0 100%,0 100%)}45%,85%{clip-path:polygon(0 -100%,200% 100%,0 100%)}100%{clip-path:polygon(0 -100%,200% 100%,0 100%);opacity:0}}
+@keyframes a-zoom{0%{transform:scale(1.18)}60%,100%{transform:scale(1)}}
+@keyframes a-bar{0%,20%{width:0}45%,80%{width:100%}100%{width:0}}
+@keyframes a-arrow{0%,20%{transform:rotate(0)}45%,80%{transform:rotate(45deg)}100%{transform:rotate(0)}}
+@keyframes a-draw{0%{stroke-dashoffset:1}50%,88%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes a-dot{0%,45%{transform:scale(0)}55%,88%{transform:scale(1)}100%{transform:scale(0)}}
+@keyframes a-section{0%,15%{clip-path:polygon(0 100%,100% 100%,100% 100%,0 100%)}60%,90%{clip-path:polygon(0 100%,100% 100%,100% -100%,0 0)}100%{clip-path:polygon(0 100%,100% 100%,100% -100%,0 0)}}
+@keyframes a-svc{0%,28%{transform:translateY(0)}34%,61%{transform:translateY(100%)}67%,94%{transform:translateY(200%)}100%{transform:translateY(0)}}
+@keyframes a-cursor{0%{transform:translate(10px,80px)}40%,70%{transform:translate(150px,30px)}100%{transform:translate(10px,80px)}}
+@keyframes a-img{0%,30%{transform:scale(1)}45%,70%{transform:scale(1.06)}100%{transform:scale(1)}}
+@keyframes b-focus{0%{filter:blur(12px);opacity:0;transform:scale(.94)}35%,85%{filter:blur(0);opacity:1;transform:scale(1)}100%{opacity:0;filter:blur(6px)}}
+@keyframes b-fill{0%,35%{color:transparent}60%,100%{color:#FFBC51}}
+@keyframes b-depth{0%{transform:translateY(60px);opacity:0}50%,90%{transform:translateY(0);opacity:1}100%{opacity:0}}
+@keyframes b-portal{0%,10%{clip-path:circle(0% at 70% 45%)}55%,88%{clip-path:circle(150% at 70% 45%)}100%{clip-path:circle(150% at 70% 45%);opacity:0}}
+@keyframes b-magnet{0%,20%{transform:translate(0,0)}45%,75%{transform:translate(8px,-5px)}100%{transform:translate(0,0)}}
+@keyframes b-orbfill{0%,25%{width:34px}50%,75%{width:100%}100%{width:34px}}
+@keyframes b-spin{to{transform:rotate(360deg)}}
+@keyframes b-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes b-ring{0%,25%{transform:rotate(0)}33%,58%{transform:rotate(-120deg)}66%,91%{transform:rotate(-240deg)}100%{transform:rotate(-360deg)}}
+@keyframes b-ringn{0%,25%{transform:rotate(0)}33%,58%{transform:rotate(120deg)}66%,91%{transform:rotate(240deg)}100%{transform:rotate(360deg)}}
+@keyframes b-card{0%,25%{transform:translate(0,0) scale(1);z-index:3;opacity:1}33%{transform:translate(120%,0) rotate(8deg);z-index:3;opacity:0}36%{transform:translate(36px,-36px) scale(.88);z-index:1;opacity:0}42%,58%{transform:translate(36px,-36px) scale(.88);z-index:1;opacity:1}66%,91%{transform:translate(18px,-18px) scale(.94);z-index:2;opacity:1}100%{transform:translate(0,0) scale(1);z-index:3;opacity:1}}
+@media (prefers-reduced-motion: reduce){.mo *{animation:none !important}}
+</style>
+</helmet>
+<div class="{{ rootClass }}" style="width: 1440px; height: 2400px; box-sizing: border-box; background: #FAF5EF; color: #0F0E0D; font-family: 'Archivo', Arial, sans-serif; display: flex; flex-direction: column">
+
+  <header style="padding: 64px 80px 40px; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.12em; color: #C93A3C">05 — MOTION DIRECTION · LIVE LOOPS</p>
+      <h1 style="margin: 0; font-size: 64px; line-height: 0.95; font-weight: 800; font-stretch: 112%; letter-spacing: -0.03em">How each identity <span style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-style: italic; font-stretch: 100%">moves</span></h1>
+      <p style="margin: 0; max-width: 760px; font-size: 16px; line-height: 1.6; color: #6A625A">The same eight moments in both concepts. Loops are sped up and repeated for review. On the site each plays once, when it's triggered. With reduced motion turned on, every one becomes a short fade.</p>
+    </div>
+    <button type="button" onClick="{{ toggle }}" aria-pressed="{{ pausedAttr }}" style="height: 52px; padding: 0 22px; background: #0F0E0D; color: #FAF5EF; border: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.12em; cursor: pointer">{{ toggleLabel }}</button>
+  </header>
+
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0 80px 64px">
+    <!-- ================= A ================= -->
+    <div style="background: #0F0E0D; color: #FAF5EF; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+      <p style="margin: 0 0 8px; font-size: 30px; font-weight: 800; font-stretch: 118%; letter-spacing: -0.02em">A · Kinetic <span style="font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-style: italic; font-stretch: 100%; color: #FF5C5E">Editorial</span></p>
+
+      <!-- A1 headline -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 16px">
+        <div style="height: 180px; background: #1A1816; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 0 18px; gap: 2px">
+          <span style="display: block; overflow: hidden"><span style="display: inline-block; font-size: 36px; font-weight: 800; line-height: 1.05; animation-name: a-rise, a-stretch; animation-delay: 0s">strategy,</span></span>
+          <span style="display: block; overflow: hidden; padding-left: 24px"><span style="display: inline-block; font-size: 36px; font-weight: 800; line-height: 1.05; animation-name: a-rise, a-stretch; animation-delay: .08s">creativity</span></span>
+          <span style="display: block; overflow: hidden; padding-left: 48px"><span style="display: inline-block; font-size: 36px; font-weight: 800; line-height: 1.05; animation-name: a-rise, a-stretch; animation-delay: .16s">technology</span></span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">01 Headline entrance</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #D9CFC3">Lines rise from behind a mask while the width axis stretches open, so the type itself propels.</p><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.6; color: #A39A90">ON LOAD / IN VIEW · GSAP SPLITTEXT + CSS VAR FONT · 1100ms · 80ms STAGGER</p></div>
+      </div>
+      <!-- A2 reveal -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 16px">
+        <div style="height: 180px; background: #FAF5EF; color: #0F0E0D; padding: 24px 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; align-items: center; gap: 10px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #C93A3C">02</span><div style="flex: 1; height: 1px; background: #0F0E0D; transform-origin: left; animation-name: a-rule"></div></div>
+          <div style="height: 22px; width: 80%; background: #0F0E0D; animation-name: a-up; animation-delay: .1s"></div>
+          <div style="height: 8px; width: 60%; background: #D9CFC3; animation-name: a-up; animation-delay: .2s"></div>
+          <div style="height: 8px; width: 50%; background: #D9CFC3; animation-name: a-up; animation-delay: .28s"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">02 Scroll-triggered reveal</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #D9CFC3">The section's index rule draws left to right first, then the content rises in reading order.</p><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.6; color: #A39A90">20% IN VIEW · SCROLLTRIGGER (CSS VIEW-TIMELINE WHERE SUPPORTED) · 640ms</p></div>
+      </div>
+      <!-- A3 image -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 16px">
+        <div style="height: 180px; background: #1A1816; overflow: hidden; position: relative">
+          <div style="position: absolute; inset: 0; animation-name: a-wipe"><div style="position: absolute; inset: 0; background: radial-gradient(circle at 65% 40%, rgba(255,92,94,0.9), rgba(255,92,94,0.1) 45%, transparent 65%), linear-gradient(140deg, #2A2724, #0F0E0D); animation-name: a-zoom"></div></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">03 Image transition</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #D9CFC3">Images open along the logo's 45° diagonal while the photo settles from 118% to 100% scale.</p><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.6; color: #A39A90">IN VIEW · CSS CLIP-PATH + GSAP · 900ms</p></div>
+      </div>
+      <!-- A4 hover -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 16px">
+        <div style="height: 180px; background: #1A1816; display: flex; align-items: center; justify-content: center">
+          <span style="position: relative; display: inline-flex; align-items: center; gap: 14px; height: 56px; padding: 0 24px; border: 1px solid #FAF5EF; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; overflow: hidden">
+            <span style="position: absolute; left: 0; top: 0; bottom: 0; background: #FF5C5E; animation-name: a-bar"></span>
+            <span style="position: relative">REQUEST PROPOSAL</span>
+            <svg style="position: relative; animation-name: a-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 14L14 4M6 4h8v8"></path></svg>
+          </span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">04 Hover interaction</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #D9CFC3">A coral fill wipes across in the direction of travel and the arrow swings from 45° to forward.</p><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.6; color: #A39A90">HOVER + FOCUS-VISIBLE · PURE CSS · 400ms</p></div>
+      </div>
+      <!-- A5 propel line -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 16px">
+        <div style="height: 180px; background: #0F0E0D; border: 1px solid rgba(250,245,239,0.14); box-sizing: border-box; position: relative">
+          <svg viewBox="0 0 290 180" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%"><path pathLength="1" d="M10 170 L 260 20" fill="none" stroke="#FF5C5E" stroke-width="3" stroke-dasharray="1" style="animation-name: a-draw"></path></svg>
+          <div style="position: absolute; left: 252px; top: 12px; width: 16px; height: 16px; border-radius: 50%; background: #FFBC51; animation-name: a-dot"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">05 The Propel Line</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #D9CFC3">Drawn by scroll position, not by time. It moves only as fast as the reader, and it lands on the amber dot when a section's story is complete.</p><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.6; color: #A39A90">SCRUBBED · SCROLLTRIGGER SCRUB + SVG STROKE · NO EXTRA LIBRARY</p></div>
+      </div>
+      <!-- A6 section -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 16px">
+        <div style="height: 180px; background: #0F0E0D; position: relative; overflow: hidden; border: 1px solid rgba(250,245,239,0.14); box-sizing: border-box">
+          <p style="position: absolute; left: 16px; top: 14px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #A39A90">PAGE A</p>
+          <div style="position: absolute; inset: 0; background: #FAF5EF; animation-name: a-section"><p style="position: absolute; left: 16px; bottom: 14px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #0F0E0D">PAGE B</p></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">06 Section &amp; page transitions</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #D9CFC3">Ink and paper trade places along a rising diagonal. The same edge carries you between pages.</p><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.6; color: #A39A90">NAVIGATION · NATIVE VIEW TRANSITIONS API · 700ms · FALLS BACK TO NORMAL LOAD</p></div>
+      </div>
+      <!-- A7 services -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 16px">
+        <div style="height: 180px; background: #FAF5EF; color: #0F0E0D; display: grid; grid-template-columns: 1fr 96px; gap: 12px; padding: 18px; box-sizing: border-box">
+          <div style="position: relative; display: flex; flex-direction: column">
+            <div style="position: absolute; left: 0; right: 0; top: 0; height: 33.33%; border-bottom: 3px solid #FF5C5E; box-sizing: border-box; animation-name: a-svc"></div>
+            <span style="flex: 1; display: flex; align-items: center; font-size: 20px; font-weight: 800; font-stretch: 115%">Marketing</span>
+            <span style="flex: 1; display: flex; align-items: center; font-size: 20px; font-weight: 800; font-stretch: 115%">Development</span>
+            <span style="flex: 1; display: flex; align-items: center; font-size: 20px; font-weight: 800; font-stretch: 115%">Branding</span>
+          </div>
+          <div style="background: #0F0E0D; clip-path: polygon(0 0, 70% 0, 100% 30%, 100% 100%, 0 100%); position: relative; overflow: hidden"><div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, #FF5C5E, transparent 60%); animation-name: a-img"></div></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">07 Interactive service preview</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #D9CFC3">The coral underline slides to the hovered service, the name switches to the serif, and the preview opens through the diagonal cut.</p><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.6; color: #A39A90">HOVER / FOCUS / TAP · GSAP FLIP · 500ms · WORKS AS AN ACCORDION ON TOUCH</p></div>
+      </div>
+      <!-- A8 portfolio -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(250,245,239,0.14); padding-top: 16px">
+        <div style="height: 180px; background: #1A1816; position: relative; overflow: hidden">
+          <div style="position: absolute; inset: 14px; overflow: hidden"><div style="position: absolute; inset: 0; background: linear-gradient(140deg, #2A2724, #0F0E0D), #2A2724; animation-name: a-img"><div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 40%, rgba(255,188,81,0.6), transparent 55%)"></div></div></div>
+          <div style="position: absolute; left: 0; top: 0; width: 76px; height: 76px; border-radius: 50%; background: #FF5C5E; color: #0F0E0D; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 10px; line-height: 1.3; animation-name: a-cursor">VIEW<br>CASE ↗</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">08 Portfolio interaction</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #D9CFC3">A coral "View case" chip trails the cursor with a slight lag, and the image pushes in 6%. Filters reflow the spread with FLIP.</p><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.6; color: #A39A90">POINTER ONLY (HIDDEN ON TOUCH) · GSAP QUICKTO · 300ms LAG</p></div>
+      </div>
+    </div>
+
+    <!-- ================= B ================= -->
+    <div style="background: #07080F; color: #EEF0F4; padding: 32px; display: flex; flex-direction: column; gap: 16px; font-family: 'Manrope', Arial, sans-serif">
+      <p style="margin: 0 0 8px; font-family: 'Unbounded', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.04em">B · Future <span style="font-weight: 200; color: transparent; -webkit-text-stroke: 1px #FFBC51">Forward</span></p>
+
+      <!-- B1 -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(238,240,244,0.12); padding-top: 16px">
+        <div style="height: 180px; border-radius: 24px; background: #0E1020; display: flex; flex-direction: column; justify-content: center; padding: 0 20px; gap: 4px; overflow: hidden">
+          <span style="font-family: 'Unbounded', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: -0.04em; animation-name: b-focus">We bring</span>
+          <span style="font-family: 'Unbounded', sans-serif; font-size: 30px; font-weight: 300; letter-spacing: -0.04em; -webkit-text-stroke: 1px #FFBC51; animation-name: b-focus, b-fill; animation-delay: .12s, .12s">technology</span>
+          <span style="font-family: 'Unbounded', sans-serif; font-size: 24px; font-weight: 600; letter-spacing: -0.04em; animation-name: b-focus; animation-delay: .24s">together</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">01 Headline entrance</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #C4C9D8">Words pull into focus from blur. The outlined key word then fills with amber, as if lit by the core.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 1.6; color: #8C93AD">ON LOAD · GSAP SPLITTEXT (WORDS) · 1200ms · FILL DELAYED 600ms</p></div>
+      </div>
+      <!-- B2 -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(238,240,244,0.12); padding-top: 16px">
+        <div style="height: 180px; border-radius: 24px; background: #0E1020; position: relative; overflow: hidden">
+          <div style="position: absolute; left: 20px; top: 26px; width: 110px; height: 110px; border-radius: 50%; background: radial-gradient(circle, rgba(255,188,81,0.6), transparent 70%); animation-name: b-depth; animation-duration: 4s"></div>
+          <div style="position: absolute; left: 60px; top: 46px; width: 150px; height: 90px; border-radius: 18px; background: #1A1D2E; animation-name: b-depth; animation-delay: .15s"></div>
+          <div style="position: absolute; left: 140px; top: 86px; width: 120px; height: 70px; border-radius: 18px; background: rgba(238,240,244,0.1); border: 1px solid rgba(238,240,244,0.24); animation-name: b-depth; animation-delay: .3s"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">02 Scroll-triggered reveal</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #C4C9D8">Layers arrive at different speeds (light, content, then glass), so every section has physical depth.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 1.6; color: #8C93AD">IN VIEW · SCROLLTRIGGER · 3 PARALLAX RATES · MAX 60px TRAVEL</p></div>
+      </div>
+      <!-- B3 -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(238,240,244,0.12); padding-top: 16px">
+        <div style="height: 180px; border-radius: 24px; background: #0E1020; position: relative; overflow: hidden">
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 45%, #FFE6B0, #FFBC51 18%, rgba(255,92,94,0.7) 40%, #1A1D2E 70%); animation-name: b-portal"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">03 Image transition</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #C4C9D8">Images open from a point of light, a circular portal taken from the logo's dot.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 1.6; color: #8C93AD">IN VIEW · CSS CLIP-PATH CIRCLE · 900ms</p></div>
+      </div>
+      <!-- B4 -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(238,240,244,0.12); padding-top: 16px">
+        <div style="height: 180px; border-radius: 24px; background: #0E1020; display: flex; align-items: center; justify-content: center">
+          <span style="position: relative; display: inline-flex; align-items: center; height: 56px; width: 230px; border-radius: 999px; background: #FFBC51; overflow: hidden; animation-name: b-magnet">
+            <span style="position: absolute; right: 11px; top: 11px; bottom: 11px; border-radius: 999px; background: radial-gradient(circle at 80% 50%, #FFE6B0, #FF5C5E); animation-name: b-orbfill"></span>
+            <span style="position: relative; padding-left: 24px; font-weight: 700; color: #0B0C14">Request proposal</span>
+          </span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">04 Hover interaction</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #C4C9D8">Magnetic pill: the button leans toward the cursor and the inner orb expands to fill it with core light.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 1.6; color: #8C93AD">POINTER · GSAP QUICKTO (MAGNET) + CSS (FILL) · SPRING · OFF ON TOUCH</p></div>
+      </div>
+      <!-- B5 -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(238,240,244,0.12); padding-top: 16px">
+        <div style="height: 180px; border-radius: 24px; background: #07080F; border: 1px solid rgba(238,240,244,0.12); box-sizing: border-box; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center">
+          <div style="position: absolute; width: 90px; height: 90px; border-radius: 50%; background: radial-gradient(circle at 42% 40%, #FFE6B0, #FFBC51 30%, rgba(255,92,94,0.7) 58%, transparent 72%); animation-name: b-breathe; animation-timing-function: ease-in-out"></div>
+          <div style="position: absolute; width: 150px; height: 150px; border-radius: 50%; border: 1px solid rgba(238,240,244,0.2); animation-name: b-spin; animation-duration: 8s; animation-timing-function: linear"><div style="position: absolute; left: 50%; top: -5px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: #FFBC51; box-shadow: 0 0 14px #FFBC51"></div></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">05 The Core &amp; orbit</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #C4C9D8">The core breathes slowly and a satellite traces the orbit. On desktop the light drifts gently toward the pointer; on touch it stays still.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 1.6; color: #8C93AD">AMBIENT · CSS GRADIENT + SVG · NO WEBGL · PAUSES OFF-SCREEN</p></div>
+      </div>
+      <!-- B6 -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(238,240,244,0.12); padding-top: 16px">
+        <div style="height: 180px; border-radius: 24px; background: #07080F; border: 1px solid rgba(238,240,244,0.12); box-sizing: border-box; position: relative; overflow: hidden">
+          <p style="position: absolute; left: 16px; top: 14px; margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; color: #8C93AD">PAGE A</p>
+          <div style="position: absolute; inset: 0; background: #EEF0F4; animation-name: b-portal"><p style="position: absolute; left: 16px; bottom: 14px; margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; color: #0B0C14">PAGE B</p></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">06 Section &amp; page transitions</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #C4C9D8">The portal expands from the clicked element (the orb, a card) to reveal the next page.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 1.6; color: #8C93AD">NAVIGATION · VIEW TRANSITIONS API · 1000ms · FALLS BACK TO NORMAL LOAD</p></div>
+      </div>
+      <!-- B7 -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(238,240,244,0.12); padding-top: 16px">
+        <div style="height: 180px; border-radius: 24px; background: #0E1020; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center">
+          <div style="position: absolute; width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(circle, #FFE6B0, #FFBC51 40%, rgba(255,92,94,0.6) 70%, transparent 75%)"></div>
+          <div style="position: absolute; width: 140px; height: 140px; border-radius: 50%; border: 1px solid rgba(238,240,244,0.22); animation-name: b-ring; animation-duration: 6s">
+            <div style="position: absolute; left: 50%; top: -9px; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: #FFBC51; box-shadow: 0 0 16px #FFBC51"></div>
+            <div style="position: absolute; left: 93.3%; top: 75%; width: 12px; height: 12px; margin: -6px; border-radius: 50%; background: rgba(238,240,244,0.5)"></div>
+            <div style="position: absolute; left: 6.7%; top: 75%; width: 12px; height: 12px; margin: -6px; border-radius: 50%; background: rgba(238,240,244,0.5)"></div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">07 Interactive service preview</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #C4C9D8">The orbit rotates the chosen service to the top. The core takes on its name and the glass panel refocuses.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 1.6; color: #8C93AD">CLICK / FOCUS / ARROW KEYS · GSAP · 700ms · STACKED LIST ON MOBILE</p></div>
+      </div>
+      <!-- B8 -->
+      <div style="display: grid; grid-template-columns: 290px 1fr; gap: 20px; border-top: 1px solid rgba(238,240,244,0.12); padding-top: 16px">
+        <div style="height: 180px; border-radius: 24px; background: #EEF0F4; position: relative; overflow: hidden">
+          <div style="position: absolute; left: 60px; top: 56px; width: 150px; height: 100px; border-radius: 18px; background: linear-gradient(135deg, #FF5C5E, #FFBC51); animation-name: b-card; animation-duration: 12s; animation-delay: 0s"></div>
+          <div style="position: absolute; left: 60px; top: 56px; width: 150px; height: 100px; border-radius: 18px; background: #1E2236; animation-name: b-card; animation-duration: 12s; animation-delay: -7.9s"></div>
+          <div style="position: absolute; left: 60px; top: 56px; width: 150px; height: 100px; border-radius: 18px; background: #8C93AD; animation-name: b-card; animation-duration: 12s; animation-delay: -4.8s"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px"><p style="margin: 0; font-weight: 700; font-size: 17px">08 Portfolio interaction</p><p style="margin: 0; font-size: 14px; line-height: 1.5; color: #C4C9D8">A depth stack: "next" throws the front case study aside and the next one rises into focus. You can drag it, use the arrows or swipe.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 1.6; color: #8C93AD">CLICK / DRAG / SWIPE · GSAP DRAGGABLE · 600ms · KEYBOARD ARROWS</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2400}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { paused: false };
+  }
+  renderVals() {
+    const p = this.state.paused;
+    return {
+      rootClass: p ? 'mo mo-paused' : 'mo',
+      pausedAttr: p ? 'true' : 'false',
+      toggleLabel: p ? 'PLAY MOTION ▶' : 'PAUSE MOTION ❚❚',
+      toggle: () => this.setState({ paused: !p })
+    };
+  }
+}
+</script>
+</body>
+</html>
